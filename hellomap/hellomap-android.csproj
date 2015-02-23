@@ -44,7 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="NutiteqMapsSDK">
-      <HintPath>dll\NutiteqMapsSDK.dll</HintPath>
+      <HintPath>Assemblies\NutiteqMapsSDK.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
