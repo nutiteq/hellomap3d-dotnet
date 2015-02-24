@@ -59,7 +59,7 @@ namespace HelloMap
 			// Register license
 			Nutiteq.Utils.Log.SetShowError (true);
 			Nutiteq.Utils.Log.SetShowWarn(true);
-			MapView.RegisterLicense("XTUN3Q0ZCRGQzR2xweEcxeHl2VmVlTG5LbWhTaVAzMlRBaFJiSlhVUTRzWFdvKzgvTUUwaVhueStFc013eGc9PQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLjAuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCndhdGVybWFyaz1udXRpdGVxCg==", ApplicationContext);
+			MapView.RegisterLicense("XTUN3Q0ZHRWttdzAzMWErL1g1V2tCdVNJVVF5TGIrTGpBaFExYTFVbHdsL2VxekQvK3ZlNHZDa2k2eGRQbnc9PQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLjAuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCndhdGVybWFyaz1udXRpdGVxCnVzZXJLZXk9MmE5ZTlmNzQ2MmNlZjQ4MWJlMmE4YzEyNjFmZTZjYmQK", ApplicationContext);
 
 			// Set our view from the "main" layout resource
 			MapView mapView = new MapView (ApplicationContext);
