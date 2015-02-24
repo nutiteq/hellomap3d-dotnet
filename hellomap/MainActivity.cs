@@ -58,8 +58,8 @@ namespace HelloMap
 
 			// Register license
 			Nutiteq.Utils.Log.SetShowError (true);
-			Nutiteq.Utils.Log.SetShowWarn(true);
-			MapView.RegisterLicense("XTUN3Q0ZCRGQzR2xweEcxeHl2VmVlTG5LbWhTaVAzMlRBaFJiSlhVUTRzWFdvKzgvTUUwaVhueStFc013eGc9PQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLjAuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCndhdGVybWFyaz1udXRpdGVxCg==", ApplicationContext);
+			Nutiteq.Utils.Log.SetShowWarn (true);
+			MapView.RegisterLicense("XTUN3Q0ZHRWttdzAzMWErL1g1V2tCdVNJVVF5TGIrTGpBaFExYTFVbHdsL2VxekQvK3ZlNHZDa2k2eGRQbnc9PQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLjAuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCndhdGVybWFyaz1udXRpdGVxCnVzZXJLZXk9MmE5ZTlmNzQ2MmNlZjQ4MWJlMmE4YzEyNjFmZTZjYmQK\n", ApplicationContext);
 
 			// Set our view from the "main" layout resource
 			MapView mapView = new MapView (ApplicationContext);
@@ -70,10 +70,10 @@ namespace HelloMap
 			mapView.Options.BaseProjection = proj; // note: EPSG3857 is the default, so this is actually not required
 
 			// Set initial location and other parameters, don't animate
-			mapView.SetFocusPos(proj.FromWgs84(new MapPos(13.38933, 52.51704)), 0); // Berlin
-			mapView.SetZoom(2, 0); // zoom 2, duration 0 seconds (no animation)
-			mapView.SetMapRotation(0, 0);
-			mapView.SetTilt(90, 0);
+			mapView.FocusPos = proj.FromWgs84(new MapPos(13.38933, 52.51704)); // Berlin
+			mapView.Zoom = 5;
+			mapView.MapRotation = 0;
+			mapView.Tilt = 90;
 
 			// Create base layer. Use vector style from assets (osmbright.zip)
 			VectorTileLayer baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
