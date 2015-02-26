@@ -127,7 +127,7 @@ namespace HelloMap
 			// Register license
 			Nutiteq.Utils.Log.SetShowError (true);
 			Nutiteq.Utils.Log.SetShowWarn (true);
-			MapView.RegisterLicense("XTUN3Q0ZHRWttdzAzMWErL1g1V2tCdVNJVVF5TGIrTGpBaFExYTFVbHdsL2VxekQvK3ZlNHZDa2k2eGRQbnc9PQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLjAuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCndhdGVybWFyaz1udXRpdGVxCnVzZXJLZXk9MmE5ZTlmNzQ2MmNlZjQ4MWJlMmE4YzEyNjFmZTZjYmQK", ApplicationContext);
+			MapView.RegisterLicense("XTUMwQ0ZBVUo5ZkJjUE1ESEdIY2VNcVFaTUxMY2RuNEdBaFVBbWpsdFlHbTR0Q005ZEE2LzdDNnc5RytHS2pjPQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLjAuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCndhdGVybWFyaz1udXRpdGVxCnZhbGlkVW50aWw9MjAxNS0wMy0zMQp1c2VyS2V5PTJhOWU5Zjc0NjJjZWY0ODFiZTJhOGMxMjYxZmU2Y2JkCg==", ApplicationContext);
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
@@ -145,7 +145,6 @@ namespace HelloMap
 			mapView.Zoom = 5;
 			mapView.MapRotation = 0;
 			mapView.Tilt = 90;
-
 
 			// offline base layer
 
