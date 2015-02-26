@@ -25,23 +25,6 @@ using System.Collections;
 namespace HelloMap
 {
 
-	public class MyUtils
-	{
-		public static bool PackageExists(PackageInfoVector localPackages, String packageIdInput){
-
-			IEnumerator ie1 = localPackages.GetEnumerator();
-			while (ie1.MoveNext ()) {
-				PackageInfo package = (PackageInfo) ie1.Current;
-				String packageId = package.PackageId;
-				if(packageId.Equals(packageIdInput)){
-					return true;
-				}
-			}
-			return false;
-		}
-
-	}
-
 	public class Listener : MapEventListener
 	{
 		LocalVectorDataSource _dataSource;
@@ -88,7 +71,7 @@ namespace HelloMap
 			Android.Util.Log.Debug("Nutiteq", "OnPackageListUpdated");
 
 			// you have to download full package when list is downloaded
-			if(!MyUtils.PackageExists(_packageManager.LocalPackages,"JE"))
+			if(_packageManager.GetLocalPackage("JE") == null)
 				_packageManager.StartPackageDownload ("JE");
 		}
 
@@ -160,13 +143,17 @@ namespace HelloMap
 			PackageManager packageManager = new NutiteqPackageManager(this, "nutiteq.mbstreets", packageFolder.AbsolutePath);
 
 			packageManager.PackageManagerListener = new PackageListener(packageManager);
-			packageManager.StartPackageListDownload();
+
+			// Download new package list only if it is older than 24h
+			if (packageManager.ServerPackageListAge > 24 * 60 * 60) {
+				packageManager.StartPackageListDownload ();
+			}
 			packageManager.Start ();
 
 			// bbox download can be done right away, no need to wait for package download
 			String bbox = "bbox(51.2383,-0.8164,51.7402,0.6406)"; // London (about 30MB)
 
-			if (!MyUtils.PackageExists (packageManager.LocalPackages, bbox)) {
+			if (packageManager.GetLocalPackage(bbox) == null) {
 				packageManager.StartPackageDownload (bbox);
 			}
 
