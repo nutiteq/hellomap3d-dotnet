@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Java.IO;
 
 using Nutiteq.Core;
 using Nutiteq.Ui;
@@ -15,9 +16,32 @@ using Nutiteq.DataSources;
 using Nutiteq.VectorElements;
 using Nutiteq.Projections;
 using Nutiteq.Styles;
+using Nutiteq.PackageManager;
+using Nutiteq.WrappedCommons;
+using Nutiteq.VectorTiles;
+using System.Collections;
+
 
 namespace HelloMap
 {
+
+	public class MyUtils
+	{
+		public static bool PackageExists(PackageInfoVector localPackages, String packageIdInput){
+
+			IEnumerator ie1 = localPackages.GetEnumerator();
+			while (ie1.MoveNext ()) {
+				PackageInfo package = (PackageInfo) ie1.Current;
+				String packageId = package.PackageId;
+				if(packageId.Equals(packageIdInput)){
+					return true;
+				}
+			}
+			return false;
+		}
+
+	}
+
 	public class Listener : MapEventListener
 	{
 		LocalVectorDataSource _dataSource;
@@ -49,9 +73,59 @@ namespace HelloMap
 		}
 	}
 
+	public class PackageListener : PackageManagerListener
+	{
+		PackageManager _packageManager;
+
+		public PackageListener(PackageManager packageManager)
+		{
+			_packageManager = packageManager;
+		}
+
+		public override void OnPackageListUpdated() {
+			// called when package list is downloaded
+			// now you can start downloading packages
+			Android.Util.Log.Debug("Nutiteq", "OnPackageListUpdated");
+
+
+			// you have to download full package when list is downloaded
+			if(!MyUtils.PackageExists(_packageManager.LocalPackages,"JE"))
+				_packageManager.StartPackageDownload ("JE");
+		}
+
+		public override void OnPackageListFailed() {
+			Android.Util.Log.Debug("Nutiteq", "OnPackageListFailed");
+			// Failed to download package list
+		}
+
+		public override void OnPackageStatusChanged(String id, int version, PackageStatus status) {
+			// a portion of package is downloaded. Update your progress bar here.
+//			Android.Util.Log.Debug("Nutiteq", "OnPackageStatusChanged "+id+" ver "+version+" progress "+status.Progress.ToString());
+			Android.Util.Log.Debug("Nutiteq", "OnPackageStatusChanged "+ id +" ver "+ version);
+		}
+
+		public override void OnPackageCancelled(String id, int version) {
+			// called when you called cancel package download
+			Android.Util.Log.Debug("Nutiteq", "OnPackageCancelled");
+		}
+
+		public override void OnPackageUpdated(String id, int version) {
+			// called when package is updated
+			Android.Util.Log.Debug("Nutiteq", "OnPackageUpdated");
+		}
+
+		public override void OnPackageFailed(String id, int version) {
+			// Failed to download package " + id + "/" + version
+			Android.Util.Log.Debug("Nutiteq", "OnPackageFailed");
+		}
+
+	}
+
+
 	[Activity (Label = "Hellomap", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -70,13 +144,50 @@ namespace HelloMap
 			mapView.Options.BaseProjection = proj; // note: EPSG3857 is the default, so this is actually not required
 
 			// Set initial location and other parameters, don't animate
-			mapView.FocusPos = proj.FromWgs84(new MapPos(13.38933, 52.51704)); // Berlin
+			mapView.FocusPos = proj.FromWgs84(new MapPos(-0.8164,51.2383)); // Berlin
 			mapView.Zoom = 5;
 			mapView.MapRotation = 0;
 			mapView.Tilt = 90;
 
-			// Create base layer. Use vector style from assets (osmbright.zip)
-			VectorTileLayer baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+
+			// offline base layer
+			// 1. download map metadata
+
+			// Create package manager
+			File packageFolder = new File (GetExternalFilesDir(null), "packages");
+			if (!(packageFolder.Mkdirs() || packageFolder.IsDirectory)) {
+				Android.Util.Log.Error("Nutiteq", "Could not create package folder!");
+			}
+			PackageManager packageManager = new NutiteqPackageManager(this, "nutiteq.mbstreets", packageFolder.AbsolutePath);
+
+			packageManager.PackageManagerListener = new PackageListener(packageManager);
+			packageManager.StartPackageListDownload();
+			packageManager.Start ();
+
+			// bbox download can be done right away, no need to wait for package download
+			String bbox = "bbox(51.2383,-0.8164,51.7402,0.6406)";
+
+			if (!MyUtils.PackageExists (packageManager.LocalPackages, bbox)) {
+				packageManager.StartPackageDownload (bbox);
+			}
+
+
+			// define styling for vector map
+			UnsignedCharVector styleBytes = AssetUtils.LoadBytes("osmbright.zip");
+			MBVectorTileDecoder vectorTileDecoder = null;
+			if (styleBytes != null){
+
+				// Create style set
+				MBVectorTileStyleSet vectorTileStyleSet = new MBVectorTileStyleSet(styleBytes);
+				vectorTileDecoder = new MBVectorTileDecoder(vectorTileStyleSet);
+			}
+
+			VectorTileLayer baseLayer = new VectorTileLayer(new PackageManagerTileDataSource(packageManager),vectorTileDecoder);
+
+			// Create online base layer (no package download needed then). Use vector style from assets (osmbright.zip)
+//			VectorTileLayer baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+
+
 			mapView.Layers.Add(baseLayer);
 
 			// Create overlay layer for markers
