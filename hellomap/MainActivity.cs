@@ -59,10 +59,14 @@ namespace HelloMap
 	public class PackageListener : PackageManagerListener
 	{
 		PackageManager _packageManager;
+		TextView _textView;
+		Activity _activity;
 
-		public PackageListener(PackageManager packageManager)
+		public PackageListener(Activity activity, PackageManager packageManager, TextView textView)
 		{
 			_packageManager = packageManager;
+			_textView =  textView;
+			_activity = activity;
 		}
 
 		public override void OnPackageListUpdated() {
@@ -70,9 +74,9 @@ namespace HelloMap
 			// now you can start downloading packages
 			Android.Util.Log.Debug("Nutiteq", "OnPackageListUpdated");
 
-			// you have to download full package when list is downloaded
-			if(_packageManager.GetLocalPackage("JE") == null)
-				_packageManager.StartPackageDownload ("JE");
+			// to make sure that package list is updated, full package download is called here
+//			if(_packageManager.GetLocalPackage("EE") == null)
+//				_packageManager.StartPackageDownload ("EE");
 		}
 
 		public override void OnPackageListFailed() {
@@ -82,8 +86,13 @@ namespace HelloMap
 
 		public override void OnPackageStatusChanged(String id, int version, PackageStatus status) {
 			// a portion of package is downloaded. Update your progress bar here.
-//			Android.Util.Log.Debug("Nutiteq", "OnPackageStatusChanged "+id+" ver "+version+" progress "+status.Progress.ToString());
-			Android.Util.Log.Debug("Nutiteq", "OnPackageStatusChanged "+ id +" ver "+ version);
+			// Notice that the view and SDK are in different threads, so data copy id needed
+			Android.Util.Log.Debug("Nutiteq", "OnPackageStatusChanged "+id+" ver "+version+" progress "+status.Progress.ToString());
+			String progress = (String) status.Progress.ToString().Clone();
+			_activity.RunOnUiThread(() => {
+				_textView.Text = "Downloaded " + id+ " : " + progress + " %";
+			});
+
 		}
 
 		public override void OnPackageCancelled(String id, int version) {
@@ -94,6 +103,9 @@ namespace HelloMap
 		public override void OnPackageUpdated(String id, int version) {
 			// called when package is updated
 			Android.Util.Log.Debug("Nutiteq", "OnPackageUpdated");
+			_activity.RunOnUiThread(() => {
+				_textView.Text = "Downloaded " + id + " version " + version;
+			});
 		}
 
 		public override void OnPackageFailed(String id, int version) {
@@ -118,8 +130,11 @@ namespace HelloMap
 			MapView.RegisterLicense("XTUN3Q0ZHRWttdzAzMWErL1g1V2tCdVNJVVF5TGIrTGpBaFExYTFVbHdsL2VxekQvK3ZlNHZDa2k2eGRQbnc9PQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLjAuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCndhdGVybWFyaz1udXRpdGVxCnVzZXJLZXk9MmE5ZTlmNzQ2MmNlZjQ4MWJlMmE4YzEyNjFmZTZjYmQK", ApplicationContext);
 
 			// Set our view from the "main" layout resource
-			MapView mapView = new MapView (ApplicationContext);
-			SetContentView (mapView);
+			SetContentView (Resource.Layout.Main);
+			MapView mapView = (MapView)FindViewById (Resource.Id.mapView);
+
+			TextView textView = (TextView)FindViewById (Resource.Id.textView);
+			textView.Visibility = ViewStates.Visible;
 
 			// Set base projection
 			EPSG3857 proj = new EPSG3857();
@@ -133,31 +148,36 @@ namespace HelloMap
 
 
 			// offline base layer
-			// 1. download map metadata
 
-			// Create package manager
+			// 1. Create package manager
 			File packageFolder = new File (GetExternalFilesDir(null), "packages");
 			if (!(packageFolder.Mkdirs() || packageFolder.IsDirectory)) {
 				Android.Util.Log.Error("Nutiteq", "Could not create package folder!");
 			}
 			PackageManager packageManager = new NutiteqPackageManager(this, "nutiteq.mbstreets", packageFolder.AbsolutePath);
 
-			packageManager.PackageManagerListener = new PackageListener(packageManager);
+			// 2. define listener, definition is in same class above
+			packageManager.PackageManagerListener = new PackageListener(this, packageManager, textView);
 
 			// Download new package list only if it is older than 24h
 			if (packageManager.ServerPackageListAge > 24 * 60 * 60) {
 				packageManager.StartPackageListDownload ();
 			}
+
+			// start manager - mandatory
 			packageManager.Start ();
 
-			// bbox download can be done right away, no need to wait for package download
-			String bbox = "bbox(51.2383,-0.8164,51.7402,0.6406)"; // London (about 30MB)
+			// bounding box download can be done now
+			// for country package download see OnPackageListUpdated in PackageListener
+
+			String bbox = "bbox(-0.8164,51.2382,0.6406,51.7401)"; // London (about 30MB)
 
 			if (packageManager.GetLocalPackage(bbox) == null) {
 				packageManager.StartPackageDownload (bbox);
 			}
 
 
+			// Now can add vector map as layer
 			// define styling for vector map
 			UnsignedCharVector styleBytes = AssetUtils.LoadBytes("osmbright.zip");
 			MBVectorTileDecoder vectorTileDecoder = null;
@@ -171,8 +191,8 @@ namespace HelloMap
 			VectorTileLayer baseLayer = new VectorTileLayer(new PackageManagerTileDataSource(packageManager),vectorTileDecoder);
 
 			// Create online base layer (no package download needed then). Use vector style from assets (osmbright.zip)
+			// comment in to use online map. Packagemanager stuff is not needed then
 //			VectorTileLayer baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
-
 
 			mapView.Layers.Add(baseLayer);
 
