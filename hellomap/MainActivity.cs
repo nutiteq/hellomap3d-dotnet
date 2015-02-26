@@ -87,7 +87,6 @@ namespace HelloMap
 			// now you can start downloading packages
 			Android.Util.Log.Debug("Nutiteq", "OnPackageListUpdated");
 
-
 			// you have to download full package when list is downloaded
 			if(!MyUtils.PackageExists(_packageManager.LocalPackages,"JE"))
 				_packageManager.StartPackageDownload ("JE");
@@ -165,7 +164,7 @@ namespace HelloMap
 			packageManager.Start ();
 
 			// bbox download can be done right away, no need to wait for package download
-			String bbox = "bbox(51.2383,-0.8164,51.7402,0.6406)";
+			String bbox = "bbox(51.2383,-0.8164,51.7402,0.6406)"; // London (about 30MB)
 
 			if (!MyUtils.PackageExists (packageManager.LocalPackages, bbox)) {
 				packageManager.StartPackageDownload (bbox);
