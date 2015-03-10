@@ -1,5 +1,6 @@
 ﻿using System;
 using Nutiteq.Core;
+using Nutiteq.Graphics;
 using Nutiteq.Ui;
 using Nutiteq.Utils;
 using Nutiteq.Layers;
@@ -10,7 +11,6 @@ using Nutiteq.Styles;
 using Nutiteq.PackageManager;
 using Nutiteq.WrappedCommons;
 using Nutiteq.VectorTiles;
-using System.Collections;
 
 namespace HelloMap
 {
@@ -24,7 +24,7 @@ namespace HelloMap
 
 			// Set initial location and other parameters, don't animate
 			mapView.FocusPos = proj.FromWgs84(new MapPos(-0.8164,51.2383)); // Berlin
-			mapView.Zoom = 5;
+			mapView.Zoom = 2;
 			mapView.MapRotation = 0;
 			mapView.Tilt = 90;
 
@@ -66,32 +66,43 @@ namespace HelloMap
 				Log.Error ("Failed to load style data");
 			}
 
-			VectorTileLayer baseLayer = new VectorTileLayer(new PackageManagerTileDataSource(packageManager),vectorTileDecoder);
-
 			// Create online base layer (no package download needed then). Use vector style from assets (osmbright.zip)
 			// comment in to use online map. Packagemanager stuff is not needed then
 			//			VectorTileLayer baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 
+			var baseLayer = new VectorTileLayer(new PackageManagerTileDataSource(packageManager),vectorTileDecoder);
 			mapView.Layers.Add(baseLayer);
 
 			// Create overlay layer for markers
-			LocalVectorDataSource dataSource = new LocalVectorDataSource (proj);
-			VectorLayer overlayLayer = new VectorLayer (dataSource);
+			var dataSource = new LocalVectorDataSource (proj);
+			var overlayLayer = new VectorLayer (dataSource);
 			mapView.Layers.Add (overlayLayer);
 
 			// Create line style, and line poses
-			LineStyleBuilder lineStyleBuilder = new LineStyleBuilder();
+			var lineStyleBuilder = new LineStyleBuilder();
 			lineStyleBuilder.SetLineJointType(LineJointType.LineJointTypeRound);
 			lineStyleBuilder.SetStretchFactor(2);
 			lineStyleBuilder.SetWidth(8);
 
-			Nutiteq.WrappedCommons.MapPosVector linePoses = new Nutiteq.WrappedCommons.MapPosVector ();
+			var linePoses = new MapPosVector ();
 			linePoses.Add(proj.FromWgs84(new MapPos(0, 0)));
 			linePoses.Add(proj.FromWgs84(new MapPos(0, 80)));
 			linePoses.Add(proj.FromWgs84(new MapPos(45, 45)));
 
-			Line line = new Line (linePoses, lineStyleBuilder.BuildStyle ());
+			var line = new Line (linePoses, lineStyleBuilder.BuildStyle ());
 			dataSource.Add (line);
+
+			// Create balloon popup
+			var balloonPopupStyleBuilder = new BalloonPopupStyleBuilder();
+			balloonPopupStyleBuilder.SetCornerRadius(3);
+			balloonPopupStyleBuilder.SetStrokeColor(new Color(200, 120, 0, 255));
+			balloonPopupStyleBuilder.SetStrokeWidth(1);
+			balloonPopupStyleBuilder.SetPlacementPriority(1);
+			var popup = new BalloonPopup(
+				proj.FromWgs84(new MapPos(0, 20)),
+				balloonPopupStyleBuilder.BuildStyle(),
+				"Title", "Description");
+			dataSource.Add(popup);
 
 			// Create and set map listener
 			mapView.MapEventListener = new MapListener (dataSource);

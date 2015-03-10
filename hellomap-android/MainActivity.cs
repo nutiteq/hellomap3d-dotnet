@@ -40,7 +40,7 @@ namespace HelloMap
 			// Copy bundled tile data to file system, so it can be imported by package manager
 			string importPackagePath = new File (GetExternalFilesDir (null), "world_ntvt_0_4.mbtiles").AbsolutePath;
 			using (var input = Assets.Open ("world_ntvt_0_4.mbtiles")) {
-				using (var output = new System.IO.FileStream (importPackagePath, System.IO.FileMode.CreateNew)) {
+				using (var output = new System.IO.FileStream (importPackagePath, System.IO.FileMode.Create)) {
 					input.CopyTo (output);
 				}
 			}
