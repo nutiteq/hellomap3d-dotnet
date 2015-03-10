@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="hellomap-android/hellomap-android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Jaak Laineste’s iPad" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="hellomap-android/MainActivity.cs">
+    <Files>
+      <File FileName="hellomap-ios/MainViewController.cs" Line="1" Column="1" />
+      <File FileName="hellomap-ios/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="hellomap-android/Resources/Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="hellomap-shared/MapListener.cs" Line="41" Column="41" />
+      <File FileName="hellomap-shared/PackageListener.cs" Line="10" Column="10" />
+      <File FileName="hellomap-shared/MapSetup.cs" Line="22" Column="22" />
+      <File FileName="hellomap-android/MainActivity.cs" Line="4" Column="4" />
+      <File FileName="hellomap-ios/MainViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="hellomap-ios/Main.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
