@@ -10,7 +10,7 @@ Includes samples and Nutiteq Maps SDK 3.0 for .NET platform:
 #Getting started
 ## Register license key
 
-Sign up in [developer.nutiteq.com](http://developer.nutiteq.com) and add an application. Select **xamarin-ios** or **xamarin-android** as application type, and make sure you enter same application ID as you have in your app. Finally you should get license code, which is a long string starting with *"XTU..."*. This is needed for your code
+Sign up in [developer.nutiteq.com](http://developer.nutiteq.com) and add an application. Select **xamarin-ios** or **xamarin-android** as application type, and make sure you enter same application ID as you have in your app (sample app ID is **com.nutiteq.hellomap.xamarin** for both platforms). Finally you should get license code, which is a long string starting with *"XTU..."*. This is needed for your code
 
 If you cover both platforms, register two apps.
 
