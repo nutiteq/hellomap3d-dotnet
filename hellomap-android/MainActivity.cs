@@ -8,7 +8,6 @@ using Android.Widget;
 using Android.OS;
 using Java.IO;
 
-using Nutiteq.PackageManager;
 using Nutiteq.Ui;
 using Nutiteq.Utils;
 
@@ -30,12 +29,11 @@ namespace HelloMap
 			SetContentView (Resource.Layout.Main);
 			var mapView = (MapView)FindViewById (Resource.Id.mapView);
 
-			// Create package manager (Platform-specific)
+			// Create package manager folder (Platform-specific)
 			var packageFolder = new File (GetExternalFilesDir(null), "packages");
 			if (!(packageFolder.Mkdirs() || packageFolder.IsDirectory)) {
 				Log.Fatal("Could not create package folder!");
 			}
-			var packageManager = new NutiteqPackageManager(this, "nutiteq.mbstreets", packageFolder.AbsolutePath);
 
 			// Copy bundled tile data to file system, so it can be imported by package manager
 			string importPackagePath = new File (GetExternalFilesDir (null), "world_ntvt_0_4.mbtiles").AbsolutePath;
@@ -46,7 +44,7 @@ namespace HelloMap
 			}
 
 			// Initialize map
-			MapSetup.InitializeMapView (packageManager, importPackagePath, mapView);
+			MapSetup.InitializeMapView (packageFolder.AbsolutePath, importPackagePath, mapView);
 		}
 	}
 }

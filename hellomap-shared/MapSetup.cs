@@ -16,7 +16,7 @@ namespace HelloMap
 {
 	public class MapSetup
 	{
-		public static void InitializeMapView(PackageManager packageManager, string importPackagePath, IMapView mapView)
+		public static void InitializeMapView(string packageFolder, string importPackagePath, IMapView mapView)
 		{
 			// Set base projection
 			EPSG3857 proj = new EPSG3857();
@@ -31,6 +31,7 @@ namespace HelloMap
 			// offline base layer
 
 			// 2. define listener, definition is in same class above
+			var packageManager = new NutiteqPackageManager("nutiteq.mbstreets", packageFolder);
 			packageManager.PackageManagerListener = new PackageListener(packageManager);
 
 			// Download new package list only if it is older than 24h
