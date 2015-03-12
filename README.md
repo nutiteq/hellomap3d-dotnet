@@ -25,7 +25,7 @@ Almost all of the map API related code: adding layers and objects to map, handli
 
 ## Android app#
 
-1) **Add Nutiteq SDK component** to your project
+1) **Add Nutiteq SDK component** to your project (from Xamarin Component store) or just copy the .dll files from Assemblies
 
 2) **Copy vector style file** (*osmbright.zip*) to your project *Assets* folder. You can take it from samples. This is needed for vector basemap.
 
@@ -85,7 +85,7 @@ public class MainActivity : Activity
 ## iOS app#
 
 
-1) **Add Nutiteq SDK component** to your project
+1) **Add Nutiteq SDK component** to your project (from Xamarin Component store) or just copy the .dll files from Assemblies
 
 2) **Copy vector style file** (*osmbright.zip*) to your project. You can take it from samples. This is needed for vector basemap.
 
