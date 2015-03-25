@@ -16,13 +16,13 @@ namespace HelloMap
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		GLKit.GLKView MapView { get; set; }
+		Nutiteq.Ui.MapView Map { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (MapView != null) {
-				MapView.Dispose ();
-				MapView = null;
+			if (Map != null) {
+				Map.Dispose ();
+				Map = null;
 			}
 		}
 	}

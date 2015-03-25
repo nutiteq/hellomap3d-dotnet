@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="5"/>
                         <viewControllerLayoutGuide type="bottom" id="6"/>
                     </layoutGuides>
-                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9" customClass="MapView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <connections>
@@ -20,7 +20,7 @@
                         </connections>
                     </glkView>
                     <connections>
-                        <outlet property="MapView" destination="9" id="name-outlet-9"/>
+                        <outlet property="Map" destination="9" id="name-outlet-9"/>
                     </connections>
                 </glkViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11" userLabel="First Responder" sceneMemberID="firstResponder"/>

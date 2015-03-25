@@ -26,6 +26,7 @@
     <MtouchI18n>
     </MtouchI18n>
     <OptimizePNGs>false</OptimizePNGs>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -58,9 +59,10 @@
     <MtouchI18n>
     </MtouchI18n>
     <OptimizePNGs>false</OptimizePNGs>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -72,6 +74,8 @@
     <MtouchI18n>
     </MtouchI18n>
     <OptimizePNGs>false</OptimizePNGs>
+    <IpaPackageName>
+    </IpaPackageName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>full</DebugType>

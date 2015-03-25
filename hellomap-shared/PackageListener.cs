@@ -49,10 +49,10 @@ namespace HelloMap
 			Log.Debug ("OnPackageUpdated");
 		}
 
-		public override void OnPackageFailed (string id, int version)
+		public override void OnPackageFailed (string id, int version, PackageErrorType errorType)
 		{
 			// Failed to download package " + id + "/" + version
-			Log.Debug ("OnPackageFailed");
+			Log.Debug ("OnPackageFailed: " + errorType);
 		}
 	}
 }

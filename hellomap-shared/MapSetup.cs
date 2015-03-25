@@ -81,9 +81,8 @@ namespace HelloMap
 
 			// Create line style, and line poses
 			var lineStyleBuilder = new LineStyleBuilder();
-			lineStyleBuilder.SetLineJointType(LineJointType.LineJointTypeRound);
-			lineStyleBuilder.SetStretchFactor(2);
-			lineStyleBuilder.SetWidth(8);
+			lineStyleBuilder.LineJointType = LineJointType.LineJointTypeRound;
+			lineStyleBuilder.Width = 8;
 
 			var linePoses = new MapPosVector ();
 			linePoses.Add(proj.FromWgs84(new MapPos(0, 0)));
@@ -95,10 +94,13 @@ namespace HelloMap
 
 			// Create balloon popup
 			var balloonPopupStyleBuilder = new BalloonPopupStyleBuilder();
-			balloonPopupStyleBuilder.SetCornerRadius(3);
-			balloonPopupStyleBuilder.SetStrokeColor(new Color(200, 120, 0, 255));
-			balloonPopupStyleBuilder.SetStrokeWidth(1);
-			balloonPopupStyleBuilder.SetPlacementPriority(1);
+			balloonPopupStyleBuilder.CornerRadius = 3;
+			balloonPopupStyleBuilder.TitleFontName = "Helvetica";
+			balloonPopupStyleBuilder.TitleFontSize = 55;
+			balloonPopupStyleBuilder.TitleColor = new Color(200,0,0,255);
+			balloonPopupStyleBuilder.StrokeColor = new Color(200, 120, 0, 255);
+			balloonPopupStyleBuilder.StrokeWidth = 1;
+			balloonPopupStyleBuilder.PlacementPriority = 1;
 			var popup = new BalloonPopup(
 				proj.FromWgs84(new MapPos(0, 20)),
 				balloonPopupStyleBuilder.BuildStyle(),

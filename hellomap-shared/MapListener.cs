@@ -23,7 +23,7 @@ namespace HelloMap
 		{
 			// Add default marker to the click location
 			var styleBuilder = new MarkerStyleBuilder ();
-			styleBuilder.SetSize (10);
+			styleBuilder.Size = 10;
 			var marker = new Marker (mapClickInfo.ClickPos, styleBuilder.BuildStyle());
 			_dataSource.Add (marker);
 		}
@@ -41,9 +41,9 @@ namespace HelloMap
 			var bitmap = new Bitmap (iconBytes, true);
 
 			var styleBuilder = new MarkerStyleBuilder ();
-			styleBuilder.SetSize (20);
-			styleBuilder.SetBitmap (bitmap);
-			styleBuilder.SetColor (new Nutiteq.Graphics.Color (200, 0, 200, 200));
+			styleBuilder.Size = 20;
+			styleBuilder.Bitmap = bitmap;
+			styleBuilder.Color = new Nutiteq.Graphics.Color (200, 0, 200, 200);
 			var marker = new Marker (vectorElementsClickInfo.VectorElementClickInfos[0].ClickPos, styleBuilder.BuildStyle());
 			_dataSource.Add (marker);
 		}

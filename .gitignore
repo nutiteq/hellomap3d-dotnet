@@ -24,3 +24,8 @@ proguard/
 
 # Log Files
 *.log
+
+# Obj files
+hellomap-ios/obj
+hellomap-android/obj
+
