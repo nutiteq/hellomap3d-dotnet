@@ -47,7 +47,7 @@ Almost all of the map API related code: adding layers and objects to map, handli
 
 4) **Create MapView object, add a base layer** 
 
-You you can load layout from axml and load the MapView from Layout, or create it with code. Definition of base layer is enough for minimal map configuration.
+You you can load layout from a xml and load the MapView from Layout, or create it with code. Definition of base layer is enough for minimal map configuration.
 
 ```csharp
 using Nutiteq.Ui;
@@ -89,7 +89,9 @@ public class MainActivity : Activity
 
 2) **Copy vector style file** (*osmbright.zip*) to your project. You can take it from samples. This is needed for vector basemap.
 
-3) **Add Map object to app view**. When using Storyboards, use *OpenGL ES View Controller* as a template for the map. Remember to connect *MainViewController* (the name of the class below) as controller class.
+3) **Add Map object to app view**. When using Storyboards, use *OpenGL ES View Controller* (GLKit.GLKViewController)
+as a template for the map and replace *GLKView* with *MapView* as the underlying view class.
+In the example below, it is assumed that the outlet name of the map view is *Map*.
 
 4) **Initiate map, set base layer**
 
@@ -100,34 +102,43 @@ using Nutiteq.Ui;
 using Nutiteq.Layers;
 using Nutiteq.DataSources;
 
-partial class MainViewController : MapViewController
+public class MainViewController : GLKit.GLKViewController
 {
 
 	public override void ViewDidLoad ()
 	{
 		base.ViewDidLoad ();
 
+                // GLKViewController-specific parameters for smoother animations
+                ResumeOnDidBecomeActive = false;
+                PreferredFramesPerSecond = 60;
+
 		// Register license BEFORE creating MapView 
 		MapView.RegisterLicense("YOUR_LICENSE_KEY");
 
-		/// Online vector base layer
+		// Online vector base layer
 		var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 
-		/// Note that "this" is the MapViewController itself, it is based on IMapView interface which is shared with Android MapView class.
-		/// mapView is used here to keep code same with Android
-		var mapView = this;
-
-		/// Set online base layer
-		mapView.Layers.Add(baseLayer);
-
+		// Set online base layer.
+                // Note: assuming here that Map is an outlet added to the controller.
+		Map.Layers.Add(baseLayer);
 	}
+
+        public override void ViewWillAppear(bool animated) {
+                base.ViewWillAppear (animated);
+
+                // GLKViewController-specific, do on-demand rendering instead of constant redrawing
+                // This is VERY IMPORTANT as it stops battery drain when nothing changes on the screen!
+                Paused = true;
+        }
+
 ```
 
 
 
 ## Android and iOS common map code #
 
-3) **Add a marker** to map, to given coordinates. Add following after creating mapView.
+1) **Add a marker** to map, to given coordinates. Add following after creating mapView.
 
 You must have *Icon.png* in your Assets folder to set bitmap
 
