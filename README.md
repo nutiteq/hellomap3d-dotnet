@@ -104,14 +104,13 @@ using Nutiteq.DataSources;
 
 public class MainViewController : GLKit.GLKViewController
 {
-
 	public override void ViewDidLoad ()
 	{
 		base.ViewDidLoad ();
 
-                // GLKViewController-specific parameters for smoother animations
-                ResumeOnDidBecomeActive = false;
-                PreferredFramesPerSecond = 60;
+		// GLKViewController-specific parameters for smoother animations
+		ResumeOnDidBecomeActive = false;
+		PreferredFramesPerSecond = 60;
 
 		// Register license BEFORE creating MapView 
 		MapView.RegisterLicense("YOUR_LICENSE_KEY");
@@ -120,17 +119,18 @@ public class MainViewController : GLKit.GLKViewController
 		var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 
 		// Set online base layer.
-                // Note: assuming here that Map is an outlet added to the controller.
+		// Note: assuming here that Map is an outlet added to the controller.
 		Map.Layers.Add(baseLayer);
 	}
 
-        public override void ViewWillAppear(bool animated) {
-                base.ViewWillAppear (animated);
+	public override void ViewWillAppear(bool animated)
+	{
+		base.ViewWillAppear (animated);
 
-                // GLKViewController-specific, do on-demand rendering instead of constant redrawing
-                // This is VERY IMPORTANT as it stops battery drain when nothing changes on the screen!
-                Paused = true;
-        }
+		// GLKViewController-specific, do on-demand rendering instead of constant redrawing
+		// This is VERY IMPORTANT as it stops battery drain when nothing changes on the screen!
+		Paused = true;
+	}
 
 ```
 
