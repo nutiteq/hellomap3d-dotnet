@@ -5,7 +5,7 @@ Includes samples and Nutiteq Maps SDK 3.0 for .NET platform:
 * iOS (Xamarin)
 * Windows Phone (Visual Studio, coming)
 
-**This is currently non-commercial preview version**
+**Update:** Same samples are available in [Xamarin Store Nutiteq SDK component](https://components.xamarin.com/view/NutiteqMapsSDK) release. This github project has updated development version.
 
 #Getting started
 ## Register license key
