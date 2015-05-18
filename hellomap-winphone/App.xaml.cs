@@ -53,8 +53,12 @@ namespace HelloMap
         {
 			if (mPage == null)
 			{
+                Nutiteq.Utils.Log.ShowDebug = true;
+                Nutiteq.Utils.Log.ShowInfo = true;
+                Nutiteq.Utils.Log.ShowError = true;
+
                 // Register Nutiteq app license
-				Nutiteq.Ui.MapView.RegisterLicense("XTUN3Q0ZBd2NtcmFxbUJtT1h4QnlIZ2F2ZXR0Mi9TY2JBaFJoZDNtTjUvSjJLay9aNUdSVjdnMnJwVXduQnc9PQoKcHJvZHVjdHM9c2RrLWlvcy0zLiosc2RrLWFuZHJvaWQtMy4qCnBhY2thZ2VOYW1lPWNvbS5udXRpdGVxLioKYnVuZGxlSWRlbnRpZmllcj1jb20ubnV0aXRlcS4qCndhdGVybWFyaz1ldmFsdWF0aW9uCnVzZXJLZXk9MTVjZDkxMzEwNzJkNmRmNjhiOGE1NGZlZGE1YjA0OTYK");
+               var licenseOk = Nutiteq.Ui.MapView.RegisterLicense("XTUMwQ0ZRQ0F5OWt6Sk5qcFlVZk5LSXJ3bGh6YnZ3cnpEd0lVSXE1M3dDVUl1MHR3amZROGNDRmJwQWN5dUVRPQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4taW9zLTMuKixzZGsteGFtYXJpbi1hbmRyb2lkLTMuKixzZGstZ2lzZXh0ZW5zaW9uLHNkay13aW5waG9uZS0zLioKcGFja2FnZU5hbWU9Y29tLm51dGl0ZXEuaGVsbG9tYXAueGFtYXJpbgpidW5kbGVJZGVudGlmaWVyPWNvbS5udXRpdGVxLmhlbGxvbWFwLnhhbWFyaW4KcHJvZHVjdElkPWM4ODJkMzhhLTVjMDktNDk5NC04N2YwLTg5ODc1Y2RlZTUzOQp3YXRlcm1hcms9bnV0aXRlcQp2YWxpZFVudGlsPTIwMTUtMDktMDEKdXNlcktleT0yYTllOWY3NDYyY2VmNDgxYmUyYThjMTI2MWZlNmNiZAo=");
 
                 // Get asset folder for mbtiles file
                 var importPackageName = Path.Combine(Windows.ApplicationModel.Package.Current.InstalledLocation.Path, "Assets\\world_ntvt_0_4.mbtiles");
