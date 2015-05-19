@@ -141,8 +141,8 @@
     <BundleResource Include="..\hellomap-android\Assets\Icon.png">
       <Link>Resources\Icon.png</Link>
     </BundleResource>
-    <BundleResource Include="..\..\hellomap3d-android\com.nutiteq.advancedmap3\assets\world_ntvt_0_4.mbtiles">
-      <Link>Resources\world_ntvt_0_4.mbtiles</Link>
-    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\world_ntvt_0_4.mbtiles" />
   </ItemGroup>
 </Project>
