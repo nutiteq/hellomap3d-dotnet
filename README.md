@@ -138,7 +138,7 @@ public class MainViewController : GLKit.GLKViewController
 
 ## Windows Phone app (Visual Studio)#
 
-Nutiteq SDK 3.1 requires **Windows Phone 8.1.**. It is tested with free **Visual Studio Community 2013** and **Windows 8.1 as developent** PC.
+Nutiteq SDK 3.1 requires **Windows Phone 8.1**. It is tested with free **Visual Studio Community 2013** and **Windows 8.1 as developent** PC.
 
 1) **Import Nutiteq SDK VSIX** to your Visual Studio. Download it from SDK Downloads, and just run it to install.
 
