@@ -111,6 +111,9 @@
     <Reference Include="NutiteqMapsSDK.iOS">
       <HintPath>Assemblies\NutiteqMapsSDK.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -123,6 +126,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -141,8 +145,17 @@
     <BundleResource Include="..\hellomap-android\Assets\Icon.png">
       <Link>Resources\Icon.png</Link>
     </BundleResource>
+    <BundleResource Include="Resources\world_countries.mbtiles" />
+    <BundleResource Include="Resources\water.png" />
+    <BundleResource Include="Resources\capitals_3857.geojson" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Resources\world_ntvt_0_4.mbtiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <Version>6.0.8.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>
