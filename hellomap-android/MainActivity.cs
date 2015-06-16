@@ -10,6 +10,7 @@ using Java.IO;
 
 using Nutiteq.Ui;
 using Nutiteq.Utils;
+using Nutiteq.Layers;
 
 namespace HelloMap
 {
@@ -23,7 +24,7 @@ namespace HelloMap
 			// Register license
 			Nutiteq.Utils.Log.ShowError = true;
 			Nutiteq.Utils.Log.ShowWarn = true;
-			MapView.RegisterLicense("XTUMwQ0ZRQzdURnJKck9HYUdhT09VNGFSN3o3Nmg3UWhjQUlVTnV4TStMMk0vemhPMXUwUnBGRlhwbmFtTklFPQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4taW9zLTMuKixzZGsteGFtYXJpbi1hbmRyb2lkLTMuKgpwYWNrYWdlTmFtZT1jb20ubnV0aXRlcS5oZWxsb21hcC54YW1hcmluCmJ1bmRsZUlkZW50aWZpZXI9Y29tLm51dGl0ZXEuaGVsbG9tYXAueGFtYXJpbgp3YXRlcm1hcms9bnV0aXRlcQp2YWxpZFVudGlsPTIwMTUtMDYtMDEKdXNlcktleT0yYTllOWY3NDYyY2VmNDgxYmUyYThjMTI2MWZlNmNiZAo", ApplicationContext);
+			MapView.RegisterLicense("XTUMwQ0ZEeFpTU0piNCs0M05lcHM2eVdKSFd3SWNQdHBBaFVBbzk0K1VuUjNMWG9vc1JsOGthbHNBYjJ5RnBVPQoKcHJvZHVjdHM9c2RrLXhhbWFyaW4tYW5kcm9pZC0zLioKcGFja2FnZU5hbWU9Y29tLm51dGl0ZXEuaGVsbG9tYXAueGFtYXJpbgp3YXRlcm1hcms9bnV0aXRlcQp1c2VyS2V5PTE1Y2Q5MTMxMDcyZDZkZjY4YjhhNTRmZWRhNWIwNDk2Cg==", ApplicationContext);
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
@@ -44,7 +45,12 @@ namespace HelloMap
 			}
 
 			// Initialize map
-			MapSetup.InitializeMapView (packageFolder.AbsolutePath, importPackagePath, mapView);
+			//MapSetup.InitializeMapView (packageFolder.AbsolutePath, importPackagePath, mapView);
+
+		
+			/// Set online base layer
+			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+			mapView.Layers.Add(baseLayer);
 
 			// read json from assets and add to map
 			string json;
