@@ -45,6 +45,15 @@ namespace HelloMap
 
 			// Initialize map
 			MapSetup.InitializeMapView (packageFolder.AbsolutePath, importPackagePath, mapView);
+
+			// read json from assets and add to map
+			string json;
+			using (System.IO.StreamReader sr = new System.IO.StreamReader (Assets.Open ("capitals_3857.geojson")))
+			{
+				json = sr.ReadToEnd ();
+			}
+
+			MapSetup.addJosnLayer (mapView, json);
 		}
 	}
 }
