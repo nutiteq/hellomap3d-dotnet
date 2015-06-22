@@ -7,7 +7,7 @@ using Nutiteq.WrappedCommons;
 using Nutiteq.Utils;
 using Nutiteq.Graphics;
 
-namespace HelloMap
+namespace NutiteqSample
 {
 
 	public class MapListener : MapEventListener

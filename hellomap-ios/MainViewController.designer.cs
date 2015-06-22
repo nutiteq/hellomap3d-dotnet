@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace HelloMap
+namespace NutiteqSample
 {
 	[Register ("MainViewController")]
 	partial class MainViewController

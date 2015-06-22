@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{FAB116EB-6741-489E-884E-3E7D0D3D0DE8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HelloMap</RootNamespace>
+    <RootNamespace>NutiteqSample</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>hellomap-ios</AssemblyName>
   </PropertyGroup>

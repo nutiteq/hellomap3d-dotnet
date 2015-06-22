@@ -15,7 +15,7 @@ using Nutiteq.VectorTiles;
 using Nutiteq.Graphics;
 using Nutiteq.Geometry;
 
-namespace HelloMap
+namespace NutiteqSample
 {
 	partial class MainViewController : GLKit.GLKViewController
 	{
@@ -44,14 +44,22 @@ namespace HelloMap
 
 
 			// Initialize map
+			string downloadArea = "bbox(-0.8164,51.2382,0.6406,51.7401)"; // London (about 30MB)
+			string downloadId = "EE"; // one of ID-s from https://developer.nutiteq.com/guides/packages
+
+			// decice what to download offline
+			var toBeDownloaded = downloadId;
+
 			string importPackagePath = AssetUtils.CalculateResourcePath ("world_ntvt_0_4.mbtiles");
-			MapSetup.InitializeMapView (packagesDir, importPackagePath, Map);
+			MapSetup.InitializePackageManager (packagesDir, importPackagePath, Map, toBeDownloaded);
 
 			/// Online vector base layer
 //			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 
 			/// Set online base layer
 //			Map.Layers.Add(baseLayer);
+
+			MapSetup.AddMapOverlays (Map);
 
 			var json = System.IO.File.ReadAllText(AssetUtils.CalculateResourcePath("capitals_3857.geojson"));
 

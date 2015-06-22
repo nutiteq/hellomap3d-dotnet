@@ -14,33 +14,38 @@ using Nutiteq.VectorTiles;
 using Newtonsoft.Json.Linq;
 using Nutiteq.Geometry;
 
-namespace HelloMap
+namespace NutiteqSample
 {
 	public class MapSetup
 	{
-		public static void InitializeMapView(string packageFolder, string importPackagePath, IMapView mapView)
-		{
-			// Set base projection
-			EPSG3857 proj = new EPSG3857();
-			mapView.Options.BaseProjection = proj; // note: EPSG3857 is the default, so this is actually not required
 
+		// Set base projection
+		public static EPSG3857 proj = new EPSG3857();
+
+		public static void InitLocation(IMapView mapView){
+			
 			// Set initial location and other parameters, don't animate
 			mapView.FocusPos = proj.FromWgs84(new MapPos(-0.8164,51.2383)); // Berlin
 			mapView.Zoom = 2;
 			mapView.MapRotation = 0;
 			mapView.Tilt = 90;
+		}
+
+
+		public static void InitializePackageManager(string packageFolder, string importPackagePath, IMapView mapView,string downloadedPackage )
+		{
 
 			// offline base layer
 
 			// 2. define listener, definition is in same class above
 			var packageManager = new NutiteqPackageManager("nutiteq.mbstreets", packageFolder);
-			packageManager.PackageManagerListener = new PackageListener(packageManager);
+			packageManager.PackageManagerListener = new PackageListener(packageManager, downloadedPackage);
 
 			// Download new package list only if it is older than 24h
 			// Note: this is only needed if pre-made packages are used
-			//	if (packageManager.ServerPackageListAge > 24 * 60 * 60) {
-			//		packageManager.StartPackageListDownload ();
-			//	}
+			if (packageManager.ServerPackageListAge > 24 * 60 * 60) {
+					packageManager.StartPackageListDownload ();
+			}
 
 			// start manager - mandatory
 			packageManager.Start ();
@@ -49,14 +54,7 @@ namespace HelloMap
 			if (packageManager.GetLocalPackage("world0_4") == null) {
 				packageManager.StartPackageImport ("world0_4", 1, importPackagePath);
 			}
-
-			// bounding box download can be done now
-			// for country package download see OnPackageListUpdated in PackageListener
-			String bbox = "bbox(-0.8164,51.2382,0.6406,51.7401)"; // London (about 30MB)
-			if (packageManager.GetLocalPackage(bbox) == null) {
-				packageManager.StartPackageDownload (bbox);
-			}
-
+				
 			// Now can add vector map as layer
 			// define styling for vector map
 			UnsignedCharVector styleBytes = AssetUtils.LoadBytes("osmbright.zip");
@@ -75,6 +73,25 @@ namespace HelloMap
 
 			var baseLayer = new VectorTileLayer(new PackageManagerTileDataSource(packageManager),vectorTileDecoder);
 			mapView.Layers.Add(baseLayer);
+
+		}
+
+
+		public static void StartBboxDownload(NutiteqPackageManager packageManager){
+
+			// bounding box download can be done now
+			// for country package download see OnPackageListUpdated in PackageListener
+			String bbox = "bbox(-0.8164,51.2382,0.6406,51.7401)"; // London (about 30MB)
+			if (packageManager.GetLocalPackage(bbox) == null) {
+				packageManager.StartPackageDownload (bbox);
+			}
+
+
+		}
+
+
+		public static void AddMapOverlays(IMapView mapView)
+		{
 
 			// Create overlay layer for markers
 			var dataSource = new LocalVectorDataSource (proj);

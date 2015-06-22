@@ -1,16 +1,18 @@
 ﻿using Nutiteq.PackageManager;
 using Nutiteq.Utils;
 
-namespace HelloMap
+namespace NutiteqSample
 {
 
 	public class PackageListener : PackageManagerListener
 	{
 		private PackageManager _packageManager;
+		private string _downloadedPackage;
 
-		public PackageListener (PackageManager packageManager)
+		public PackageListener (PackageManager packageManager, string downloadedPackage)
 		{
 			_packageManager = packageManager;
+			_downloadedPackage = downloadedPackage;
 		}
 
 		public override void OnPackageListUpdated ()
@@ -20,8 +22,8 @@ namespace HelloMap
 			Log.Debug ("OnPackageListUpdated");
 
 			// to make sure that package list is updated, full package download is called here
-			//			if(_packageManager.GetLocalPackage("EE") == null)
-			//				_packageManager.StartPackageDownload ("EE");
+			if(_packageManager.GetLocalPackage(_downloadedPackage) == null)
+				_packageManager.StartPackageDownload (_downloadedPackage);
 		}
 
 		public override void OnPackageListFailed ()

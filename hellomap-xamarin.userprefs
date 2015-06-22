@@ -1,26 +1,39 @@
 ﻿<Properties StartupItem="hellomap-ios/hellomap-ios.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.3" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="hellomap-android/OnlineMap.cs">
     <Files>
-      <File FileName="hellomap-ios/MainViewController.cs" Line="56" Column="89" />
-      <File FileName="hellomap-android/MainActivity.cs" Line="54" Column="6" />
-      <File FileName="hellomap-shared/MapSetup.cs" Line="122" Column="49" />
+      <File FileName="hellomap-ios/MainViewController.cs" Line="61" Column="4" />
+      <File FileName="hellomap-android/BaseMapActivity.cs" Line="36" Column="1" />
+      <File FileName="hellomap-shared/MapSetup.cs" Line="35" Column="46" />
+      <File FileName="hellomap-android/OfflineMap.cs" Line="36" Column="4" />
+      <File FileName="hellomap-shared/PackageListener.cs" Line="12" Column="58" />
+      <File FileName="hellomap-android/LauncherListActivity.cs" Line="35" Column="41" />
+      <File FileName="hellomap-android/OnlineMap.cs" Line="12" Column="28" />
+      <File FileName="hellomap-ios/Main.cs" Line="11" Column="4" />
+      <File FileName="hellomap-ios/AppDelegate.cs" Line="14" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="hellomap-xamarin" expanded="True">
-            <Node name="hellomap-android" expanded="True">
-              <Node name="References" expanded="True">
-                <Node name="NutiteqMapsSDK.Android" selected="True" />
-              </Node>
-              <Node name="ComponentReferenceFolder" expanded="True" />
-            </Node>
-            <Node name="hellomap-ios" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="ComponentReferenceFolder" expanded="True" />
+            <Node name="hellomap-android" expanded="True" />
+            <Node name="hellomap-ios" expanded="True" selected="True">
+              <Node name="MainViewController.cs" expanded="True" />
             </Node>
             <Node name="hellomap-shared" expanded="True" />
+          </Node>
+          <Node name="NutiteqSDK-private" expanded="True">
+            <Node name="Nutiteq.AdvancedMap3D" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
+              <Node name="src" expanded="True">
+                <Node name="Activities" expanded="True" />
+                <Node name="Listeners" expanded="True" />
+                <Node name="RasterDataSources" expanded="True" />
+                <Node name="Search" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>

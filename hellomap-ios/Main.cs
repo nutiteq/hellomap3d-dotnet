@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace HelloMap
+namespace NutiteqSample
 {
 	public class Application
 	{
