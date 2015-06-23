@@ -59,6 +59,7 @@
     <Compile Include="OnlineMap.cs" />
     <Compile Include="ClusteredGeoJSONCaptitals.cs" />
     <Compile Include="MapOverlays.cs" />
+    <Compile Include="GpsLocationMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -75,6 +76,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\list.axml" />
+    <AndroidResource Include="Resources\layout\MainGPS.axml" />
   </ItemGroup>
   <Import Project="..\hellomap-shared\hellomap-shared.projitems" Label="Shared" Condition="Exists('..\hellomap-shared\hellomap-shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

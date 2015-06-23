@@ -63,6 +63,9 @@ namespace HelloMap
 			// aapt resource value: 0x7f050000
 			public const int mapView = 2131034112;
 			
+			// aapt resource value: 0x7f050001
+			public const int textViewMessage = 2131034113;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -81,6 +84,9 @@ namespace HelloMap
 			
 			// aapt resource value: 0x7f030001
 			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int MainGPS = 2130903042;
 			
 			static Layout()
 			{

@@ -32,7 +32,8 @@ namespace NutiteqSample
 					typeof ( OfflineMap ),
 					typeof ( OnlineMap ),
 					typeof ( MapOverlays ),
-					typeof ( ClusteredGeoJSONCaptitals)
+					typeof ( ClusteredGeoJSONCaptitals),
+					typeof ( GpsLocationMap)
 													}
 			                                  );
 

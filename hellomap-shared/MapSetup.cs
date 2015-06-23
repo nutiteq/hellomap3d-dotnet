@@ -85,8 +85,6 @@ namespace NutiteqSample
 			if (packageManager.GetLocalPackage(bbox) == null) {
 				packageManager.StartPackageDownload (bbox);
 			}
-
-
 		}
 
 
