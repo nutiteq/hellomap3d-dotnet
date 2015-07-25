@@ -120,7 +120,7 @@
     <SDKReference Include="Microsoft.VCLibs, Version=12.0">
       <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Phone</Name>
     </SDKReference>
-    <SDKReference Include="NutiteqMapsSDK.WinPhone, Version=3.1">
+    <SDKReference Include="NutiteqMapsSDK.WinPhone, Version=3.2">
       <Name>Nutiteq Maps SDK for Windows Phone</Name>
     </SDKReference>
   </ItemGroup>
@@ -128,6 +128,14 @@
     <Content Include="..\hellomap-android\Assets\world_ntvt_0_4.mbtiles">
       <Link>Assets\world_ntvt_0_4.mbtiles</Link>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\hellomap-shared\hellomap-shared.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

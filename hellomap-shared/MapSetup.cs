@@ -32,8 +32,7 @@ namespace NutiteqSample
 		}
 
 
-		public static void InitializePackageManager(string packageFolder, string importPackagePath, IMapView mapView,string downloadedPackage )
-		{
+		public static void InitializePackageManager(string packageFolder, string importPackagePath, IMapView mapView,string downloadedPackage ) {
 
 			// offline base layer
 
@@ -77,7 +76,7 @@ namespace NutiteqSample
 		}
 
 
-		public static void StartBboxDownload(NutiteqPackageManager packageManager){
+		public static void StartBboxDownload(NutiteqPackageManager packageManager) {
 
 			// bounding box download can be done now
 			// for country package download see OnPackageListUpdated in PackageListener
@@ -88,8 +87,7 @@ namespace NutiteqSample
 		}
 
 
-		public static void AddMapOverlays(IMapView mapView)
-		{
+		public static void AddMapOverlays(IMapView mapView) {
 
 			// Create overlay layer for markers
 			var dataSource = new LocalVectorDataSource (proj);
@@ -105,7 +103,6 @@ namespace NutiteqSample
 			linePoses.Add(proj.FromWgs84(new MapPos(0, 0)));
 			linePoses.Add(proj.FromWgs84(new MapPos(0, 80)));
 			linePoses.Add(proj.FromWgs84(new MapPos(45, 45)));
-
 			var line = new Line (linePoses, lineStyleBuilder.BuildStyle ());
 			dataSource.Add (line);
 
@@ -123,7 +120,6 @@ namespace NutiteqSample
 				balloonPopupStyleBuilder.BuildStyle(),
 				"Title", "Description");
 			dataSource.Add(popup);
-
 
 			// Create and set map listener
 			mapView.MapEventListener = new MapListener (dataSource);
@@ -175,7 +171,7 @@ namespace NutiteqSample
 	{
 		BalloonPopupStyleBuilder balloonPopupStyleBuilder;
 
-		public MyClusterElementBuilder(){
+		public MyClusterElementBuilder() {
 			balloonPopupStyleBuilder = new BalloonPopupStyleBuilder();
 			balloonPopupStyleBuilder.CornerRadius = 3;
 			balloonPopupStyleBuilder.TitleMargins = new BalloonPopupMargins (6, 6, 6, 6);

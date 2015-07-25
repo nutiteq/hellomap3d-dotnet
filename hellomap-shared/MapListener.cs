@@ -37,8 +37,7 @@ namespace NutiteqSample
 			// A note about iOS: DISABLE 'Optimize PNG files for iOS' option in iOS build settings,
 			// otherwise icons can not be loaded using AssetUtils/Bitmap constructor as Xamarin converts
 			// PNGs to unsupported custom format.
-			UnsignedCharVector iconBytes = AssetUtils.LoadBytes("Icon.png");
-			var bitmap = new Bitmap (iconBytes, true);
+			var bitmap = BitmapUtils.LoadBitmapFromAssets("Icon.png", true);
 
 			var styleBuilder = new MarkerStyleBuilder ();
 			styleBuilder.Size = 20;
