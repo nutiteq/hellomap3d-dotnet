@@ -44,20 +44,19 @@ namespace NutiteqSample
 
 
 			// Initialize map
-			string downloadArea = "bbox(-0.8164,51.2382,0.6406,51.7401)"; // London (about 30MB)
-			string downloadId = "EE"; // one of ID-s from https://developer.nutiteq.com/guides/packages
-
-			// decice what to download offline
-			var toBeDownloaded = downloadId;
-
-			string importPackagePath = AssetUtils.CalculateResourcePath ("world_ntvt_0_4.mbtiles");
-			MapSetup.InitializePackageManager (packagesDir, importPackagePath, Map, toBeDownloaded);
+//			string downloadArea = "bbox(-0.8164,51.2382,0.6406,51.7401)"; // London (about 30MB)
+//			string downloadId = "EE"; // one of ID-s from https://developer.nutiteq.com/guides/packages
+//
+			// Decide what to download offline
+//			var toBeDownloaded = downloadId;
+//			string importPackagePath = AssetUtils.CalculateResourcePath ("world_ntvt_0_4.mbtiles");
+//			MapSetup.InitializePackageManager (packagesDir, importPackagePath, Map, toBeDownloaded);
 
 			/// Online vector base layer
-//			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 
 			/// Set online base layer
-//			Map.Layers.Add(baseLayer);
+			Map.Layers.Add(baseLayer);
 
 			MapSetup.AddMapOverlays (Map);
 

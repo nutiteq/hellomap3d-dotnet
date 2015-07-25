@@ -16,11 +16,7 @@ namespace NutiteqSample
 			/// Set online base layer
 			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 			mapView.Layers.Add(baseLayer);
-
-
 		}
-
-
 	}
 }
 
