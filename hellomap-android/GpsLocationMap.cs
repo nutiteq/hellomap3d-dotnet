@@ -57,15 +57,15 @@ namespace NutiteqSample
 		{
 			base.OnCreate (savedInstanceState);
 
-			/// Set our view from the "mainGPS" layout resource, reload MapView
+			// Set our view from the "mainGPS" layout resource, reload MapView
 			SetContentView ( Resource.Layout.MainGPS);
 			mapView = (MapView)FindViewById (Resource.Id.mapView);
 
-			/// Set online base layer
+			// Set online base layer
 			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 			mapView.Layers.Add(baseLayer);
 
-			///bind the textViewMessage
+			// bind the textViewMessage
 			_textViewMessage = FindViewById<TextView> ( Resource.Id.textViewMessage );
 
 			// create layer and add object to the layer, finally add layer to the map. 
@@ -74,7 +74,7 @@ namespace NutiteqSample
 			var _markerLayer = new VectorLayer (_markerDataSource);
 			mapView.Layers.Add (_markerLayer);
 
-			///inizialize the location manager to get the current position
+			// inizialize the location manager to get the current position
 			InitializeLocationManager ();
 
 		}
@@ -83,7 +83,7 @@ namespace NutiteqSample
 		{
 			base.OnPause ();
 
-			///remove the update of the position to save battery
+			// remove the update of the position to save battery
 			if ( ( _locationManager != null ) && ( !String.IsNullOrEmpty ( _locationProvider ) ) ) 
 			{
 				_locationManager.RemoveUpdates(this);
@@ -95,35 +95,30 @@ namespace NutiteqSample
 		{
 			base.OnResume ();
 
-			///request updated position
+			// request updated position
 			if ( ( _locationManager != null ) && (!String.IsNullOrEmpty ( _locationProvider ) ) ) 
 			{
 				_locationManager.RequestLocationUpdates ( _locationProvider, 0, 0, this );
 			}
 		}
 
-		/// <summary>
-		/// It Adds a Marker in the map for the current location
-		/// </summary>
-		/// <param name="location">Location.</param>
-
 		void AddMarker ( string currentPositionTitle, string currentPositionSubtitle, float latitude, float longitude )
 		{
 
-			/// Define the location of the marker, it must be converted to base map coordinate system
+			// Define the location of the marker, it must be converted to base map coordinate system
 			MapPos currentLocation = mapView.Options.BaseProjection.FromWgs84 ( new MapPos(longitude, latitude) );
 
-			///load default market style
+			// load default market style
 			MarkerStyleBuilder markerStyleBuilder = new MarkerStyleBuilder();
 
-			/// add the label to the Marker
+			// add the label to the Marker
 			_currentPositionMarker = new Marker ( currentLocation, markerStyleBuilder.BuildStyle());
 
-			/// Define label what is shown when you click on marker, with default style
+			// Define label what is shown when you click on marker, with default style
 			var balloonPopupStyleBuilder = new BalloonPopupStyleBuilder();
 			_currentPositionMarkerLabel = new BalloonPopup (_currentPositionMarker, balloonPopupStyleBuilder.BuildStyle(), currentPositionTitle, currentPositionSubtitle );
 					
-			/// add the marker and label to the layer
+			// add the marker and label to the layer
 			_markerDataSource.Add ( _currentPositionMarker );
 			_markerDataSource.Add ( _currentPositionMarkerLabel );
 
@@ -218,7 +213,7 @@ namespace NutiteqSample
 		/// </summary>
 		void LocationNotFound ()
 		{
-			///the error message appears o the screen
+			// the error message appears o the screen
 			_textViewMessage.Visibility = ViewStates.Visible;
 		}
 

@@ -18,7 +18,6 @@ namespace NutiteqSample
 {
 	public class MapSetup
 	{
-
 		// Set base projection
 		public static EPSG3857 proj = new EPSG3857();
 

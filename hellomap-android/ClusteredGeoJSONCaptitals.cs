@@ -13,7 +13,7 @@ namespace NutiteqSample
 		{
 			base.OnCreate (savedInstanceState);
 
-			/// Set online base layer
+			// Set online base layer
 			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
 			mapView.Layers.Add(baseLayer);
 
@@ -25,11 +25,7 @@ namespace NutiteqSample
 			}
 
 			MapSetup.addJosnLayer (mapView, json);
-
-
 		}
-
-
 	}
 }
 

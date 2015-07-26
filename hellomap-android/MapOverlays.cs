@@ -18,10 +18,7 @@ namespace NutiteqSample
 			mapView.Layers.Add(baseLayer);
 
 			MapSetup.AddMapOverlays (mapView);
-
 		}
-
-
 	}
 }
 
