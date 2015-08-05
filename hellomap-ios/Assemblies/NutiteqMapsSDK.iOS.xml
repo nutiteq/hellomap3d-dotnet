@@ -455,6 +455,10 @@
             For example, if basePath = "t{zoom}_{x}_{y}.png" and the requested tile has zoom == 2,
             x == 1 and y == 3, then the tile will be loaded from the following path: "t2_1_2.png".
             </summary></member>
+        <member name="M:Nutiteq.DataSources.AssetTileDataSource.SwigCreatePolymorphicInstanceAssetTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.AssetTileDataSource.#ctor(System.Int32,System.Int32,System.String)">
             <summary>
             Constructs an AssetTileDataSource object.
@@ -463,13 +467,15 @@
             <param name="maxZoom"> The maximum zoom level supported by this data source.</param>
             <param name="basePath"> The base path containing tags (for example, "t{zoom}_{x}_{y}.png").</param></member>
         <member name="M:Nutiteq.DataSources.AssetTileDataSource.SwigGetClassNameAssetTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.AssetTileDataSource.SwigGetDirectorObjectAssetTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Utils.AssetUtils">
             <summary>
             A helper class for managing application-bundled assets.
@@ -495,6 +501,10 @@
         <member name="T:Nutiteq.VectorElements.BalloonPopup">
             <summary>
             A highly configurable popup implementation that allows the user to specify a title, description, colors, images, font sizes etc.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.BalloonPopup.SwigCreatePolymorphicInstanceBalloonPopup(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.BalloonPopup.Style">
             <summary>
@@ -538,13 +548,15 @@
             </summary>
             <returns>The new style that defines what this balloon popup looks like.</returns></member>
         <member name="M:Nutiteq.VectorElements.BalloonPopup.SwigGetClassNameBalloonPopup">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.BalloonPopup.SwigGetDirectorObjectBalloonPopup">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.BalloonPopupMargins">
             <summary>
             Margins info for balloon popup.
@@ -552,6 +564,10 @@
         <member name="T:Nutiteq.Styles.BalloonPopupStyle">
             <summary>
             A style for balloon popups. Contains attributes for configuring how the balloon popup is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.BalloonPopupStyle.SwigCreatePolymorphicInstanceBalloonPopupStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.BalloonPopupStyle.#ctor(Nutiteq.Graphics.Color,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Int32,System.Boolean,System.Int32,Nutiteq.Graphics.Color,Nutiteq.Graphics.Bitmap,Nutiteq.Styles.BalloonPopupMargins,Nutiteq.Graphics.Color,Nutiteq.Graphics.Bitmap,Nutiteq.Styles.BalloonPopupMargins,Nutiteq.Graphics.Color,System.String,System.Int32,Nutiteq.Styles.BalloonPopupMargins,System.Boolean,Nutiteq.Graphics.Color,System.String,System.Int32,Nutiteq.Styles.BalloonPopupMargins,System.Boolean,Nutiteq.Graphics.Color,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -589,16 +605,22 @@
             <param name="triangleWidth"> The width of the triangle at the bottom of the popup in dp.</param>
             <param name="triangleHeight"> The height of the triangle at the bottom of the popup in dp.</param></member>
         <member name="M:Nutiteq.Styles.BalloonPopupStyle.SwigGetClassNameBalloonPopupStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.BalloonPopupStyle.SwigGetDirectorObjectBalloonPopupStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.BalloonPopupStyleBuilder">
             <summary>
             A builder class for BalloonPopupStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.BalloonPopupStyleBuilder.SwigCreatePolymorphicInstanceBalloonPopupStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.BalloonPopupStyleBuilder.#ctor">
             <summary>
@@ -610,13 +632,15 @@
             </summary>
             <returns>A new BalloonPopupStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.BalloonPopupStyleBuilder.SwigGetClassNameBalloonPopupStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.BalloonPopupStyleBuilder.SwigGetDirectorObjectBalloonPopupStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Ui.BaseMapView">
             <summary>
             A platform independent main view class for all mapping operations.
@@ -937,6 +961,10 @@
             Billboards can either be given a concrete position on the map or be attached to
             other billboards.
             </summary></member>
+        <member name="M:Nutiteq.VectorElements.Billboard.SwigCreatePolymorphicInstanceBillboard(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="P:Nutiteq.VectorElements.Billboard.RootGeometry">
             <summary>
             The Geometry property.
@@ -971,13 +999,15 @@
             </summary>
             <param name="pos"> The new map position that defines the location of this billboard.</param></member>
         <member name="M:Nutiteq.VectorElements.Billboard.SwigGetClassNameBillboard">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Billboard.SwigGetDirectorObjectBillboard">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.BillboardOrientation">
             <summary>
             Possible orientation modes for billboards.
@@ -999,17 +1029,27 @@
             <summary>
             A base class for BillboardStyle subclasses.
             </summary></member>
+        <member name="M:Nutiteq.Styles.BillboardStyle.SwigCreatePolymorphicInstanceBillboardStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Styles.BillboardStyle.SwigGetClassNameBillboardStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.BillboardStyle.SwigGetDirectorObjectBillboardStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.BillboardStyleBuilder">
             <summary>
             A base class for BillboardStyleBuilder subclasses.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.BillboardStyleBuilder.SwigCreatePolymorphicInstanceBillboardStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.BillboardStyleBuilder.SetAttachAnchorPoint(System.Single,System.Single)">
             <summary>
@@ -1022,13 +1062,15 @@
             <param name="attachAnchorPointY"> The new vertical attaching anchor point for the billoard. -1 means the bottom,
             0 the center and 1 the top. The default is 1.</param></member>
         <member name="M:Nutiteq.Styles.BillboardStyleBuilder.SwigGetClassNameBillboardStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.BillboardStyleBuilder.SwigGetDirectorObjectBillboardStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Graphics.Bitmap">
             <summary>
             A class that provides the functionality to store, compress, uncompress and resize basic image formats.
@@ -1135,6 +1177,10 @@
             Tile data source that uses given bitmap with two, three or four control points define a raster overlay.
             Note: if two points are given, conformal transformation is calculated. If three points are given, affine transformation is calculated. In case of four points, perspective transformation is used.
             </summary></member>
+        <member name="M:Nutiteq.DataSources.BitmapOverlayRasterTileDataSource.SwigCreatePolymorphicInstanceBitmapOverlayRasterTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.BitmapOverlayRasterTileDataSource.#ctor(System.Int32,System.Int32,Nutiteq.Graphics.Bitmap,Nutiteq.Projections.Projection,Nutiteq.WrappedCommons.MapPosVector,Nutiteq.WrappedCommons.ScreenPosVector)">
             <summary>
             Constructs a new bitmap overlay data source.
@@ -1146,13 +1192,15 @@
             <param name="mapPoses"> The geographical control points. The list must contain either 2, 3 or 4 points.</param>
             <param name="bitmapPoses"> The pixel coordinates in the bitmap corresponding to geographical control points. The number of coordinates must be equal to the number of control points in mapPoses list.</param></member>
         <member name="M:Nutiteq.DataSources.BitmapOverlayRasterTileDataSource.SwigGetClassNameBitmapOverlayRasterTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.BitmapOverlayRasterTileDataSource.SwigGetDirectorObjectBitmapOverlayRasterTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Utils.BitmapUtils">
             <summary>
             A helper class for loading bitmaps and converting Bitmaps to UIImages an vice versa.
@@ -1202,18 +1250,24 @@
             <summary>
             A tile data source that loads tiles from another tile data source and caches them.
             </summary></member>
+        <member name="M:Nutiteq.DataSources.CacheTileDataSource.SwigCreatePolymorphicInstanceCacheTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.CacheTileDataSource.Clear">
             <summary>
             Clear the cache.
             </summary></member>
         <member name="M:Nutiteq.DataSources.CacheTileDataSource.SwigGetClassNameCacheTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.CacheTileDataSource.SwigGetDirectorObjectCacheTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.CartoCSSParser">
             <summary>
             A CartoCSS style parser. Geometry and marker styles can be parsed from simple human-readable format.
@@ -1239,7 +1293,7 @@
         <member name="M:Nutiteq.Styles.CartoCSSParser.CreatePolygonStyleBuilder(System.String)">
             <summary>
             Read polygon style parameters from CartoCSS description. The following tags are supported:
-            polygon-fill, polygon-opacity.
+            polygon-fill, polygon-opacity, line-* (all line tags).
             </summary>
             <param name="cartoCSS"> The CartoCSS to parse. For example, "polygon-fill:#ff00ff; polygon-opacity:0.3"</param>
             <returns>Polygon style builder object with parameters set from the specified CartoCSS.</returns></member>
@@ -1262,6 +1316,10 @@
             <summary>
             A special callback interface for building cluster elements from set of existing vector element.
             </summary></member>
+        <member name="M:Nutiteq.Layers.ClusterElementBuilder.SwigCreatePolymorphicInstanceClusterElementBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Layers.ClusterElementBuilder.BuildClusterElement(Nutiteq.Core.MapPos,Nutiteq.WrappedCommons.VectorElementVector)">
             <summary>
             Builds new cluster element given position and list of vector elements.
@@ -1270,17 +1328,23 @@
             <param name="elements"> The list of elements that defines the cluster.</param>
             <returns>The created cluster element.</returns></member>
         <member name="M:Nutiteq.Layers.ClusterElementBuilder.SwigGetClassNameClusterElementBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.ClusterElementBuilder.SwigGetDirectorObjectClusterElementBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.ClusteredVectorLayer">
             <summary>
             A vector layer that supports clustering point-type features.
             A Pairwise centroid hierarchical clustering algorithm is used internally.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.ClusteredVectorLayer.SwigCreatePolymorphicInstanceClusteredVectorLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.Layers.ClusteredVectorLayer.ClusterElementBuilder">
             <summary>
@@ -1306,13 +1370,15 @@
             <param name="px"> The distance (in device-independent pixels) between cluster center and expanded elements. Use 0 to shrink already expanded cluster.</param>
             <returns>True if the element was found and expanded/shrunk. False otherwise.</returns></member>
         <member name="M:Nutiteq.Layers.ClusteredVectorLayer.SwigGetClassNameClusteredVectorLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.ClusteredVectorLayer.SwigGetDirectorObjectClusteredVectorLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Graphics.Color">
             <summary>
             A color represented in RGBA space, alpha is expected to be non-premultiplied.
@@ -1376,6 +1442,10 @@
             based on zoom level. All requests below specified zoom level are directed to the first data source
             and all requests at or above specified zoom level are directed to the second data source.
             </summary></member>
+        <member name="M:Nutiteq.DataSources.CombinedTileDataSource.SwigCreatePolymorphicInstanceCombinedTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.CombinedTileDataSource.#ctor(Nutiteq.DataSources.TileDataSource,Nutiteq.DataSources.TileDataSource,System.Int32)">
             <summary>
             Constructs a combined tile data source object.
@@ -1384,18 +1454,24 @@
             <param name="dataSource2"> Second data source that is used if requested tile is at or above given zoomLevel.</param>
             <param name="zoomLevel"> Threshold zoom level value.</param></member>
         <member name="M:Nutiteq.DataSources.CombinedTileDataSource.SwigGetClassNameCombinedTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.CombinedTileDataSource.SwigGetDirectorObjectCombinedTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.DataSources.CompressedCacheTileDataSource">
             <summary>
             A tile data source that loads tiles from another tile data source
             and caches them in memory as compressed images. This cache is not persistent, tiles
             will be cleared once the application closes. Default cache capacity is 6MB.
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.CompressedCacheTileDataSource.SwigCreatePolymorphicInstanceCompressedCacheTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.DataSources.CompressedCacheTileDataSource.#ctor(Nutiteq.DataSources.TileDataSource)">
             <summary>
@@ -1403,13 +1479,15 @@
             </summary>
             <param name="dataSource"> The datasource to be cached.</param></member>
         <member name="M:Nutiteq.DataSources.CompressedCacheTileDataSource.SwigGetClassNameCompressedCacheTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.CompressedCacheTileDataSource.SwigGetDirectorObjectCompressedCacheTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Renderers.Components.CullState">
             <summary>
             View specific state determined by the culling process. This includes
@@ -1444,32 +1522,44 @@
             Simplification is done in two passes - first pass uses fast Radial Distance vertex rejection,
             second pass uses Ramer-Douglas-Peuckerworst algorithm (with worst case quadratic complexity).
             </summary></member>
+        <member name="M:Nutiteq.Geometry.DouglasPeuckerGeometrySimplifier.SwigCreatePolymorphicInstanceDouglasPeuckerGeometrySimplifier(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Geometry.DouglasPeuckerGeometrySimplifier.#ctor(System.Single)">
             <summary>
             Constructs a new simplifier, given tolerance.
             </summary>
             <param name="tolerance"> The maximum error for simplification. The tolerance value multiplied by view size (either height or width) gives maximum error in pixels.</param></member>
         <member name="M:Nutiteq.Geometry.DouglasPeuckerGeometrySimplifier.SwigGetClassNameDouglasPeuckerGeometrySimplifier">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.DouglasPeuckerGeometrySimplifier.SwigGetDirectorObjectDouglasPeuckerGeometrySimplifier">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Projections.EPSG3857">
             <summary>
             EPSG:3857 is a Spherical Mercator projection coordinate system popularized by web services such as Google and later OpenStreetMap.
             Z-coordinate denotes height in meters.
             </summary></member>
+        <member name="M:Nutiteq.Projections.EPSG3857.SwigCreatePolymorphicInstanceEPSG3857(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Projections.EPSG3857.SwigGetClassNameEPSG3857">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Projections.EPSG3857.SwigGetDirectorObjectEPSG3857">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Graphics.Frustum">
             <summary>
             A 3D frustum defined by 6 clipping planes.
@@ -1525,10 +1615,26 @@
             A GeoJSON parser.
             Only Geometry objects are supported, Features and FeatureCollections are not supported.
             </summary></member>
+        <member name="P:Nutiteq.Geometry.GeoJSONGeometryReader.TargetProjection">
+            <summary>
+            The Projection property.
+            </summary></member>
         <member name="M:Nutiteq.Geometry.GeoJSONGeometryReader.#ctor">
             <summary>
             Constructs a new GeoJSONGeometryReader object.
             </summary></member>
+        <member name="M:Nutiteq.Geometry.GeoJSONGeometryReader.getTargetProjectionInternal">
+            <summary>
+            Returns the current target projection. If target projection is set, all geometry
+            coordinates will be converted from WGS84 to target projection coordinate system.
+            </summary>
+            <returns>The current target projection or null.</returns></member>
+        <member name="M:Nutiteq.Geometry.GeoJSONGeometryReader.setTargetProjectionInternal(Nutiteq.Projections.Projection)">
+            <summary>
+            Sets the current target projection. If target projection is set, all geometry
+            coordinates will be converted from WGS84 to target projection coordinate system.
+            </summary>
+            <param name="proj"> The new target projection or null.</param></member>
         <member name="M:Nutiteq.Geometry.GeoJSONGeometryReader.ReadGeometry(System.String)">
             <summary>
             Reads geometry from the specified GeoJSON string.
@@ -1540,10 +1646,26 @@
             A GeoJSON writer. Generates human-readable GeoJSON representation of the geometry.
             Supports both 2D and 3D coordinate serialization.
             </summary></member>
+        <member name="P:Nutiteq.Geometry.GeoJSONGeometryWriter.SourceProjection">
+            <summary>
+            The Projection property.
+            </summary></member>
         <member name="M:Nutiteq.Geometry.GeoJSONGeometryWriter.#ctor">
             <summary>
             Constructs a new GeoJSONGeometryWriter object with default settings.
             </summary></member>
+        <member name="M:Nutiteq.Geometry.GeoJSONGeometryWriter.getSourceProjectionInternal">
+            <summary>
+            Returns the current source projection. If source projection is set, all geometry
+            coordinates will be converted from given coordinate system to WGS84.
+            </summary>
+            <returns>The current source projection or null.</returns></member>
+        <member name="M:Nutiteq.Geometry.GeoJSONGeometryWriter.setSourceProjectionInternal(Nutiteq.Projections.Projection)">
+            <summary>
+            Sets the current source projection. If source projection is set, all geometry
+            coordinates will be converted from given coordinate system to WGS84.
+            </summary>
+            <param name="proj"> The new source projection or null.</param></member>
         <member name="M:Nutiteq.Geometry.GeoJSONGeometryWriter.WriteGeometry(Nutiteq.Geometry.Geometry)">
             <summary>
             Creates a GeoJSON string corresponding to the specified geometry.
@@ -1553,6 +1675,10 @@
         <member name="T:Nutiteq.Geometry.Geometry">
             <summary>
             A base class for all geometry types.
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.Geometry.SwigCreatePolymorphicInstanceGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.Geometry.Equals(System.Object)">
             <summary>
@@ -1565,16 +1691,22 @@
             </summary>
             <returns>The hash value of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.Geometry.SwigGetClassNameGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.Geometry.SwigGetDirectorObjectGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.GeometryCollection">
             <summary>
             A collection of multiple geometries that can be displayed on the map.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.GeometryCollection.SwigCreatePolymorphicInstanceGeometryCollection(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.GeometryCollection.Geometry">
             <summary>
@@ -1592,28 +1724,40 @@
             </summary>
             <param name="geometry"> The new geometry object.</param></member>
         <member name="M:Nutiteq.VectorElements.GeometryCollection.SwigGetClassNameGeometryCollection">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.GeometryCollection.SwigGetDirectorObjectGeometryCollection">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.GeometryCollectionStyle">
             <summary>
             A style for geometry collections. Contains styles for points, lines, polygons.
             </summary></member>
+        <member name="M:Nutiteq.Styles.GeometryCollectionStyle.SwigCreatePolymorphicInstanceGeometryCollectionStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Styles.GeometryCollectionStyle.SwigGetClassNameGeometryCollectionStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.GeometryCollectionStyle.SwigGetDirectorObjectGeometryCollectionStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.GeometryCollectionStyleBuilder">
             <summary>
             A builder class for GeometryCollectionStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.GeometryCollectionStyleBuilder.SwigCreatePolymorphicInstanceGeometryCollectionStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.GeometryCollectionStyleBuilder.#ctor">
             <summary>
@@ -1625,16 +1769,22 @@
             </summary>
             <returns>A new GeometryCollectionStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.GeometryCollectionStyleBuilder.SwigGetClassNameGeometryCollectionStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.GeometryCollectionStyleBuilder.SwigGetDirectorObjectGeometryCollectionStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Geometry.GeometrySimplifier">
             <summary>
             Base class for geometry simplifiers.
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.GeometrySimplifier.SwigCreatePolymorphicInstanceGeometrySimplifier(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.GeometrySimplifier.Equals(System.Object)">
             <summary>
@@ -1655,13 +1805,15 @@
             <returns>The simplified geometry. If simplification failed, original geometry may be returned.
             Null pointer may be returned if geometry should be discarded.</returns></member>
         <member name="M:Nutiteq.Geometry.GeometrySimplifier.SwigGetClassNameGeometrySimplifier">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.GeometrySimplifier.SwigGetDirectorObjectGeometrySimplifier">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.WrappedCommons.GeometryVector.GeometryVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -1676,6 +1828,10 @@
             <summary>
             For example, if baseURL = "http://tile.openstreetmap.org/{zoom}/{x}/{y}.png" and the requested tile has zoom = 2,
             x = 1 and y = 3, then the tile will be loaded from the following URL: "http://tile.openstreetmap.org/2/1/3.png".
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.HTTPTileDataSource.SwigCreatePolymorphicInstanceHTTPTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.DataSources.HTTPTileDataSource.#ctor(System.Int32,System.Int32,System.String)">
             <summary>
@@ -1695,13 +1851,15 @@
             </summary>
             <param name="headers"> A map of HTTP headers that will be used in subsequent requests.</param></member>
         <member name="M:Nutiteq.DataSources.HTTPTileDataSource.SwigGetClassNameHTTPTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.HTTPTileDataSource.SwigGetDirectorObjectHTTPTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Utils.IOSUtils">
             <summary>
             IOSUtils is an internal class of the SDK.
@@ -1710,6 +1868,10 @@
         <member name="T:Nutiteq.VectorElements.Label">
             <summary>
             An abstract billboard element with a dynamically drawn bitmap that can be displayed on the map.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.Label.SwigCreatePolymorphicInstanceLabel(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.Label.Style">
             <summary>
@@ -1751,16 +1913,22 @@
             </summary>
             <returns>The new style that defines what this marker looks like.</returns></member>
         <member name="M:Nutiteq.VectorElements.Label.SwigGetClassNameLabel">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Label.SwigGetDirectorObjectLabel">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.LabelStyle">
             <summary>
             A style for labels. Contains attributes for configuring how the label is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.LabelStyle.SwigCreatePolymorphicInstanceLabelStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.LabelStyle.#ctor(Nutiteq.Graphics.Color,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Int32,System.Boolean,System.Single,System.Single,System.Boolean,Nutiteq.Styles.BillboardOrientation,Nutiteq.Styles.BillboardScaling)">
             <summary>
@@ -1782,16 +1950,22 @@
             <param name="orientationMode"> The orientation mode for the label.</param>
             <param name="scalingMode"> The scaling mode for the label.</param></member>
         <member name="M:Nutiteq.Styles.LabelStyle.SwigGetClassNameLabelStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.LabelStyle.SwigGetDirectorObjectLabelStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.LabelStyleBuilder">
             <summary>
             A builder class for LabelStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.LabelStyleBuilder.SwigCreatePolymorphicInstanceLabelStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.LabelStyleBuilder.#ctor">
             <summary>
@@ -1811,16 +1985,22 @@
             </summary>
             <returns>A new LabelStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.LabelStyleBuilder.SwigGetClassNameLabelStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.LabelStyleBuilder.SwigGetDirectorObjectLabelStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.Layer">
             <summary>
             An abstract base class for all layers.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.Layer.SwigCreatePolymorphicInstanceLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Layers.Layer.Equals(System.Object)">
             <summary>
@@ -1849,13 +2029,15 @@
             changes.
             </summary></member>
         <member name="M:Nutiteq.Layers.Layer.SwigGetClassNameLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.Layer.SwigGetDirectorObjectLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.WrappedCommons.LayerVector.LayerVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -1905,6 +2087,10 @@
             <summary>
             A geometric line string that can be displayed on the map.
             </summary></member>
+        <member name="M:Nutiteq.VectorElements.Line.SwigCreatePolymorphicInstanceLine(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="P:Nutiteq.VectorElements.Line.Geometry">
             <summary>
             The LineGeometry property.
@@ -1937,13 +2123,15 @@
             </summary>
             <param name="poses"> The new vector of map positions that defines this line.</param></member>
         <member name="M:Nutiteq.VectorElements.Line.SwigGetClassNameLine">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Line.SwigGetDirectorObjectLine">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.LineEndType">
             <summary>
             Possible styles in which line end points are drawn.
@@ -1956,18 +2144,24 @@
             <summary>
             Line geometry defined by a list of map positions.
             </summary></member>
+        <member name="M:Nutiteq.Geometry.LineGeometry.SwigCreatePolymorphicInstanceLineGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Geometry.LineGeometry.#ctor(Nutiteq.WrappedCommons.MapPosVector)">
             <summary>
             Constructs a new LineGeometry object from a map position list.
             </summary></member>
         <member name="M:Nutiteq.Geometry.LineGeometry.SwigGetClassNameLineGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.LineGeometry.SwigGetDirectorObjectLineGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.WrappedCommons.LineGeometryVector.LineGeometryVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -1985,6 +2179,10 @@
             <summary>
             A style for lines. Contains attributes for configuring how the line is drawn on the screen.
             </summary></member>
+        <member name="M:Nutiteq.Styles.LineStyle.SwigCreatePolymorphicInstanceLineStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Styles.LineStyle.#ctor(Nutiteq.Graphics.Color,Nutiteq.Graphics.Bitmap,System.Single,Nutiteq.Styles.LineEndType,Nutiteq.Styles.LineJointType,System.Single,System.Single)">
             <summary>
             Constructs a LineStyle object from various parameters. Instantiating the object directly is
@@ -1998,16 +2196,22 @@
             <param name="stretchFactor"> The color for the line.</param>
             <param name="width"> The width for the line.</param></member>
         <member name="M:Nutiteq.Styles.LineStyle.SwigGetClassNameLineStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.LineStyle.SwigGetDirectorObjectLineStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.LineStyleBuilder">
             <summary>
             A builder class for LineStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.LineStyleBuilder.SwigCreatePolymorphicInstanceLineStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.LineStyleBuilder.#ctor">
             <summary>
@@ -2019,13 +2223,15 @@
             </summary>
             <returns>A new LineStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.LineStyleBuilder.SwigGetClassNameLineStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.LineStyleBuilder.SwigGetDirectorObjectLineStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.DataSources.LocalSpatialIndexType">
             <summary>
             Spatial index type for local data source.
@@ -2043,6 +2249,10 @@
             </summary>
             <summary>
             The draw order of vector elements within the data source is undefined.
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.LocalVectorDataSource.SwigCreatePolymorphicInstanceLocalVectorDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.DataSources.LocalVectorDataSource.GeometrySimplifier">
             <summary>
@@ -2100,13 +2310,15 @@
             </summary>
             <param name="simplifier"> The new geometry simplifier to use (can be null).</param></member>
         <member name="M:Nutiteq.DataSources.LocalVectorDataSource.SwigGetClassNameLocalVectorDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.LocalVectorDataSource.SwigGetDirectorObjectLocalVectorDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Utils.Log">
             <summary>
             A diagnostic log for various SDK events.
@@ -2151,6 +2363,10 @@
             "zoom_level" (tile zoom level), "tile_column" (tile x coordinate),
             "tile_row" (tile y coordinate), "tile_data" (compressed tile image).
             </summary></member>
+        <member name="M:Nutiteq.DataSources.MBTilesTileDataSource.SwigCreatePolymorphicInstanceMBTilesTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.MBTilesTileDataSource.#ctor(System.String)">
             <summary>
             Constructs a MBTilesTileDataSource object. TMS tile scheme is used,
@@ -2179,16 +2395,22 @@
             </summary>
             <returns>Map containing meta data information (parameter names mapped to parameter values).</returns></member>
         <member name="M:Nutiteq.DataSources.MBTilesTileDataSource.SwigGetClassNameMBTilesTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.MBTilesTileDataSource.SwigGetDirectorObjectMBTilesTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorTiles.MBVectorTileDecoder">
             <summary>
             Decoder for vector tiles in MapBox format.
+            </summary></member>
+        <member name="M:Nutiteq.VectorTiles.MBVectorTileDecoder.SwigCreatePolymorphicInstanceMBVectorTileDecoder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.VectorTiles.MBVectorTileDecoder.#ctor(Nutiteq.VectorTiles.MBVectorTileStyleSet)">
             <summary>
@@ -2239,13 +2461,15 @@
             <param name="param"> The parameter to set.</param>
             <param name="value"> The value for the parameter.</param></member>
         <member name="M:Nutiteq.VectorTiles.MBVectorTileDecoder.SwigGetClassNameMBVectorTileDecoder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorTiles.MBVectorTileDecoder.SwigGetDirectorObjectMBVectorTileDecoder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorTiles.MBVectorTileStyleSet">
             <summary>
             Style set for MapBox vector tiles. Style set is a read-only key-value containers,
@@ -2404,6 +2628,10 @@
             <summary>
             Listener for events like map and vector element clicks etc.
             </summary></member>
+        <member name="M:Nutiteq.Ui.MapEventListener.SwigCreatePolymorphicInstanceMapEventListener(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Ui.MapEventListener.OnMapMoved">
             <summary>
             Listener method that gets called when the map is panned, rotated, tilted or zoomed.
@@ -2424,13 +2652,15 @@
             </summary>
             <param name="vectorElementsClickInfo"> A container that provides information about the click.</param></member>
         <member name="M:Nutiteq.Ui.MapEventListener.SwigGetClassNameMapEventListener">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Ui.MapEventListener.SwigGetDirectorObjectMapEventListener">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Core.MapPos">
             <summary>
             A double precision map position defined using three coordinates. X and y coordinates denote positions on the map,
@@ -2614,19 +2844,25 @@
             <summary>
             Listener for events like map and vector element clicks etc.
             </summary></member>
+        <member name="M:Nutiteq.Ui.MapRenderListener.SwigCreatePolymorphicInstanceMapRenderListener(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Ui.MapRenderListener.OnMapRendered(Nutiteq.Graphics.Bitmap)">
             <summary>
             Listener method that is called when the map has been rendered.
             </summary>
             <param name="mapBitmap"> rendered map as bitmap.</param></member>
         <member name="M:Nutiteq.Ui.MapRenderListener.SwigGetClassNameMapRenderListener">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Ui.MapRenderListener.SwigGetDirectorObjectMapRenderListener">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Core.MapTile">
             <summary>
             An immutable map tile, used by tile layers for representing small pieces of map at different zoom levels and coordinates.
@@ -2757,6 +2993,10 @@
             <summary>
             A billboard element with a static bitmap that can be displayed on the map.
             </summary></member>
+        <member name="M:Nutiteq.VectorElements.Marker.SwigCreatePolymorphicInstanceMarker(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.VectorElements.Marker.#ctor(Nutiteq.VectorElements.Billboard,Nutiteq.Styles.MarkerStyle)">
             <summary>
             Constructs a Marker object with the specified style and attaches it to a billboard element.
@@ -2776,16 +3016,22 @@
             <param name="pos"> The map position that defines the location of this marker.</param>
             <param name="style"> The style that defines what this marker looks like.</param></member>
         <member name="M:Nutiteq.VectorElements.Marker.SwigGetClassNameMarker">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Marker.SwigGetDirectorObjectMarker">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.MarkerStyle">
             <summary>
             A style for markers. Contains attributes for configuring how the marker is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.MarkerStyle.SwigCreatePolymorphicInstanceMarkerStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.MarkerStyle.#ctor(Nutiteq.Graphics.Color,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Int32,System.Boolean,System.Single,System.Single,Nutiteq.Graphics.Bitmap,Nutiteq.Styles.BillboardOrientation,Nutiteq.Styles.BillboardScaling,System.Single)">
             <summary>
@@ -2808,16 +3054,22 @@
             <param name="scalingMode"> The scaling mode for the marker.</param>
             <param name="size"> The size for the marker.</param></member>
         <member name="M:Nutiteq.Styles.MarkerStyle.SwigGetClassNameMarkerStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.MarkerStyle.SwigGetDirectorObjectMarkerStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.MarkerStyleBuilder">
             <summary>
             A builder class for MarkerStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.MarkerStyleBuilder.SwigCreatePolymorphicInstanceMarkerStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.MarkerStyleBuilder.#ctor">
             <summary>
@@ -2837,16 +3089,22 @@
             </summary>
             <returns>A new MarkerStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.MarkerStyleBuilder.SwigGetClassNameMarkerStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.MarkerStyleBuilder.SwigGetDirectorObjectMarkerStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Geometry.MultiGeometry">
             <summary>
             A generic multi geometry container.
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.MultiGeometry.SwigCreatePolymorphicInstanceMultiGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.MultiGeometry.#ctor(Nutiteq.WrappedCommons.GeometryVector)">
             <summary>
@@ -2859,16 +3117,22 @@
             </summary>
             <returns>The geometry at specified index.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiGeometry.SwigGetClassNameMultiGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiGeometry.SwigGetDirectorObjectMultiGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Geometry.MultiLineGeometry">
             <summary>
             A multiline container.
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.MultiLineGeometry.SwigCreatePolymorphicInstanceMultiLineGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.MultiLineGeometry.#ctor(Nutiteq.WrappedCommons.LineGeometryVector)">
             <summary>
@@ -2880,16 +3144,22 @@
             </summary>
             <returns>The line geometry at specified index.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiLineGeometry.SwigGetClassNameMultiLineGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiLineGeometry.SwigGetDirectorObjectMultiLineGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Geometry.MultiPointGeometry">
             <summary>
             A multipoint container.
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.MultiPointGeometry.SwigCreatePolymorphicInstanceMultiPointGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.MultiPointGeometry.#ctor(Nutiteq.WrappedCommons.PointGeometryVector)">
             <summary>
@@ -2901,16 +3171,22 @@
             </summary>
             <returns>The point geometry at specified index.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiPointGeometry.SwigGetClassNameMultiPointGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiPointGeometry.SwigGetDirectorObjectMultiPointGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Geometry.MultiPolygonGeometry">
             <summary>
             A multipolygon container.
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.MultiPolygonGeometry.SwigCreatePolymorphicInstanceMultiPolygonGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.MultiPolygonGeometry.#ctor(Nutiteq.WrappedCommons.PolygonGeometryVector)">
             <summary>
@@ -2922,13 +3198,15 @@
             </summary>
             <returns>The polygon geometry at specified index.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiPolygonGeometry.SwigGetClassNameMultiPolygonGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.MultiPolygonGeometry.SwigGetDirectorObjectMultiPolygonGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.NMLModel">
             <summary>
             A 3D model that can be displayed on the map.
@@ -2936,6 +3214,10 @@
             <summary>
             NML models can be created from Collada files directly and placed anywhere on the map or converted from KMZ files.
             NML models are optimized for fast loading and rendering.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.NMLModel.SwigCreatePolymorphicInstanceNMLModel(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.VectorElements.NMLModel.#ctor(Nutiteq.Geometry.Geometry,Nutiteq.WrappedCommons.UnsignedCharVector)">
             <summary>
@@ -2966,17 +3248,23 @@
             <param name="axis"> The axis of rotation.</param>
             <param name="angle"> The rotation angle in degrees.</param></member>
         <member name="M:Nutiteq.VectorElements.NMLModel.SwigGetClassNameNMLModel">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.NMLModel.SwigGetDirectorObjectNMLModel">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.DataSources.NMLModelLODTreeDataSource">
             <summary>
             An abstract base class for NML model LOD tree data sources. NML model LOD tree data sources are tile based data sources
             that provide access to different entities: map tiles, LOD tree metadata, model meshes and textures.
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.NMLModelLODTreeDataSource.SwigCreatePolymorphicInstanceNMLModelLODTreeDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.DataSources.NMLModelLODTreeDataSource.Projection">
             <summary>
@@ -2988,17 +3276,23 @@
             </summary>
             <returns>The projection used by this data source.</returns></member>
         <member name="M:Nutiteq.DataSources.NMLModelLODTreeDataSource.SwigGetClassNameNMLModelLODTreeDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.NMLModelLODTreeDataSource.SwigGetDirectorObjectNMLModelLODTreeDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.NMLModelLODTreeLayer">
             <summary>
             An advanced layer for 3D models that supports automatic Level of Detail (LOD) calculation based on view.
             Should be used together with corresponding data source.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.NMLModelLODTreeLayer.SwigCreatePolymorphicInstanceNMLModelLODTreeLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Layers.NMLModelLODTreeLayer.#ctor(Nutiteq.DataSources.NMLModelLODTreeDataSource)">
             <summary>
@@ -3026,16 +3320,22 @@
             </summary>
             <param name="factor"> The relative LOD resolution factor.</param></member>
         <member name="M:Nutiteq.Layers.NMLModelLODTreeLayer.SwigGetClassNameNMLModelLODTreeLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.NMLModelLODTreeLayer.SwigGetDirectorObjectNMLModelLODTreeLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.NMLModelLODTreeProxy">
             <summary>
             A proxy class representing a small part (f.e a single building) of the NMLModelLODTree.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.NMLModelLODTreeProxy.SwigCreatePolymorphicInstanceNMLModelLODTreeProxy(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.NMLModelLODTreeProxy.Geometry">
             <summary>
@@ -3047,17 +3347,23 @@
             </summary>
             <param name="pos"> The map position that defines the location of this proxy.</param></member>
         <member name="M:Nutiteq.VectorElements.NMLModelLODTreeProxy.SwigGetClassNameNMLModelLODTreeProxy">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.NMLModelLODTreeProxy.SwigGetDirectorObjectNMLModelLODTreeProxy">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.DataSources.NutiteqOnlineTileDataSource">
             <summary>
             An online tile data source that connects to Nutiteq tile server.
             Tile server is currently used to
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.NutiteqOnlineTileDataSource.SwigCreatePolymorphicInstanceNutiteqOnlineTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.DataSources.NutiteqOnlineTileDataSource.#ctor(System.String)">
             <summary>
@@ -3065,18 +3371,24 @@
             </summary>
             <param name="source"> Tile source id. Currently only "nutiteq.mbstreets" is supported.</param></member>
         <member name="M:Nutiteq.DataSources.NutiteqOnlineTileDataSource.SwigGetClassNameNutiteqOnlineTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.NutiteqOnlineTileDataSource.SwigGetDirectorObjectNutiteqOnlineTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.NutiteqOnlineVectorTileLayer">
             <summary>
             Specialized online vector tile layer that connects to Nutiteq online tile server.
             This layer is intended as a 'shortcut' to make using Nutiteq online service and
             vector tiles as simple as possible.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.NutiteqOnlineVectorTileLayer.SwigCreatePolymorphicInstanceNutiteqOnlineVectorTileLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Layers.NutiteqOnlineVectorTileLayer.#ctor(System.String)">
             <summary>
@@ -3093,13 +3405,15 @@
             <param name="source"> The tile source name. Currently only "nutiteq.mbstreets" is supported.</param>
             <param name="styleAssetName"> The name of the style asset that defines visual style of the map.</param></member>
         <member name="M:Nutiteq.Layers.NutiteqOnlineVectorTileLayer.SwigGetClassNameNutiteqOnlineVectorTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.NutiteqOnlineVectorTileLayer.SwigGetDirectorObjectNutiteqOnlineVectorTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.PackageManager.NutiteqPackageManager">
             <summary>
             Offline map package manager that uses Nutiteq online service for map package downloads.
@@ -3118,6 +3432,10 @@
             Online NML LOD Tree data source. This data source needs special
             online service and uses custom protocol.
             </summary></member>
+        <member name="M:Nutiteq.DataSources.OnlineNMLModelLODTreeDataSource.SwigCreatePolymorphicInstanceOnlineNMLModelLODTreeDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.OnlineNMLModelLODTreeDataSource.#ctor(Nutiteq.Projections.Projection,System.String)">
             <summary>
             Constructs an OnlineNMLModelLODTreeDataSource object.
@@ -3125,13 +3443,15 @@
             <param name="projection"> The projection for the database. Currently only EPSG3857 is supported.</param>
             <param name="serviceUrl"> The service connection point.</param></member>
         <member name="M:Nutiteq.DataSources.OnlineNMLModelLODTreeDataSource.SwigGetClassNameOnlineNMLModelLODTreeDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.OnlineNMLModelLODTreeDataSource.SwigGetDirectorObjectOnlineNMLModelLODTreeDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Components.Options">
             <summary>
             A class containing various options for rendering and map manipulation.
@@ -3366,6 +3686,10 @@
             Base class for map package manager event listeners.
             Includes callbacks for package list events and individual package events.
             </summary></member>
+        <member name="M:Nutiteq.PackageManager.PackageManagerListener.SwigCreatePolymorphicInstancePackageManagerListener(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.PackageManager.PackageManagerListener.OnPackageListUpdated">
             <summary>
             Listener method that is called when server package list has been successfully updated.
@@ -3402,16 +3726,22 @@
             <param name="version"> The version of the package that failed</param>
             <param name="errorType"> Reason or type of the failure</param></member>
         <member name="M:Nutiteq.PackageManager.PackageManagerListener.SwigGetClassNamePackageManagerListener">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.PackageManager.PackageManagerListener.SwigGetDirectorObjectPackageManagerListener">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.DataSources.PackageManagerTileDataSource">
             <summary>
             A tile data source that loads tiles from package manager.
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.PackageManagerTileDataSource.SwigCreatePolymorphicInstancePackageManagerTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.DataSources.PackageManagerTileDataSource.#ctor(Nutiteq.PackageManager.PackageManager)">
             <summary>
@@ -3419,13 +3749,15 @@
             </summary>
             <param name="packageManager"> The package manager that is used to retrieve requested tiles.</param></member>
         <member name="M:Nutiteq.DataSources.PackageManagerTileDataSource.SwigGetClassNamePackageManagerTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.PackageManagerTileDataSource.SwigGetDirectorObjectPackageManagerTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.PackageManager.PackageMetaInfo">
             <summary>
             Package meta info element. Can contain JSON-style structured data, including objects and arrays.
@@ -3536,6 +3868,10 @@
             "time" (the time the tile was cached in milliseconds from epoch).
             Default cache capacity is 50MB.
             </summary></member>
+        <member name="M:Nutiteq.DataSources.PersistentCacheTileDataSource.SwigCreatePolymorphicInstancePersistentCacheTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.PersistentCacheTileDataSource.#ctor(Nutiteq.DataSources.TileDataSource,System.String)">
             <summary>
             Constructs a PersistentCacheTileDataSource object from tile data source
@@ -3545,16 +3881,22 @@
             <param name="dataSource"> The datasource to be cached.</param>
             <param name="databasePath"> The path to the sqlite database, where the tiles will be cached.</param></member>
         <member name="M:Nutiteq.DataSources.PersistentCacheTileDataSource.SwigGetClassNamePersistentCacheTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.PersistentCacheTileDataSource.SwigGetDirectorObjectPersistentCacheTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.Point">
             <summary>
             A geometric point that can be displayed on the map.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.Point.SwigCreatePolymorphicInstancePoint(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.Point.Geometry">
             <summary>
@@ -3588,16 +3930,22 @@
             </summary>
             <param name="pos"> The new map position that defines the location of this point.</param></member>
         <member name="M:Nutiteq.VectorElements.Point.SwigGetClassNamePoint">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Point.SwigGetDirectorObjectPoint">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Geometry.PointGeometry">
             <summary>
             Point geometry. Geometry is defined by a single map position.
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.PointGeometry.SwigCreatePolymorphicInstancePointGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.PointGeometry.#ctor(Nutiteq.Core.MapPos)">
             <summary>
@@ -3605,13 +3953,15 @@
             </summary>
             <param name="pos"> The map position.</param></member>
         <member name="M:Nutiteq.Geometry.PointGeometry.SwigGetClassNamePointGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.PointGeometry.SwigGetDirectorObjectPointGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.WrappedCommons.PointGeometryVector.PointGeometryVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -3620,6 +3970,10 @@
         <member name="T:Nutiteq.Styles.PointStyle">
             <summary>
             A style for points. Contains attributes for configuring how the point is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.PointStyle.SwigCreatePolymorphicInstancePointStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.PointStyle.#ctor(Nutiteq.Graphics.Color,Nutiteq.Graphics.Bitmap,System.Single,System.Single)">
             <summary>
@@ -3631,16 +3985,22 @@
             <param name="clickSize"> The size of the point used for click detection.</param>
             <param name="size"> The size for the point.</param></member>
         <member name="M:Nutiteq.Styles.PointStyle.SwigGetClassNamePointStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.PointStyle.SwigGetDirectorObjectPointStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.PointStyleBuilder">
             <summary>
             A builder class for PointStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.PointStyleBuilder.SwigCreatePolymorphicInstancePointStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.PointStyleBuilder.#ctor">
             <summary>
@@ -3652,17 +4012,23 @@
             </summary>
             <returns>A new PointStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.PointStyleBuilder.SwigGetClassNamePointStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.PointStyleBuilder.SwigGetDirectorObjectPointStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.Polygon">
             <summary>
             A geometric polygon that can be displayed on the map.
             Polygons can be concave and have multiple overlapping holes.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.Polygon.SwigCreatePolymorphicInstancePolygon(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.Polygon.Geometry">
             <summary>
@@ -3714,17 +4080,23 @@
             </summary>
             <param name="holes"> The list of holes of the polygon.</param></member>
         <member name="M:Nutiteq.VectorElements.Polygon.SwigGetClassNamePolygon">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Polygon.SwigGetDirectorObjectPolygon">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.Polygon3D">
             <summary>
             A geometric 3d polygon that can be displayed on the map.
             3d polygons can be concave and have multiple overlapping holes.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.Polygon3D.SwigCreatePolymorphicInstancePolygon3D(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.Polygon3D.Geometry">
             <summary>
@@ -3779,16 +4151,22 @@
             </summary>
             <param name="holes"> The list of holes of the 3d polygon.</param></member>
         <member name="M:Nutiteq.VectorElements.Polygon3D.SwigGetClassNamePolygon3D">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Polygon3D.SwigGetDirectorObjectPolygon3D">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.Polygon3DStyle">
             <summary>
             A style for 3d polygons. Contains attributes for configuring how the 3d polygon is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.Polygon3DStyle.SwigCreatePolymorphicInstancePolygon3DStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.Polygon3DStyle.#ctor(Nutiteq.Graphics.Color)">
             <summary>
@@ -3797,16 +4175,22 @@
             </summary>
             <param name="color"> The color for the 3d polygon.</param></member>
         <member name="M:Nutiteq.Styles.Polygon3DStyle.SwigGetClassNamePolygon3DStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.Polygon3DStyle.SwigGetDirectorObjectPolygon3DStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.Polygon3DStyleBuilder">
             <summary>
             A builder class for Polygon3DStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.Polygon3DStyleBuilder.SwigCreatePolymorphicInstancePolygon3DStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.Polygon3DStyleBuilder.#ctor">
             <summary>
@@ -3818,16 +4202,22 @@
             </summary>
             <returns>A new Polygon3DStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.Polygon3DStyleBuilder.SwigGetClassNamePolygon3DStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.Polygon3DStyleBuilder.SwigGetDirectorObjectPolygon3DStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Geometry.PolygonGeometry">
             <summary>
             Polygon geometry defined by an outer ring and optional multiple inner rings (holes).
+            </summary></member>
+        <member name="M:Nutiteq.Geometry.PolygonGeometry.SwigCreatePolymorphicInstancePolygonGeometry(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Geometry.PolygonGeometry.#ctor(Nutiteq.WrappedCommons.MapPosVector)">
             <summary>
@@ -3847,13 +4237,15 @@
             </summary>
             <param name="rings"> The list of map position lists defining the rings</param></member>
         <member name="M:Nutiteq.Geometry.PolygonGeometry.SwigGetClassNamePolygonGeometry">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Geometry.PolygonGeometry.SwigGetDirectorObjectPolygonGeometry">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.WrappedCommons.PolygonGeometryVector.PolygonGeometryVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -3862,6 +4254,10 @@
         <member name="T:Nutiteq.Styles.PolygonStyle">
             <summary>
             A style for polygons. Contains attributes for configuring how the polygon is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.PolygonStyle.SwigCreatePolymorphicInstancePolygonStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.PolygonStyle.#ctor(Nutiteq.Graphics.Color,Nutiteq.Graphics.Bitmap,Nutiteq.Styles.LineStyle)">
             <summary>
@@ -3872,16 +4268,22 @@
             <param name="bitmap"> The bitmap for the polygon.</param>
             <param name="lineStyle"> The line style for the edges of the polygon. May be null.</param></member>
         <member name="M:Nutiteq.Styles.PolygonStyle.SwigGetClassNamePolygonStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.PolygonStyle.SwigGetDirectorObjectPolygonStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.PolygonStyleBuilder">
             <summary>
             A builder class for PolygonStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.PolygonStyleBuilder.SwigCreatePolymorphicInstancePolygonStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.PolygonStyleBuilder.#ctor">
             <summary>
@@ -3893,17 +4295,23 @@
             </summary>
             <returns>A new PolygonStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.PolygonStyleBuilder.SwigGetClassNamePolygonStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.PolygonStyleBuilder.SwigGetDirectorObjectPolygonStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.Popup">
             <summary>
             An abstract billboard element that can be displayed on the map. It
             always faces the camera and has a dynamically drawn bitmap.
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.Popup.SwigCreatePolymorphicInstancePopup(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.Popup.Style">
             <summary>
@@ -3958,16 +4366,22 @@
             </summary>
             <returns>The new style that defines what this popup looks like.</returns></member>
         <member name="M:Nutiteq.VectorElements.Popup.SwigGetClassNamePopup">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Popup.SwigGetDirectorObjectPopup">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.PopupStyle">
             <summary>
             A style for popups. Contains attributes for configuring how the popup is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.PopupStyle.SwigCreatePolymorphicInstancePopupStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.PopupStyle.#ctor(Nutiteq.Graphics.Color,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Int32,System.Boolean)">
             <summary>
@@ -3984,16 +4398,22 @@
             <param name="placementPriority"> The placement priority for the popup.</param>
             <param name="scaleWithDPI"> The scale with DPI flag for the label.</param></member>
         <member name="M:Nutiteq.Styles.PopupStyle.SwigGetClassNamePopupStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.PopupStyle.SwigGetDirectorObjectPopupStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.PopupStyleBuilder">
             <summary>
             A builder class for PopupStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.PopupStyleBuilder.SwigCreatePolymorphicInstancePopupStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.PopupStyleBuilder.#ctor">
             <summary>
@@ -4005,16 +4425,22 @@
             </summary>
             <returns>A new PopupStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.PopupStyleBuilder.SwigGetClassNamePopupStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.PopupStyleBuilder.SwigGetDirectorObjectPopupStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Projections.Projection">
             <summary>
             An abstract base class for all projections.
+            </summary></member>
+        <member name="M:Nutiteq.Projections.Projection.SwigCreatePolymorphicInstanceProjection(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Projections.Projection.Equals(System.Object)">
             <summary>
@@ -4056,13 +4482,15 @@
             <param name="pos"> The position in the coordinate system of this projection.</param>
             <returns>The transformed position in the WGS84 coordinate system.</returns></member>
         <member name="M:Nutiteq.Projections.Projection.SwigGetClassNameProjection">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Projections.Projection.SwigGetDirectorObjectProjection">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Components.ProjectionMode">
             <summary>
             Possible projection modes.
@@ -4078,6 +4506,10 @@
         <member name="T:Nutiteq.Layers.RasterTileLayer">
             <summary>
             A tile layer where each tile is a bitmap. Should be used together with corresponding data source.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.RasterTileLayer.SwigCreatePolymorphicInstanceRasterTileLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.Layers.RasterTileLayer.TileLoadListener">
             <summary>
@@ -4099,29 +4531,37 @@
             </summary>
             <param name="tileLoadListener"> The tile load listener.</param></member>
         <member name="M:Nutiteq.Layers.RasterTileLayer.SwigGetClassNameRasterTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.RasterTileLayer.SwigGetDirectorObjectRasterTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Ui.RedrawRequestListener">
             <summary>
             An internal listener class for notifying about screen redraw requests.
+            </summary></member>
+        <member name="M:Nutiteq.Ui.RedrawRequestListener.SwigCreatePolymorphicInstanceRedrawRequestListener(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Ui.RedrawRequestListener.OnRedrawRequested">
             <summary>
             Called when the screen needs to be redrawn.
             </summary></member>
         <member name="M:Nutiteq.Ui.RedrawRequestListener.SwigGetClassNameRedrawRequestListener">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Ui.RedrawRequestListener.SwigGetDirectorObjectRedrawRequestListener">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Core.ScreenBounds">
             <summary>
             A container class that defines a bounding box on the screen using minimum and maximum screen positions.
@@ -4244,6 +4684,10 @@
             A sqlite database based data source for NML model LOD trees. The database must be created using
             custom toolkit from Nutiteq that supports several input formats like KMZ or GeoJSON.
             </summary></member>
+        <member name="M:Nutiteq.DataSources.SqliteNMLModelLODTreeDataSource.SwigCreatePolymorphicInstanceSqliteNMLModelLODTreeDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.SqliteNMLModelLODTreeDataSource.#ctor(Nutiteq.Projections.Projection,System.String)">
             <summary>
             Constructs a SqliteNMLModelLODTreeDataSource object.
@@ -4251,13 +4695,15 @@
             <param name="projection"> The projection for the database. Currently only EPSG3857 is supported.</param>
             <param name="fileName"> The file name of the sqlite database file.</param></member>
         <member name="M:Nutiteq.DataSources.SqliteNMLModelLODTreeDataSource.SwigGetClassNameSqliteNMLModelLODTreeDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.SqliteNMLModelLODTreeDataSource.SwigGetDirectorObjectSqliteNMLModelLODTreeDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.WrappedCommons.StringMap.StringMapEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -4272,6 +4718,10 @@
             <summary>
             A base class for other Style objects.
             </summary></member>
+        <member name="M:Nutiteq.Styles.Style.SwigCreatePolymorphicInstanceStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="M:Nutiteq.Styles.Style.Equals(System.Object)">
             <summary>
             Checks if this object is equal to the specified object.
@@ -4283,16 +4733,22 @@
             </summary>
             <returns>The hash value of this object.</returns></member>
         <member name="M:Nutiteq.Styles.Style.SwigGetClassNameStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.Style.SwigGetDirectorObjectStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.StyleBuilder">
             <summary>
             A base class for other StyleBuilder subclasses.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.StyleBuilder.SwigCreatePolymorphicInstanceStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.StyleBuilder.Equals(System.Object)">
             <summary>
@@ -4305,13 +4761,15 @@
             </summary>
             <returns>The hash value of this object.</returns></member>
         <member name="M:Nutiteq.Styles.StyleBuilder.SwigGetClassNameStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.StyleBuilder.SwigGetDirectorObjectStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.StyleSelector">
             <summary>
             A collection of style rules.
@@ -4361,6 +4819,10 @@
             <summary>
             A text element that can be displayed on the map.
             </summary></member>
+        <member name="M:Nutiteq.VectorElements.Text.SwigCreatePolymorphicInstanceText(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="P:Nutiteq.VectorElements.Text.Style">
             <summary>
             The TextStyle property.
@@ -4397,16 +4859,22 @@
             </summary>
             <returns>The new style that defines what this text label looks like.</returns></member>
         <member name="M:Nutiteq.VectorElements.Text.SwigGetClassNameText">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.Text.SwigGetDirectorObjectText">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.TextStyle">
             <summary>
             A style for text labels. Contains attributes for configuring how the text label is drawn on the screen.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.TextStyle.SwigCreatePolymorphicInstanceTextStyle(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.TextStyle.#ctor(Nutiteq.Graphics.Color,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Int32,System.Boolean,System.Single,System.Single,System.Boolean,Nutiteq.Styles.BillboardOrientation,Nutiteq.Styles.BillboardScaling,System.String,System.Int32,Nutiteq.Graphics.Color,System.Single)">
             <summary>
@@ -4432,16 +4900,22 @@
             <param name="strokeColor"> The width of the color.</param>
             <param name="strokeWidth"> The width of the stroke.</param></member>
         <member name="M:Nutiteq.Styles.TextStyle.SwigGetClassNameTextStyle">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.TextStyle.SwigGetDirectorObjectTextStyle">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Styles.TextStyleBuilder">
             <summary>
             A builder class for TextStyle.
+            </summary></member>
+        <member name="M:Nutiteq.Styles.TextStyleBuilder.SwigCreatePolymorphicInstanceTextStyleBuilder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Styles.TextStyleBuilder.#ctor">
             <summary>
@@ -4453,13 +4927,15 @@
             </summary>
             <returns>A new TextStyle object.</returns></member>
         <member name="M:Nutiteq.Styles.TextStyleBuilder.SwigGetClassNameTextStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Styles.TextStyleBuilder.SwigGetDirectorObjectTextStyleBuilder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Core.TileData">
             <summary>
             A wrapper class for tile data.
@@ -4483,6 +4959,10 @@
             <summary>
             Abstract base class for tile data sources. It provides default implementation
             for listener registration and other common tile data source methods.
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.TileDataSource.SwigCreatePolymorphicInstanceTileDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.DataSources.TileDataSource.Projection">
             <summary>
@@ -4514,16 +4994,22 @@
             </summary>
             <param name="removeTiles"> The remove tiles flag.</param></member>
         <member name="M:Nutiteq.DataSources.TileDataSource.SwigGetClassNameTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.TileDataSource.SwigGetDirectorObjectTileDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.TileLayer">
             <summary>
             An abstract base class for all tile layers.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.TileLayer.SwigCreatePolymorphicInstanceTileLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.Layers.TileLayer.DataSource">
             <summary>
@@ -4554,16 +5040,22 @@
             </summary>
             <param name="all"> True if all tiles should be released, otherwise only preloading (invisible) tiles are released.</param></member>
         <member name="M:Nutiteq.Layers.TileLayer.SwigGetClassNameTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.TileLayer.SwigGetDirectorObjectTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.TileLoadListener">
             <summary>
             Interface for monitoring tile loading events.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.TileLoadListener.SwigCreatePolymorphicInstanceTileLoadListener(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Layers.TileLoadListener.OnVisibleTilesLoaded">
             <summary>
@@ -4575,13 +5067,15 @@
             This method gets called after onVisibleTilesLoaded() and only if preloading is enabled.
             </summary></member>
         <member name="M:Nutiteq.Layers.TileLoadListener.SwigGetClassNameTileLoadListener">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.TileLoadListener.SwigGetDirectorObjectTileLoadListener">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.TileSubstitutionPolicy">
             <summary>
             The policy to use when looking for tiles that are not available.
@@ -4603,6 +5097,10 @@
             </summary>
             <summary>
             The draw order of vector elements within the data source is undefined.
+            </summary></member>
+        <member name="M:Nutiteq.DataSources.VectorDataSource.SwigCreatePolymorphicInstanceVectorDataSource(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.DataSources.VectorDataSource.Projection">
             <summary>
@@ -4630,16 +5128,22 @@
             vector elements in the data source.
             </summary></member>
         <member name="M:Nutiteq.DataSources.VectorDataSource.SwigGetClassNameVectorDataSource">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.DataSources.VectorDataSource.SwigGetDirectorObjectVectorDataSource">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorElements.VectorElement">
             <summary>
             A base class for all vector elements (points, lines, texts, models, etc).
+            </summary></member>
+        <member name="M:Nutiteq.VectorElements.VectorElement.SwigCreatePolymorphicInstanceVectorElement(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="P:Nutiteq.VectorElements.VectorElement.Geometry">
             <summary>
@@ -4688,13 +5192,15 @@
             The data source may then notify the layer to update the view.
             </summary></member>
         <member name="M:Nutiteq.VectorElements.VectorElement.SwigGetClassNameVectorElement">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorElements.VectorElement.SwigGetDirectorObjectVectorElement">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Ui.VectorElementClickInfo">
             <summary>
             A container class that provies information about a click performed on
@@ -4762,6 +5268,10 @@
             <summary>
             A vector layer that loads data using an envelope. Should be used together with corresponding data source.
             </summary></member>
+        <member name="M:Nutiteq.Layers.VectorLayer.SwigCreatePolymorphicInstanceVectorLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
+            </summary></member>
         <member name="P:Nutiteq.Layers.VectorLayer.DataSource">
             <summary>
             The VectorDataSource property.
@@ -4777,16 +5287,22 @@
             </summary>
             <returns>The vector data source that was bound to this vector layer on construction.</returns></member>
         <member name="M:Nutiteq.Layers.VectorLayer.SwigGetClassNameVectorLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.VectorLayer.SwigGetDirectorObjectVectorLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.VectorTiles.VectorTileDecoder">
             <summary>
             Abstract base class for vector tile decoders.
+            </summary></member>
+        <member name="M:Nutiteq.VectorTiles.VectorTileDecoder.SwigCreatePolymorphicInstanceVectorTileDecoder(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.VectorTiles.VectorTileDecoder.Equals(System.Object)">
             <summary>
@@ -4804,16 +5320,22 @@
             listeners, but generally all cached tiles will be reloaded.
             </summary></member>
         <member name="M:Nutiteq.VectorTiles.VectorTileDecoder.SwigGetClassNameVectorTileDecoder">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.VectorTiles.VectorTileDecoder.SwigGetDirectorObjectVectorTileDecoder">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Layers.VectorTileLayer">
             <summary>
             A tile layer where each tile is a bitmap. Should be used together with corresponding data source.
+            </summary></member>
+        <member name="M:Nutiteq.Layers.VectorTileLayer.SwigCreatePolymorphicInstanceVectorTileLayer(System.IntPtr,System.Boolean)">
+            <summary>
+            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
         <member name="M:Nutiteq.Layers.VectorTileLayer.#ctor(Nutiteq.DataSources.TileDataSource,Nutiteq.VectorTiles.VectorTileDecoder)">
             <summary>
@@ -4822,13 +5344,15 @@
             <param name="dataSource"> The data source from which this layer loads data.</param>
             <param name="decoder"> The tile decoder that decoder loaded tiles and applies styles.</param></member>
         <member name="M:Nutiteq.Layers.VectorTileLayer.SwigGetClassNameVectorTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the actual class name of this object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt;The class name of this object.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the actual class name of this object. This is used internally by the SDK.
+            </summary>
+            <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Layers.VectorTileLayer.SwigGetDirectorObjectVectorTileLayer">
-            &lt;<summary>
-            summary&gt; Returns the pointer to the connected director object. This is used internally by the SDK. &lt;summary&gt; &lt;returns&gt; The pointer to the connected director object or null if director is not connected.&lt;returns&gt;
-            </summary></member>
+            <summary>
+            Returns the pointer to the connected director object. This is used internally by the SDK.
+            </summary>
+            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.Graphics.ViewState">
             <summary>
             A class containing various view parameters for a view state.
