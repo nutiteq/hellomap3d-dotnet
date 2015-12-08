@@ -13,6 +13,7 @@ using Nutiteq.WrappedCommons;
 using Nutiteq.VectorTiles;
 using Newtonsoft.Json.Linq;
 using Nutiteq.Geometry;
+using System.Threading.Tasks;
 
 namespace NutiteqSample
 {
@@ -36,7 +37,7 @@ namespace NutiteqSample
 			// offline base layer
 
 			// 2. define listener, definition is in same class above
-			var packageManager = new NutiteqPackageManager("nutiteq.mbstreets", packageFolder);
+			var packageManager = new NutiteqPackageManager("nutiteq.osm", packageFolder);
 			packageManager.PackageManagerListener = new PackageListener(packageManager, downloadedPackage);
 
 			// Download new package list only if it is older than 24h
@@ -55,7 +56,7 @@ namespace NutiteqSample
 				
 			// Now can add vector map as layer
 			// define styling for vector map
-			UnsignedCharVector styleBytes = AssetUtils.LoadBytes("osmbright.zip");
+			UnsignedCharVector styleBytes = AssetUtils.LoadBytes("nutibright-v2a.zip");
 			MBVectorTileDecoder vectorTileDecoder = null;
 			if (styleBytes != null) {
 				// Create style set
@@ -86,7 +87,7 @@ namespace NutiteqSample
 		}
 
 
-		public static void AddMapOverlays(IMapView mapView) {
+		async public static void AddMapOverlays(IMapView mapView) {
 
 			// Create overlay layer for markers
 			var dataSource = new LocalVectorDataSource (proj);
@@ -120,8 +121,36 @@ namespace NutiteqSample
 				"Title", "Description");
 			dataSource.Add(popup);
 
+			// load NML file model from a file
+			var modelFile = AssetUtils.LoadBytes("fcd_auto.nml");
+
+			// set location for model, and create NMLModel object with this
+			var modelPos = proj.FromWgs84(new MapPos(24.646469, 59.423939));
+			var model = new NMLModel(modelPos, modelFile);
+			mapView.FocusPos = modelPos;
+			mapView.Zoom = 15;
+
+			// oversize it 20*, just to make it more visible (optional)
+			model.Scale = 20;
+
+			// add metadata for click handling (optional)
+			model.SetMetaDataElement("ClickText", "Single model");
+
+			// add it to normal datasource
+			dataSource.Add(model);
+
 			// Create and set map listener
 			mapView.MapEventListener = new MapListener (dataSource);
+
+			await AnimateModel (model);
+
+		}
+
+		public static async Task AnimateModel(NMLModel model){
+			for (int i = 0; i < 3600; i++) { 
+					model.SetRotation (new MapVec (0, 0, 1), i);
+				await Task.Delay(10);
+			}
 		}
 
 
@@ -186,5 +215,9 @@ namespace NutiteqSample
 		}
 
 	}
+
+
+
 }
+
 

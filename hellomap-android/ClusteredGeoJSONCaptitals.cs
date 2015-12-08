@@ -14,7 +14,7 @@ namespace NutiteqSample
 			base.OnCreate (savedInstanceState);
 
 			// Set online base layer
-			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+			var baseLayer = new NutiteqOnlineVectorTileLayer("nutibright-v2a.zip");
 			mapView.Layers.Add(baseLayer);
 
 			// read json from assets and add to map

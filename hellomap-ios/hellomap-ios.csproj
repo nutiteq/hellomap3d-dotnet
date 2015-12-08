@@ -121,7 +121,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
-    <InterfaceDefinition Include="MainStoryboard_iPad.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -139,13 +138,13 @@
   <Import Project="..\hellomap-shared\hellomap-shared.projitems" Label="Shared" Condition="Exists('..\hellomap-shared\hellomap-shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <BundleResource Include="..\hellomap-android\Assets\osmbright.zip">
-      <Link>Resources\osmbright.zip</Link>
-    </BundleResource>
     <BundleResource Include="..\hellomap-android\Assets\Icon.png">
       <Link>Resources\Icon.png</Link>
     </BundleResource>
     <BundleResource Include="Resources\capitals_3857.geojson" />
+    <BundleResource Include="Resources\fcd_auto.nml" />
+    <BundleResource Include="Resources\nutibright-v2a.zip" />
+    <BundleResource Include="Resources\nutiteq-dark.zip" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Resources\world_ntvt_0_4.mbtiles" />

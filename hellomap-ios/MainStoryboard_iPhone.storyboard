@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="19">
             <objects>
-                <glkViewController autoresizesArchivedViewToFullSize="NO" preferredFramesPerSecond="30" id="20" sceneMemberID="viewController" customClass="MainViewController" pauseOnWillResignActive="YES">
+                <glkViewController autoresizesArchivedViewToFullSize="NO" preferredFramesPerSecond="60" id="20" sceneMemberID="viewController" customClass="MainViewController" pauseOnWillResignActive="YES" resumeOnDidBecomeActive="YES">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="17"/>
                         <viewControllerLayoutGuide type="bottom" id="18"/>

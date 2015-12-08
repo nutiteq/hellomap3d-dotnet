@@ -62,7 +62,7 @@ namespace NutiteqSample
 			mapView = (MapView)FindViewById (Resource.Id.mapView);
 
 			// Set online base layer
-			var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+			var baseLayer = new NutiteqOnlineVectorTileLayer("nutibright-v2a.zip");
 			mapView.Layers.Add(baseLayer);
 
 			// bind the textViewMessage

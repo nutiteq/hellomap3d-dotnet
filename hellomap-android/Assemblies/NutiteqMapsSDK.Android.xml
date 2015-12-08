@@ -30,6 +30,10 @@
             </summary>
             <param name="context">The context object.</param>
             <param name="attrs">The attributes.</param></member>
+        <member name="F:Nutiteq.Ui.MapView._baseMapView">
+            <summary>
+            Internal native map view object. Not part of the public API.
+            </summary></member>
         <member name="P:Nutiteq.Ui.MapView.MapEventListener">
             <summary>
             The map event listener property. May be null.
@@ -67,6 +71,7 @@
             If durationSeconds &gt; 0 the panning operation will be animated over time. If the previous panning animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="deltaPos">The coordinate difference the map should be moved by.</param>
             <param name="durationSeconds">The duration in which the tilting operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.MapView.SetFocusPos(Nutiteq.Core.MapPos,System.Single)">
             <summary>
@@ -76,6 +81,7 @@
             If durationSeconds &gt; 0 the panning operation will be animated over time. If the previous panning animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="pos">The new focus point position in base coordinate system.</param>
             <param name="durationSeconds">The duration in which the tilting operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.MapView.Rotate(System.Single,System.Single)">
             <summary>
@@ -85,6 +91,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="deltaAngle">The delta angle value in degrees.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.MapView.Rotate(System.Single,Nutiteq.Core.MapPos,System.Single)">
             <summary>
@@ -95,6 +102,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="deltaAngle">The delta angle value in degrees.</param>
             <param name="targetPos">The zooming target position in the coordinate system of the base projection.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.MapView.SetMapRotation(System.Single,System.Single)">
@@ -105,6 +113,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="angle">The new absolute rotation angle value in degrees.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.MapView.SetMapRotation(System.Single,Nutiteq.Core.MapPos,System.Single)">
             <summary>
@@ -115,6 +124,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="angle">The new absolute rotation angle value in degrees.</param>
             <param name="targetPos">The zooming target position in the coordinate system of the base projection.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.MapView.SetRelativeTilt(System.Single,System.Single)">
@@ -276,6 +286,7 @@
             If durationSeconds &gt; 0 the panning operation will be animated over time. If the previous panning animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="deltaPos">The coordinate difference the map should be moved by.</param>
             <param name="durationSeconds">The duration in which the tilting operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.IMapView.SetFocusPos(Nutiteq.Core.MapPos,System.Single)">
             <summary>
@@ -285,6 +296,7 @@
             If durationSeconds &gt; 0 the panning operation will be animated over time. If the previous panning animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="pos">The new focus point position in base coordinate system.</param>
             <param name="durationSeconds">The duration in which the tilting operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.IMapView.Rotate(System.Single,System.Single)">
             <summary>
@@ -294,6 +306,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="deltaAngle">The delta angle value in degrees.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.IMapView.Rotate(System.Single,Nutiteq.Core.MapPos,System.Single)">
             <summary>
@@ -304,6 +317,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="deltaAngle">The delta angle value in degrees.</param>
             <param name="targetPos">The zooming target position in the coordinate system of the base projection.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.IMapView.SetMapRotation(System.Single,System.Single)">
@@ -314,6 +328,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="angle">The new absolute rotation angle value in degrees.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.IMapView.SetMapRotation(System.Single,Nutiteq.Core.MapPos,System.Single)">
             <summary>
@@ -324,6 +339,7 @@
             If durationSeconds &gt; 0 the rotating operation will be animated over time. If the previous rotating animation has not
             finished by the time this method is called, it will be stopped.
             </summary>
+            <param name="angle">The new absolute rotation angle value in degrees.</param>
             <param name="targetPos">The zooming target position in the coordinate system of the base projection.</param>
             <param name="durationSeconds">The duration in which the zooming operation will be completed in seconds.</param></member>
         <member name="M:Nutiteq.Ui.IMapView.SetRelativeTilt(System.Single,System.Single)">
@@ -553,6 +569,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.BalloonPopup.Title">
+            <summary>
+            Returns the title of this balloon popup.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.BalloonPopup.Description">
+            <summary>
+            Returns the description of this balloon popup.
+            </summary></member>
         <member name="T:Nutiteq.Styles.BalloonPopupMargins">
             <summary>
             Margins info for balloon popup.
@@ -610,6 +634,94 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.BackgroundColor">
+            <summary>
+            Returns the background color of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.CornerRadius">
+            <summary>
+            Returns the corner radius of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.LeftColor">
+            <summary>
+            Returns the background color of the left part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.LeftImage">
+            <summary>
+            Returns the image of the left part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.LeftMargins">
+            <summary>
+            Returns the margins of the left part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.RightColor">
+            <summary>
+            Returns the background color of the right part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.RightImage">
+            <summary>
+            Returns the image of the right part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.RightMargins">
+            <summary>
+            Returns the margins of the right part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.TitleColor">
+            <summary>
+            Returns the color of the title.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.TitleFontName">
+            <summary>
+            Returns the name of the title font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.TitleFontSize">
+            <summary>
+            Returns the size of the title font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.TitleMargins">
+            <summary>
+            Returns the margins of the title.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.TitleWrap">
+            <summary>
+            Returns the state of the title wrap parameter.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.DescriptionColor">
+            <summary>
+            Returns the color of the description.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.DescriptionFontName">
+            <summary>
+            Returns the name of the description font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.DescriptionFontSize">
+            <summary>
+            Returns the size of the description font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.DescriptionMargins">
+            <summary>
+            Returns the margins of the description.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.DescriptionWrap">
+            <summary>
+            Returns the state of the description wrap parameter.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.StrokeColor">
+            <summary>
+            Returns the color of the stroke surrounding the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.StrokeWidth">
+            <summary>
+            Returns the width of the stroke surrounding the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.TriangleWidth">
+            <summary>
+            Returns the width of the triangle at the bottom of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyle.TriangleHeight">
+            <summary>
+            Returns the height of the triangle at the bottom of the popup.
+            </summary></member>
         <member name="T:Nutiteq.Styles.BalloonPopupStyleBuilder">
             <summary>
             A builder class for BalloonPopupStyle.
@@ -637,6 +749,90 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.CornerRadius">
+            <summary>
+            Returns the corner radius of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.LeftColor">
+            <summary>
+            Returns the background color of the left part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.LeftImage">
+            <summary>
+            Returns the image of the left part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.LeftMargins">
+            <summary>
+            Returns the margins of the left part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.RightColor">
+            <summary>
+            Returns the background color of the right part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.RightImage">
+            <summary>
+            Returns the image of the right part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.RightMargins">
+            <summary>
+            Returns the margins of the right part of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.TitleColor">
+            <summary>
+            Returns the color of the title.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.TitleFontName">
+            <summary>
+            Returns the name of the title font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.TitleFontSize">
+            <summary>
+            Returns the size of the title font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.TitleMargins">
+            <summary>
+            Returns the margins of the title.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.TitleWrap">
+            <summary>
+            Returns the state of the title wrap parameter.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.DescriptionColor">
+            <summary>
+            Returns the color of the description.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.DescriptionFontName">
+            <summary>
+            Returns the name of the description font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.DescriptionFontSize">
+            <summary>
+            Returns the size of the description font.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.DescriptionMargins">
+            <summary>
+            Returns the margins of the description.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.DescriptionWrap">
+            <summary>
+            Returns the state of the description wrap parameter.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.StrokeColor">
+            <summary>
+            Returns the color of the stroke surrounding the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.StrokeWidth">
+            <summary>
+            Returns the width of the stroke surrounding the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.TriangleWidth">
+            <summary>
+            Returns the width of the triangle at the bottom of the popup.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BalloonPopupStyleBuilder.TriangleHeight">
+            <summary>
+            Returns the height of the triangle at the bottom of the popup.
+            </summary></member>
         <member name="T:Nutiteq.Ui.BaseMapView">
             <summary>
             A platform independent main view class for all mapping operations.
@@ -1004,6 +1200,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Billboard.Rotation">
+            <summary>
+            Returns the rotation angle of this billboard.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.Billboard.Bounds">
+            <summary>
+            Returns the bounds of this billboard or the base billboard, if there is one.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.Billboard.BaseBillboard">
+            <summary>
+            Returns the base billboard this billboard is attached to.
+            </summary></member>
         <member name="T:Nutiteq.Styles.BillboardOrientation">
             <summary>
             Possible orientation modes for billboards.
@@ -1011,6 +1219,17 @@
         <member name="F:Nutiteq.Styles.BillboardOrientation.BillboardOrientationFaceCamera">
             <summary>
             Billboard always faces the camera plane, regardless of rotation.
+            </summary></member>
+        <member name="F:Nutiteq.Styles.BillboardOrientation.BillboardOrientationFaceCameraGround">
+            <summary>
+            Billboard lies parallel to the ground and rotates around it's
+            anchor point to face the camera. SetRotation can be used to offset the
+            final angle of the billboard.
+            </summary></member>
+        <member name="F:Nutiteq.Styles.BillboardOrientation.BillboardOrientationGround">
+            <summary>
+            Billboard lies on the ground, orientation does not depend on the
+            camera position.
             </summary></member>
         <member name="T:Nutiteq.Styles.BillboardScaling">
             <summary>
@@ -1020,6 +1239,16 @@
             <summary>
             Billboard has a constant world space size. Zooming causes the billboard
             to get smaller or bigger on the screen.
+            </summary></member>
+        <member name="F:Nutiteq.Styles.BillboardScaling.BillboardScalingScreenSize">
+            <summary>
+            Billboard's size on screen is unaffected by zooming, but billboards
+            that are further away from the camera get smaller when the tilt angle is &lt; 90.
+            </summary></member>
+        <member name="F:Nutiteq.Styles.BillboardScaling.BillboardScalingConstScreenSize">
+            <summary>
+            Billboard's screen size is always the same, regardless of the zoom level, tilt angle or
+            billboard's position.
             </summary></member>
         <member name="T:Nutiteq.Styles.BillboardStyle">
             <summary>
@@ -1039,6 +1268,38 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.ScaleWithDPI">
+            <summary>
+            Returns the state of the scale with DPI flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.PlacementPriority">
+            <summary>
+            Returns the placement priority of the billboard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.CausesOverlap">
+            <summary>
+            Returns the state of the causes overlap flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.HideIfOverlapped">
+            <summary>
+            Returns the state of the allow overlap flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.AttachAnchorPointX">
+            <summary>
+            Returns the horizontal attaching anchor point of the billoard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.AttachAnchorPointY">
+            <summary>
+            Returns the vertical attaching anchor point of the billoard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.HorizontalOffset">
+            <summary>
+            Returns the horizontal offset of the billboard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyle.VerticalOffset">
+            <summary>
+            Returns the vertical offset of the billboard.
+            </summary></member>
         <member name="T:Nutiteq.Styles.BillboardStyleBuilder">
             <summary>
             A base class for BillboardStyleBuilder subclasses.
@@ -1067,6 +1328,38 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.ScaleWithDPI">
+            <summary>
+            Returns the state of the scale with DPI flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.PlacementPriority">
+            <summary>
+            Returns the placement priority of the billboard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.CausesOverlap">
+            <summary>
+            Returns the state of the causes overlap flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.HideIfOverlapped">
+            <summary>
+            Returns the state of the allow overlap flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.AttachAnchorPointX">
+            <summary>
+            Returns the horizontal attaching anchor point of the billoard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.AttachAnchorPointY">
+            <summary>
+            Returns the vertical attaching anchor point of the billoard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.HorizontalOffset">
+            <summary>
+            Returns the horizontal offset of the billboard.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.BillboardStyleBuilder.VerticalOffset">
+            <summary>
+            Returns the vertical offset of the billboard.
+            </summary></member>
         <member name="T:Nutiteq.Graphics.Bitmap">
             <summary>
             A class that provides the functionality to store, compress, uncompress and resize basic image formats.
@@ -1168,6 +1461,32 @@
             <param name="compressedData"> The compressed bitmap data.</param>
             <param name="pow2Padding"> The power of two conversion flag.</param>
             <returns>The bitmap created from the compressed data. If the decompression fails, null is returned.</returns></member>
+        <member name="P:Nutiteq.Graphics.Bitmap.Width">
+            <summary>
+            Returns the width of the bitmap.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Bitmap.Height">
+            <summary>
+            Returns the height of the bitmap.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Bitmap.OrigWidth">
+            <summary>
+            Returns the unpadded width of this bitmap. If power of two padding was added when constructing this bitmap, the original unpadded
+            bitmap's width will be returned. If no padding was added, this method is equivalent to the getWidth() method.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Bitmap.OrigHeight">
+            <summary>
+            Returns the unpadded height of this bitmap. If power of two padding was added when constructing this bitmap, the original unpadded
+            bitmap's height will be returned. If no padding was added, this method is equivalent to the getHeight() method.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Bitmap.ColorFormat">
+            <summary>
+            Returns the color format of this bitmap.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Bitmap.BytesPerPixel">
+            <summary>
+            Returns the bytes per pixel parameter of this bitmap. Valid values are 1, 2, 3 and 4.
+            </summary></member>
         <member name="T:Nutiteq.DataSources.BitmapOverlayRasterTileDataSource">
             <summary>
             Tile data source that uses given bitmap with two, three or four control points define a raster overlay.
@@ -1197,6 +1516,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.DataSources.BitmapOverlayRasterTileDataSource.DataExtent">
+            <summary>
+            Returns the extent of this data source. Extent is the minimal bounding box encompassing all the raster data.
+            </summary></member>
         <member name="T:Nutiteq.Utils.BitmapUtils">
             <summary>
             A helper class for loading bitmaps and converting Bitmaps to Android Bitmaps an vice versa.
@@ -1262,6 +1585,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.DataSources.CacheTileDataSource.Capacity">
+            <summary>
+            Returns the compressed tile cache capacity.
+            </summary></member>
         <member name="T:Nutiteq.Styles.CartoCSSParser">
             <summary>
             A CartoCSS style parser. Geometry and marker styles can be parsed from simple human-readable format.
@@ -1305,6 +1632,18 @@
         <member name="F:Nutiteq.Ui.ClickType.ClickTypeSingle">
             <summary>
             A click caused by pressing down and then releasing the screen.
+            </summary></member>
+        <member name="F:Nutiteq.Ui.ClickType.ClickTypeLong">
+            <summary>
+            A click caused by pressing down but not releasing the screen.
+            </summary></member>
+        <member name="F:Nutiteq.Ui.ClickType.ClickTypeDouble">
+            <summary>
+            A click caused by two fast consecutive taps on the screen.
+            </summary></member>
+        <member name="F:Nutiteq.Ui.ClickType.ClickTypeDual">
+            <summary>
+            A click caused by two simultaneous taps on the screen.
             </summary></member>
         <member name="T:Nutiteq.Layers.ClusterElementBuilder">
             <summary>
@@ -1373,6 +1712,15 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Layers.ClusteredVectorLayer.MinimumClusterDistance">
+            <summary>
+            Returns the current minimum distance between clusters (in device-independent pixels).
+            </summary></member>
+        <member name="P:Nutiteq.Layers.ClusteredVectorLayer.MaximumClusterZoom">
+            <summary>
+            Returns the maximum zoom level when clusters are shown. If zoom level is greater, then
+            clusters are replaced with individual elements. Default is 24.
+            </summary></member>
         <member name="T:Nutiteq.Graphics.Color">
             <summary>
             A color represented in RGBA space, alpha is expected to be non-premultiplied.
@@ -1422,6 +1770,26 @@
             Creates a string representation of this map color, useful for logging.
             </summary>
             <returns>The string representation of this map color.</returns></member>
+        <member name="P:Nutiteq.Graphics.Color.ARGB">
+            <summary>
+            Encodes this map color into 32-bit integer value (ARGB format).
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Color.R">
+            <summary>
+            Returns the red component of this map color.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Color.G">
+            <summary>
+            Returns the green component of this map color.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Color.B">
+            <summary>
+            Returns the blue component of this map color.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.Color.A">
+            <summary>
+            Returns the alpha component of this map color.
+            </summary></member>
         <member name="T:Nutiteq.Graphics.ColorFormat">
             <summary>
             Possible image formats.
@@ -1429,6 +1797,39 @@
         <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatUnsupported">
             <summary>
             Options for identifiny unsupported image formats.
+            </summary></member>
+        <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatGrayscale">
+            <summary>
+            An image format that describes images with a single color channel.
+            </summary></member>
+        <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatGrayscaleAlpha">
+            <summary>
+            An image format that describes images with two channels, one for color and the other
+            for alpha.
+            </summary></member>
+        <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatRgb">
+            <summary>
+            An image format that describes images with three channels, one for each color: red, green and blue.
+            </summary></member>
+        <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatRgba">
+            <summary>
+            An image format that describes images with four channels, one for each color: red, green and blue
+            and one for alpha.
+            </summary></member>
+        <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatBgra">
+            <summary>
+            An image format that describes images with four channels, one for each color: blue, green and red
+            and one for alpha. This color format will be converted to RGBA.
+            </summary></member>
+        <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatRgba4444">
+            <summary>
+            An image format that describes images with four channels, one for each color: red, green, and blue
+            and one for alpha. Each color is only four bits. This color format will be converted to RGBA.
+            </summary></member>
+        <member name="F:Nutiteq.Graphics.ColorFormat.ColorFormatRgb565">
+            <summary>
+            An image format that describes images with three channels, one for each color: red, green, and blue.
+            Red and blue colors are each packed into 5 bits, green into 6 bits. This color format will be converted to RGB.
             </summary></member>
         <member name="T:Nutiteq.DataSources.CombinedTileDataSource">
             <summary>
@@ -1509,6 +1910,14 @@
             </summary>
             <param name="proj"> The projection for the envelope</param>
             <returns>The envelope for the visible area in the coordinate system of the given projection.</returns></member>
+        <member name="P:Nutiteq.Renderers.Components.CullState.ViewState">
+            <summary>
+            Returns a view state.
+            </summary></member>
+        <member name="P:Nutiteq.Renderers.Components.CullState.Envelope">
+            <summary>
+            Returns an envelope for the visible area.
+            </summary></member>
         <member name="T:Nutiteq.Geometry.DouglasPeuckerGeometrySimplifier">
             <summary>
             An implementation of Ramer-Douglas-Peucker algorithm for geometry simplification.
@@ -1524,7 +1933,7 @@
             <summary>
             Constructs a new simplifier, given tolerance.
             </summary>
-            <param name="tolerance"> The maximum error for simplification. The tolerance value multiplied by view size (either height or width) gives maximum error in pixels.</param></member>
+            <param name="tolerance"> The maximum error for simplification. The tolerance value gives maximum error in pixels.</param></member>
         <member name="M:Nutiteq.Geometry.DouglasPeuckerGeometrySimplifier.SwigGetClassNameDouglasPeuckerGeometrySimplifier">
             <summary>
             Returns the actual class name of this object. This is used internally by the SDK.
@@ -1666,6 +2075,10 @@
             </summary>
             <param name="geometry"> The geometry to write.</param>
             <returns>The corresponding GeoJSON string.</returns></member>
+        <member name="P:Nutiteq.Geometry.GeoJSONGeometryWriter.Z">
+            <summary>
+            Returns the state of Z coordinate serialization.
+            </summary></member>
         <member name="T:Nutiteq.Geometry.Geometry">
             <summary>
             A base class for all geometry types.
@@ -1694,6 +2107,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Geometry.Geometry.Bounds">
+            <summary>
+            Returns the minimal bounds for the geometry.
+            </summary></member>
+        <member name="P:Nutiteq.Geometry.Geometry.CenterPos">
+            <summary>
+            Returns the center point of the geometry.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.GeometryCollection">
             <summary>
             A collection of multiple geometries that can be displayed on the map.
@@ -1727,6 +2148,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.GeometryCollection.Style">
+            <summary>
+            Returns the style of this geometry collection.
+            </summary></member>
         <member name="T:Nutiteq.Styles.GeometryCollectionStyle">
             <summary>
             A style for geometry collections. Contains styles for points, lines, polygons.
@@ -1745,6 +2170,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.GeometryCollectionStyle.PointStyle">
+            <summary>
+            Returns the point style.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.GeometryCollectionStyle.LineStyle">
+            <summary>
+            Returns the line style.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.GeometryCollectionStyle.PolygonStyle">
+            <summary>
+            Returns the polygon style.
+            </summary></member>
         <member name="T:Nutiteq.Styles.GeometryCollectionStyleBuilder">
             <summary>
             A builder class for GeometryCollectionStyle.
@@ -1772,6 +2209,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.GeometryCollectionStyleBuilder.PointStyle">
+            <summary>
+            Returns the point style.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.GeometryCollectionStyleBuilder.LineStyle">
+            <summary>
+            Returns the line style.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.GeometryCollectionStyleBuilder.PolygonStyle">
+            <summary>
+            Returns the polygon style.
+            </summary></member>
         <member name="T:Nutiteq.Geometry.GeometrySimplifier">
             <summary>
             Base class for geometry simplifiers.
@@ -1841,7 +2290,8 @@
             @return The current set of custom HTTP headers.</member>
         <member name="M:Nutiteq.DataSources.HTTPTileDataSource.SetHTTPHeaders(Nutiteq.WrappedCommons.StringMap)">
             <summary>
-            Sets HTTP headers for all requests.
+            Sets HTTP headers for all requests. Calling this method will invalidate the datasource and
+            all layers using this data source will be refreshed.
             </summary>
             <param name="headers"> A map of HTTP headers that will be used in subsequent requests.</param></member>
         <member name="M:Nutiteq.DataSources.HTTPTileDataSource.SwigGetClassNameHTTPTileDataSource">
@@ -1854,6 +2304,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.DataSources.HTTPTileDataSource.BaseURL">
+            <summary>
+            Returns the base URL template containing tags.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.Label">
             <summary>
             An abstract billboard element with a dynamically drawn bitmap that can be displayed on the map.
@@ -1948,6 +2402,26 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.LabelStyle.OrientationMode">
+            <summary>
+            Returns the orientation mode of the label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyle.ScalingMode">
+            <summary>
+            Returns the scaling mode of the label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyle.Flippable">
+            <summary>
+            Returns the state of the flippable flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyle.AnchorPointX">
+            <summary>
+            Returns the horizontal anchor point of the label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyle.AnchorPointY">
+            <summary>
+            Returns the vertical anchor point of the label.
+            </summary></member>
         <member name="T:Nutiteq.Styles.LabelStyleBuilder">
             <summary>
             A builder class for LabelStyle.
@@ -1983,6 +2457,26 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.LabelStyleBuilder.OrientationMode">
+            <summary>
+            Returns the orientation mode of the label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyleBuilder.ScalingMode">
+            <summary>
+            Returns the scaling mode of the label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyleBuilder.Flippable">
+            <summary>
+            Returns the state of the flippable flag.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyleBuilder.AnchorPointX">
+            <summary>
+            Returns the horizontal anchor point of the label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LabelStyleBuilder.AnchorPointY">
+            <summary>
+            Returns the vertical anchor point of the label.
+            </summary></member>
         <member name="T:Nutiteq.Layers.Layer">
             <summary>
             An abstract base class for all layers.
@@ -2027,6 +2521,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Layers.Layer.Visible">
+            <summary>
+            Returns the visibility of this layer.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.Layer.Priority">
+            <summary>
+            Returns the layer task priority of this layer.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.Layer.VisibleZoomRange">
+            <summary>
+            Returns the visible zoom range of this layer.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.LayerVector.LayerVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -2072,6 +2578,10 @@
             Returns a list of layers. The layers are in the order in which they were added.
             </summary>
             <returns>A vector of all previously added layers.</returns></member>
+        <member name="P:Nutiteq.Layers.Layers.Count">
+            <summary>
+            Returns the current layer count.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.Line">
             <summary>
             A geometric line string that can be displayed on the map.
@@ -2121,6 +2631,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Line.Style">
+            <summary>
+            Returns the style of this line.
+            </summary></member>
         <member name="T:Nutiteq.Styles.LineEndType">
             <summary>
             Possible styles in which line end points are drawn.
@@ -2128,6 +2642,10 @@
         <member name="F:Nutiteq.Styles.LineEndType.LineEndTypeStraight">
             <summary>
             No line end points are drawn, line end with a straight line.
+            </summary></member>
+        <member name="F:Nutiteq.Styles.LineEndType.LineEndTypeRound">
+            <summary>
+            Line end points are drawn as half circles.
             </summary></member>
         <member name="T:Nutiteq.Geometry.LineGeometry">
             <summary>
@@ -2151,6 +2669,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Geometry.LineGeometry.Poses">
+            <summary>
+            Returns the list of of map positions defining the line.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.LineGeometryVector.LineGeometryVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -2163,6 +2685,16 @@
         <member name="F:Nutiteq.Styles.LineJointType.LineJointTypeNone">
             <summary>
             Line segments are not connected with each other. The fastest and ugliest.
+            </summary></member>
+        <member name="F:Nutiteq.Styles.LineJointType.LineJointTypeStraight">
+            <summary>
+            Line segments are connected with each other using straight line connectors. Fast
+            but results in an unnatural line.
+            </summary></member>
+        <member name="F:Nutiteq.Styles.LineJointType.LineJointTypeRound">
+            <summary>
+            Line segments are connected with each other using circle sectors resulting in
+            round corners. Slowest and prettiest.
             </summary></member>
         <member name="T:Nutiteq.Styles.LineStyle">
             <summary>
@@ -2194,6 +2726,30 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.LineStyle.Width">
+            <summary>
+            Returns the width of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyle.ClickWidth">
+            <summary>
+            Returns the width of the line used for click detection.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyle.StretchFactor">
+            <summary>
+            Returns the stretching factor of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyle.LineJointType">
+            <summary>
+            Returns the joint type of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyle.LineEndType">
+            <summary>
+            Returns the end point type of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyle.Bitmap">
+            <summary>
+            Returns the bitmap of the line.
+            </summary></member>
         <member name="T:Nutiteq.Styles.LineStyleBuilder">
             <summary>
             A builder class for LineStyle.
@@ -2221,6 +2777,30 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.LineStyleBuilder.Width">
+            <summary>
+            Returns the width of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyleBuilder.ClickWidth">
+            <summary>
+            Returns the width of the line used for click detection.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyleBuilder.StretchFactor">
+            <summary>
+            Returns the stretch factor of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyleBuilder.LineJointType">
+            <summary>
+            Returns the joint type of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyleBuilder.LineEndType">
+            <summary>
+            Returns the end point type of the line.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.LineStyleBuilder.Bitmap">
+            <summary>
+            Returns the bitmap of the line.
+            </summary></member>
         <member name="T:Nutiteq.DataSources.LocalSpatialIndexType">
             <summary>
             Spatial index type for local data source.
@@ -2228,6 +2808,10 @@
         <member name="F:Nutiteq.DataSources.LocalSpatialIndexType.LocalSpatialIndexTypeNull">
             <summary>
             Null index, fastest if few elements are used. No element culling is performed.
+            </summary></member>
+        <member name="F:Nutiteq.DataSources.LocalSpatialIndexType.LocalSpatialIndexTypeKdtree">
+            <summary>
+            K-d tree index, element culling is exact and fast.
             </summary></member>
         <member name="T:Nutiteq.DataSources.LocalVectorDataSource">
             <summary>
@@ -2263,6 +2847,11 @@
             Returns all vector elements added to this data source using add() and addAll() methods.
             </summary>
             <returns>A vector containing all the vector elements in this data source.</returns></member>
+        <member name="M:Nutiteq.DataSources.LocalVectorDataSource.SetAll(Nutiteq.WrappedCommons.VectorElementVector)">
+            <summary>
+            Replaces all vector elements in the data source with the given list of vector elements.
+            </summary>
+            <param name="elements"> The list of new vector elements</param></member>
         <member name="M:Nutiteq.DataSources.LocalVectorDataSource.Add(Nutiteq.VectorElements.VectorElement)">
             <summary>
             Adds a vector element to the data source. The vector element's coordinates are expected to be
@@ -2308,6 +2897,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.DataSources.LocalVectorDataSource.DataExtent">
+            <summary>
+            Returns the extent of this data source. Extent is the minimal bounding box encompassing all the elements.
+            </summary></member>
         <member name="T:Nutiteq.Utils.Log">
             <summary>
             A diagnostic log for various SDK events.
@@ -2337,6 +2930,26 @@
             Logs specified debug message (if debug logging is enabled).
             </summary>
             <param name="text"> The text to log.</param></member>
+        <member name="P:Nutiteq.Utils.Log.ShowError">
+            <summary>
+            Returns the state of error logging.
+            </summary></member>
+        <member name="P:Nutiteq.Utils.Log.ShowWarn">
+            <summary>
+            Returns the state of warning logging.
+            </summary></member>
+        <member name="P:Nutiteq.Utils.Log.ShowInfo">
+            <summary>
+            Returns the state of general info logging.
+            </summary></member>
+        <member name="P:Nutiteq.Utils.Log.ShowDebug">
+            <summary>
+            Returns the state of internal debug message logging.
+            </summary></member>
+        <member name="P:Nutiteq.Utils.Log.Tag">
+            <summary>
+            Returns the tag for the log events.
+            </summary></member>
         <member name="T:Nutiteq.DataSources.MBTilesScheme">
             <summary>
             MBTiles tile schemes.
@@ -2344,6 +2957,10 @@
         <member name="F:Nutiteq.DataSources.MBTilesScheme.MbtilesSchemeTms">
             <summary>
             The default scheme. Vertical coordinate is not flipped.
+            </summary></member>
+        <member name="F:Nutiteq.DataSources.MBTilesScheme.MbtilesSchemeXyz">
+            <summary>
+            Alternative to TMS scheme. Vertical coordinate is flipped.
             </summary></member>
         <member name="T:Nutiteq.DataSources.MBTilesTileDataSource">
             <summary>
@@ -2393,6 +3010,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.DataSources.MBTilesTileDataSource.DataExtent">
+            <summary>
+            Returns the extent of this data source. Extent is the minimal bounding box encompassing all the tiles at maximum zoom level.
+            </summary></member>
         <member name="T:Nutiteq.VectorTiles.MBVectorTileDecoder">
             <summary>
             Decoder for vector tiles in MapBox format.
@@ -2459,6 +3080,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorTiles.MBVectorTileDecoder.CurrentStyleName">
+            <summary>
+            Returns the current style name.
+            </summary></member>
         <member name="T:Nutiteq.VectorTiles.MBVectorTileStyleSet">
             <summary>
             Style set for MapBox vector tiles. Style set is a read-only key-value containers,
@@ -2542,6 +3167,22 @@
             Creates a string representation of this map bounds object, useful for logging.
             </summary>
             <returns>The string representation of this map bounds object.</returns></member>
+        <member name="P:Nutiteq.Core.MapBounds.Max">
+            <summary>
+            Returns the maximum map position of this map envelope object.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapBounds.Center">
+            <summary>
+            Calculates the center map position of this map envelope object.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapBounds.Min">
+            <summary>
+            Returns the minimum map position of this map envelope object.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapBounds.Delta">
+            <summary>
+            Calculates the difference vector between the maximum and minimum map positions of this map bounds object.
+            </summary></member>
         <member name="T:Nutiteq.Ui.MapClickInfo">
             <summary>
             A container class that provies information about a click performed on
@@ -2557,6 +3198,14 @@
             Returns the hash value of this object.
             </summary>
             <returns>The hash value of this object.</returns></member>
+        <member name="P:Nutiteq.Ui.MapClickInfo.ClickPos">
+            <summary>
+            Returns the click position.
+            </summary></member>
+        <member name="P:Nutiteq.Ui.MapClickInfo.ClickType">
+            <summary>
+            Returns the click type.
+            </summary></member>
         <member name="T:Nutiteq.Core.MapEnvelope">
             <summary>
             A bounding area on the map. Can be defined by a map bounds object or by a convex bounding polygon.
@@ -2613,6 +3262,14 @@
             Creates a string representation of this map envelope, useful for logging.
             </summary>
             <returns>The string representation of this map envelope.</returns></member>
+        <member name="P:Nutiteq.Core.MapEnvelope.Bounds">
+            <summary>
+            Returns the map bounds of this map envelope.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapEnvelope.ConvexHull">
+            <summary>
+            Returns the convex hull of this map envelope.
+            </summary></member>
         <member name="T:Nutiteq.Ui.MapEventListener">
             <summary>
             Listener for events like map and vector element clicks etc.
@@ -2640,6 +3297,18 @@
             in the list. This method will NOT be called from the main thread.
             </summary>
             <param name="vectorElementsClickInfo"> A container that provides information about the click.</param></member>
+        <member name="M:Nutiteq.Ui.MapEventListener.OnBeforeDrawFrame">
+            <summary>
+            Listener method that gets called at the start of the rendering process.
+            The method can be used to synchronize vector elements with renderer state, for example
+            to force marker to be always at the center of the screen (focus point).
+            This method is called from GL renderer thread, not from main thread.
+            </summary></member>
+        <member name="M:Nutiteq.Ui.MapEventListener.OnAfterDrawFrame">
+            <summary>
+            Listener method that gets called at the end of the rendering process.
+            This method is called from GL renderer thread, not from main thread.
+            </summary></member>
         <member name="M:Nutiteq.Ui.MapEventListener.SwigGetClassNameMapEventListener">
             <summary>
             Returns the actual class name of this object. This is used internally by the SDK.
@@ -2771,6 +3440,18 @@
             Creates a string representation of this map position, useful for logging.
             </summary>
             <returns>The string representation of this map position.</returns></member>
+        <member name="P:Nutiteq.Core.MapPos.Z">
+            <summary>
+            Returns the z coordinate of this map position.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapPos.X">
+            <summary>
+            Returns the x coordinate of this map position.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapPos.Y">
+            <summary>
+            Returns the y coordinate of this map position.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.MapPosVector.MapPosVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -2829,6 +3510,18 @@
             Creates a string representation of this map range, useful for logging.
             </summary>
             <returns>The string representation of this map range.</returns></member>
+        <member name="P:Nutiteq.Core.MapRange.Max">
+            <summary>
+            Returns the max value of this map range.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapRange.Min">
+            <summary>
+            Returns the min value of this map range.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapRange.Length">
+            <summary>
+            Calculates the length of this map range. Defined as max - min.
+            </summary></member>
         <member name="T:Nutiteq.Ui.MapRenderListener">
             <summary>
             Listener for events like map and vector element clicks etc.
@@ -2882,6 +3575,26 @@
             Creates a string representation of this map tile, useful for logging.
             </summary>
             <returns>The string representation of this map tile.</returns></member>
+        <member name="P:Nutiteq.Core.MapTile.X">
+            <summary>
+            Returns the x coordinate of this map tile.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapTile.Y">
+            <summary>
+            Returns the y coordinate of this map tile.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapTile.Zoom">
+            <summary>
+            Returns the zoom level of this map tile.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapTile.FrameNr">
+            <summary>
+            Returns the time of this map tile.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapTile.TileId">
+            <summary>
+            Returns the internal tile id of this map tile.
+            </summary></member>
         <member name="T:Nutiteq.Core.MapVec">
             <summary>
             A double precision map vector defined by 3 coordinates.
@@ -2978,6 +3691,26 @@
             Creates a string representation of this map vector, useful for logging.
             </summary>
             <returns>The string representation of this map vector.</returns></member>
+        <member name="P:Nutiteq.Core.MapVec.Z">
+            <summary>
+            Returns the z coordinate of this map vector.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapVec.X">
+            <summary>
+            Returns the x coordinate of this map vector.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapVec.Y">
+            <summary>
+            Returns the y coordinate of this map vector.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapVec.Length">
+            <summary>
+            Calculates the length of this map vector.
+            </summary></member>
+        <member name="P:Nutiteq.Core.MapVec.Normalized">
+            <summary>
+            Creates a new map vector by normalizing this map vector.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.Marker">
             <summary>
             A billboard element with a static bitmap that can be displayed on the map.
@@ -3014,6 +3747,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Marker.Style">
+            <summary>
+            Returns the style of this marker.
+            </summary></member>
         <member name="T:Nutiteq.Styles.MarkerStyle">
             <summary>
             A style for markers. Contains attributes for configuring how the marker is drawn on the screen.
@@ -3052,6 +3789,30 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.MarkerStyle.Size">
+            <summary>
+            Returns the size of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyle.OrientationMode">
+            <summary>
+            Returns the orientation mode of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyle.ScalingMode">
+            <summary>
+            Returns the scaling mode of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyle.AnchorPointX">
+            <summary>
+            Returns the horizontal anchor point of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyle.AnchorPointY">
+            <summary>
+            Returns the vertical anchor point of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyle.Bitmap">
+            <summary>
+            Returns the bitmap of the marker.
+            </summary></member>
         <member name="T:Nutiteq.Styles.MarkerStyleBuilder">
             <summary>
             A builder class for MarkerStyle.
@@ -3087,6 +3848,30 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.MarkerStyleBuilder.Size">
+            <summary>
+            Returns the size of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyleBuilder.OrientationMode">
+            <summary>
+            Returns the orientation mode of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyleBuilder.ScalingMode">
+            <summary>
+            Returns the scaling mode of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyleBuilder.AnchorPointX">
+            <summary>
+            Returns the horizontal anchor point of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyleBuilder.AnchorPointY">
+            <summary>
+            Returns the vertical anchor point of the marker.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.MarkerStyleBuilder.Bitmap">
+            <summary>
+            Returns the bitmap of the marker.
+            </summary></member>
         <member name="T:Nutiteq.Geometry.MultiGeometry">
             <summary>
             A generic multi geometry container.
@@ -3115,6 +3900,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Geometry.MultiGeometry.GeometryCount">
+            <summary>
+            Returns the number of geometry objects in this multi geometry container.
+            </summary></member>
         <member name="T:Nutiteq.Geometry.MultiLineGeometry">
             <summary>
             A multiline container.
@@ -3246,6 +4035,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.NMLModel.RotationAngle">
+            <summary>
+            Returns the rotation angle of this model.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.NMLModel.Scale">
+            <summary>
+            Returns the scale of this model.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.NMLModel.RotationAxis">
+            <summary>
+            Returns the rotation axis of this model. If rotation angle is 0, then the axis is irrelevant.
+            </summary></member>
         <member name="T:Nutiteq.DataSources.NMLModelLODTreeDataSource">
             <summary>
             An abstract base class for NML model LOD tree data sources. NML model LOD tree data sources are tile based data sources
@@ -3358,7 +4159,7 @@
             <summary>
             Constructs a NutiteqTileDataSource object.
             </summary>
-            <param name="source"> Tile source id. Currently only "nutiteq.mbstreets" is supported.</param></member>
+            <param name="source"> Tile source id. Default: "nutiteq.osm".</param></member>
         <member name="M:Nutiteq.DataSources.NutiteqOnlineTileDataSource.SwigGetClassNameNutiteqOnlineTileDataSource">
             <summary>
             Returns the actual class name of this object. This is used internally by the SDK.
@@ -3382,7 +4183,7 @@
         <member name="M:Nutiteq.Layers.NutiteqOnlineVectorTileLayer.#ctor(System.String)">
             <summary>
             Constructs a NutiteqOnlineVectorTileLayer object from a style asset name.
-            Uses "nutiteq.mbstreets" as a source.
+            Uses "nutiteq.osm" as a source.
             Style asset must be included in the project, style asset defines visual style of the map.
             </summary>
             <param name="styleAssetName"> The name of the style asset that defines visual style of the map.</param></member>
@@ -3391,7 +4192,7 @@
             Constructs a NutiteqOnlineVectorTileLayer object from a source name and style asset name.
             Style asset must be included in the project, style asset defines visual style of the map.
             </summary>
-            <param name="source"> The tile source name. Currently only "nutiteq.mbstreets" is supported.</param>
+            <param name="source"> The tile source name. Main and default source is currently "nutiteq.osm".</param>
             <param name="styleAssetName"> The name of the style asset that defines visual style of the map.</param></member>
         <member name="M:Nutiteq.Layers.NutiteqOnlineVectorTileLayer.SwigGetClassNameNutiteqOnlineVectorTileLayer">
             <summary>
@@ -3414,7 +4215,7 @@
             The data folder must exist before creating a new package manager and it is assumed to be persistent.
             Note: the package manager must be explicitly started using start() method!
             </summary>
-            <param name="source"> Name of the package source. Currently "nutiteq.mbstreets" source is available</param>
+            <param name="source"> Name of the package source. Default: "nutiteq.osm"</param>
             <param name="dataFolder"> The folder where downloaded packages are kept. It must exist and must be writable.</param></member>
         <member name="T:Nutiteq.DataSources.OnlineNMLModelLODTreeDataSource">
             <summary>
@@ -3507,6 +4308,127 @@
             The default is EPSG3857.
             </summary>
             <param name="baseProjection"> The new base projection.</param></member>
+        <member name="P:Nutiteq.Components.Options.FieldOfViewY">
+            <summary>
+            Returns the vertial field of view angle.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.KineticZoom">
+            <summary>
+            Returns the state of kinetic zoom flag.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.Rotatable">
+            <summary>
+            Returns the state of the map rotatability flag.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.UserInput">
+            <summary>
+            Returns the state of the user input flag.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.ClickTypeDetection">
+            <summary>
+            Returns the click type detection state.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.KineticPan">
+            <summary>
+            Returns the state of the kinetic panning flag.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.KineticRotation">
+            <summary>
+            Returns the state of the kinetic rotation flag.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.SeamlessPanning">
+            <summary>
+            Returns the state of seamless horizontal panning flag.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.ZoomRange">
+            <summary>
+            Returns the zoom range constraint.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.TiltRange">
+            <summary>
+            Returns the tilt range constraint.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.PanBounds">
+            <summary>
+            Returns the map panning bounds constraints. Map bounds minimum and maximum points are in the base
+            projection's coordinate system.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.FocusPointOffset">
+            <summary>
+            Returns the focus point offset (from screen center) in pixels.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.MainLightDirection">
+            <summary>
+            Returns the direction of the main light.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.MainLightColor">
+            <summary>
+            Returns the color of the main light.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.AmbientLightColor">
+            <summary>
+            Returns the color of the ambient light.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.ProjectionMode">
+            <summary>
+            Returns the projection mode.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.PanningMode">
+            <summary>
+            Returns the panning mode.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.BackgroundBitmap">
+            <summary>
+            Returns the background bitmap. May be null.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.SkyBitmap">
+            <summary>
+            Returns the sky bitmap. May be null.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.EnvelopeThreadPoolSize">
+            <summary>
+            Returns the number of threads used by the envelope task pool.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.TileThreadPoolSize">
+            <summary>
+            Returns the number of threads used by the tile task pool.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.TileDrawSize">
+            <summary>
+            Returns the tile size used for drawing map tiles.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.DPI">
+            <summary>
+            Returns the dots per inch value.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.DrawDistance">
+            <summary>
+            Returns the draw distance value.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.WatermarkBitmap">
+            <summary>
+            Returns the watermark bitmap. May be null.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.WatermarkAlignmentX">
+            <summary>
+            Returns the horizontal alignment of the watermark.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.WatermarkAlignmentY">
+            <summary>
+            Returns the vertical alignment of the watermark.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.WatermarkScale">
+            <summary>
+            Returns the watermark relative scale.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.WatermarkPaddingX">
+            <summary>
+            Returns the horizontal padding of the watermark.
+            </summary></member>
+        <member name="P:Nutiteq.Components.Options.WatermarkPaddingY">
+            <summary>
+            Returns the vertical padding of the watermark.
+            </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageAction">
             <summary>
             The current action that describes the operation being performed with the package.
@@ -3515,6 +4437,22 @@
             <summary>
             Package is ready.
             </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageAction.PackageActionWaiting">
+            <summary>
+            Package is waiting in the task queue.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageAction.PackageActionDownloading">
+            <summary>
+            Package is being downloaded.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageAction.PackageActionCopying">
+            <summary>
+            Package data is being copied.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageAction.PackageActionRemoving">
+            <summary>
+            Package is being removed.
+            </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageErrorType">
             <summary>
             Possible error types for failed package downloads.
@@ -3522,6 +4460,23 @@
         <member name="F:Nutiteq.PackageManager.PackageErrorType.PackageErrorTypeSystem">
             <summary>
             Internal or system error.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageErrorType.PackageErrorTypeConnection">
+            <summary>
+            Connection or network error.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageErrorType.PackageErrorTypeDownloadLimitExceeded">
+            <summary>
+            The number of downloaded packages exceeded subscription limit.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageErrorType.PackageErrorTypePackageTooBig">
+            <summary>
+            The bounding box of the package contains too many tiles.
+            This error is only returned for custom bounding box packages.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageErrorType.PackageErrorTypeNoOfflinePlan">
+            <summary>
+            The license does not allow downloading offline packages.
             </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageInfo">
             <summary>
@@ -3554,6 +4509,31 @@
             </summary>
             <param name="lang"> The language for the name</param>
             <returns>The list of names for the package in the specified language (if not available, generic/English names are returned)</returns></member>
+        <member name="P:Nutiteq.PackageManager.PackageInfo.PackageId">
+            <summary>
+            Returns the internal package id. This should not be displayed to the user.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageInfo.Name">
+            <summary>
+            Returns the default name (short description) of the package. It is better to use getNames method instead, as each package may contain multiple names.
+            The name returned is generic name or if that is not available, then English name.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageInfo.Version">
+            <summary>
+            Returns the package version. This should not be displayed to the user.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageInfo.Size">
+            <summary>
+            Returns the size of the package in bytes. This can be displayed to the user.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageInfo.MetaInfo">
+            <summary>
+            Returns package meta info. If package contains no meta info, null is returned.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageInfo.TileMask">
+            <summary>
+            Returns the encoded tile mask of the package. This should not be displayed to the user.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.PackageInfoVector.PackageInfoVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -3670,6 +4650,23 @@
             </summary>
             <param name="packageId"> The id of the download package.</param>
             <param name="priority"> The priority of the download package. If it is less than zero, package download is paused.</param></member>
+        <member name="P:Nutiteq.PackageManager.PackageManager.ServerPackages">
+            <summary>
+            Returns the list of available server packages.
+            Note that the list must be retrieved from the server first, using startPackageListDownload.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageManager.LocalPackages">
+            <summary>
+            Returns the list of available local downloaded packages.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageManager.ServerPackageListAge">
+            <summary>
+            Returns the age of server package list. This method can be used to measure the time of the download and check whether the list should be updated.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageManager.ServerPackageListMetaInfo">
+            <summary>
+            Returns the metainfo of server packages.
+            </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageManagerListener">
             <summary>
             Base class for map package manager event listeners.
@@ -3778,6 +4775,34 @@
             </summary>
             <param name="key"> The key of the map element to return.</param>
             <returns>The map element with the specified key or null if the element does not exist.</returns></member>
+        <member name="P:Nutiteq.PackageManager.PackageMetaInfo.Type">
+            <summary>
+            Returns the type of this meta info element.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageMetaInfo.Bool">
+            <summary>
+            Returns the boolean value of this element.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageMetaInfo.Long">
+            <summary>
+            Returns the integer value of this element.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageMetaInfo.Double">
+            <summary>
+            Returns the floating point value of this element.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageMetaInfo.String">
+            <summary>
+            Returns the string value of this element.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageMetaInfo.ArraySize">
+            <summary>
+            Returns the number of elements in the array.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageMetaInfo.MapKeys">
+            <summary>
+            Returns all the keys in the map.
+            </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageMetaInfoType">
             <summary>
             Meta info type.
@@ -3785,6 +4810,30 @@
         <member name="F:Nutiteq.PackageManager.PackageMetaInfoType.PackageMetaInfoTypeNull">
             <summary>
             Null element.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageMetaInfoType.PackageMetaInfoTypeString">
+            <summary>
+            String element.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageMetaInfoType.PackageMetaInfoTypeBool">
+            <summary>
+            Boolean element.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageMetaInfoType.PackageMetaInfoTypeInteger">
+            <summary>
+            Integer element.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageMetaInfoType.PackageMetaInfoTypeDouble">
+            <summary>
+            Double-precision floating point element.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageMetaInfoType.PackageMetaInfoTypeArray">
+            <summary>
+            Array element.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageMetaInfoType.PackageMetaInfoTypeMap">
+            <summary>
+            Map (dictionary) element.
             </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageStatus">
             <summary>
@@ -3808,9 +4857,22 @@
             <param name="currentAction"> The current action being performed with the package.</param>
             <param name="paused"> True if the action is paused.</param>
             <param name="progress"> The progress of the operation (in the range 0..100)</param></member>
+        <member name="P:Nutiteq.PackageManager.PackageStatus.Paused">
+            <summary>
+            Returns the paused state of the action.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageStatus.CurrentAction">
+            <summary>
+            Returns the current action being performed.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageStatus.Progress">
+            <summary>
+            Returns the progress of the action.
+            </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageTileMask">
             <summary>
-            Information about map package. This includes id, version, name, description and size.
+            Tile mask contains map package spatial coverage information and
+            can be used for very fast 'tile in package' tests.
             </summary></member>
         <member name="M:Nutiteq.PackageManager.PackageTileMask.Equals(System.Object)">
             <summary>
@@ -3830,6 +4892,14 @@
             <param name="x"> The x coordinate of the tile.</param>
             <param name="y"> The y coordinate of the tile.</param>
             <returns>The status of the specified tile.</returns></member>
+        <member name="P:Nutiteq.PackageManager.PackageTileMask.StringValue">
+            <summary>
+            Returns the encoded tile mask value. This should not be displayed to the user.
+            </summary></member>
+        <member name="P:Nutiteq.PackageManager.PackageTileMask.MaxZoomLevel">
+            <summary>
+            Returns maximum zoom level encoded in this tilemask.
+            </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageTileStatus">
             <summary>
             Tile status.
@@ -3837,6 +4907,14 @@
         <member name="F:Nutiteq.PackageManager.PackageTileStatus.PackageTileStatusMissing">
             <summary>
             Tile is not part of the package.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageTileStatus.PackageTileStatusPartial">
+            <summary>
+            Tile is part of the package, but package does not fully cover it.
+            </summary></member>
+        <member name="F:Nutiteq.PackageManager.PackageTileStatus.PackageTileStatusFull">
+            <summary>
+            Tile if part of the package and package fully covers it.
             </summary></member>
         <member name="T:Nutiteq.Components.PanningMode">
             <summary>
@@ -3846,6 +4924,20 @@
             <summary>
             Free panning means that the map panning is unrestricted, user is able to zoom, rotate and
             pan the map at the same time without any artificial limits.
+            </summary></member>
+        <member name="F:Nutiteq.Components.PanningMode.PanningModeSticky">
+            <summary>
+            Sticky panning means that the map panning is restricted, user is able to freely pan the map,
+            but zooming and rotating gestures can't be performed at the same time. User is still able to
+            switch between zooming and rotating the map but it takes a bit more effort compared to FREE panning.
+            gesture is performed and
+            </summary></member>
+        <member name="F:Nutiteq.Components.PanningMode.PanningModeStickyFinal">
+            <summary>
+            Final sticky panning means that the map panning is restricted, user is able to freely pan the map,
+            but zooming and rotating gestures can't be performed at the same time. Once the gesture type is
+            determined the user is stuck with either zooming or rotating. To switch the gesture the user has to lift
+            at least one the two fingers off the screen.
             </summary></member>
         <member name="T:Nutiteq.DataSources.PersistentCacheTileDataSource">
             <summary>
@@ -3869,6 +4961,11 @@
             </summary>
             <param name="dataSource"> The datasource to be cached.</param>
             <param name="databasePath"> The path to the sqlite database, where the tiles will be cached.</param></member>
+        <member name="M:Nutiteq.DataSources.PersistentCacheTileDataSource.Close">
+            <summary>
+            Close the cache database. The datasource will still work afterwards,
+            but all requests will be directed to the original datasource.
+            </summary></member>
         <member name="M:Nutiteq.DataSources.PersistentCacheTileDataSource.SwigGetClassNamePersistentCacheTileDataSource">
             <summary>
             Returns the actual class name of this object. This is used internally by the SDK.
@@ -3928,6 +5025,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Point.Style">
+            <summary>
+            Returns the style of this point.
+            </summary></member>
         <member name="T:Nutiteq.Geometry.PointGeometry">
             <summary>
             Point geometry. Geometry is defined by a single map position.
@@ -3951,6 +5052,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Geometry.PointGeometry.Pos">
+            <summary>
+            Returns the position of the point.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.PointGeometryVector.PointGeometryVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -3983,6 +5088,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.PointStyle.Size">
+            <summary>
+            Returns the size of the point.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.PointStyle.ClickSize">
+            <summary>
+            Returns the size of the point used for click detection.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.PointStyle.Bitmap">
+            <summary>
+            Returns the bitmap of the point.
+            </summary></member>
         <member name="T:Nutiteq.Styles.PointStyleBuilder">
             <summary>
             A builder class for PointStyle.
@@ -4010,6 +5127,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.PointStyleBuilder.Size">
+            <summary>
+            Returns the size of the point.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.PointStyleBuilder.ClickSize">
+            <summary>
+            Returns the size of the point used for click detection.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.PointStyleBuilder.Bitmap">
+            <summary>
+            Returns the bitmap of the point.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.Polygon">
             <summary>
             A geometric polygon that can be displayed on the map.
@@ -4078,6 +5207,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Polygon.Style">
+            <summary>
+            Returns the style of this polygon.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.Polygon3D">
             <summary>
             A geometric 3d polygon that can be displayed on the map.
@@ -4149,6 +5282,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Polygon3D.Height">
+            <summary>
+            Returns the height of this 3d polygon.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.Polygon3D.Style">
+            <summary>
+            Returns the style of this 3d polygon.
+            </summary></member>
         <member name="T:Nutiteq.Styles.Polygon3DStyle">
             <summary>
             A style for 3d polygons. Contains attributes for configuring how the 3d polygon is drawn on the screen.
@@ -4235,6 +5376,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Geometry.PolygonGeometry.Poses">
+            <summary>
+            Returns the list of map positions defining the outer ring of the polygon.
+            </summary></member>
+        <member name="P:Nutiteq.Geometry.PolygonGeometry.Holes">
+            <summary>
+            Returns the list of map position lists defining the inner rings of the polygon (holes).
+            </summary></member>
+        <member name="P:Nutiteq.Geometry.PolygonGeometry.Rings">
+            <summary>
+            Returns the list of map position lists defining the rings of the polygon.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.PolygonGeometryVector.PolygonGeometryVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -4266,6 +5419,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.PolygonStyle.LineStyle">
+            <summary>
+            Returns the style of the edges of the polygon.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.PolygonStyle.Bitmap">
+            <summary>
+            Returns the bitmap of the polygon.
+            </summary></member>
         <member name="T:Nutiteq.Styles.PolygonStyleBuilder">
             <summary>
             A builder class for PolygonStyle.
@@ -4293,6 +5454,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.PolygonStyleBuilder.LineStyle">
+            <summary>
+            Returns the line style of the edges of the polygon.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.Popup">
             <summary>
             An abstract billboard element that can be displayed on the map. It
@@ -4364,6 +5529,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Popup.AnchorPointX">
+            <summary>
+            Returns the horizontal anchor point of this popup.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.Popup.AnchorPointY">
+            <summary>
+            Returns the vertical anchor point of this popup.
+            </summary></member>
         <member name="T:Nutiteq.Styles.PopupStyle">
             <summary>
             A style for popups. Contains attributes for configuring how the popup is drawn on the screen.
@@ -4480,6 +5653,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Projections.Projection.Name">
+            <summary>
+            Return name of this projection in Well-Known format. For example, as "EPSG:3857"
+            </summary></member>
         <member name="T:Nutiteq.Components.ProjectionMode">
             <summary>
             Possible projection modes.
@@ -4491,6 +5668,11 @@
             avoids perspective distortion, but it becomes unusable at small tilt angles.
             This is sometimes confused with isometric projection which is a subtype of
             orthogonal projection.
+            </summary></member>
+        <member name="F:Nutiteq.Components.ProjectionMode.ProjectionModePerspective">
+            <summary>
+            Perspective projection means that the further away objects get from the camera the smaller
+            they appear on the screen. This projection mode is used in most 3D games and applications.
             </summary></member>
         <member name="T:Nutiteq.Layers.RasterTileLayer">
             <summary>
@@ -4529,6 +5711,22 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Layers.RasterTileLayer.Opacity">
+            <summary>
+            Returns the opacity of the layer.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.RasterTileLayer.FrameNr">
+            <summary>
+            Returns the current frame number.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.RasterTileLayer.SynchronizedRefresh">
+            <summary>
+            Returns the state of the synchronized refresh flag.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.RasterTileLayer.TextureCacheCapacity">
+            <summary>
+            Returns the tile texture cache capacity.
+            </summary></member>
         <member name="T:Nutiteq.Ui.RedrawRequestListener">
             <summary>
             An internal listener class for notifying about screen redraw requests.
@@ -4623,6 +5821,18 @@
             Creates a string representation of this screen bounds object, useful for logging.
             </summary>
             <returns>The string representation of this screen bounds object.</returns></member>
+        <member name="P:Nutiteq.Core.ScreenBounds.Min">
+            <summary>
+            Returns the minimum screen position.
+            </summary></member>
+        <member name="P:Nutiteq.Core.ScreenBounds.Max">
+            <summary>
+            Returns the maximum screen position of this screen envelope object.
+            </summary></member>
+        <member name="P:Nutiteq.Core.ScreenBounds.Center">
+            <summary>
+            Calculates the center screen position of this screen envelope object.
+            </summary></member>
         <member name="T:Nutiteq.Core.ScreenPos">
             <summary>
             A screen position defined by x,y floating point numbers.
@@ -4663,6 +5873,14 @@
             Creates a string representation of this screen position, useful for logging.
             </summary>
             <returns>The string representation of this screen position.</returns></member>
+        <member name="P:Nutiteq.Core.ScreenPos.X">
+            <summary>
+            Returns the x coordinate of this position.
+            </summary></member>
+        <member name="P:Nutiteq.Core.ScreenPos.Y">
+            <summary>
+            Returns the y coordinate of this position.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.ScreenPosVector.ScreenPosVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -4731,6 +5949,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.Style.Color">
+            <summary>
+            Returns the color of the vector element.
+            </summary></member>
         <member name="T:Nutiteq.Styles.StyleBuilder">
             <summary>
             A base class for other StyleBuilder subclasses.
@@ -4759,6 +5981,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.StyleBuilder.Color">
+            <summary>
+            Returns the color of the vector element.
+            </summary></member>
         <member name="T:Nutiteq.Styles.StyleSelector">
             <summary>
             A collection of style rules.
@@ -4857,6 +6083,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.Text.Title">
+            <summary>
+            Returns the display text.
+            </summary></member>
         <member name="T:Nutiteq.Styles.TextStyle">
             <summary>
             A style for text labels. Contains attributes for configuring how the text label is drawn on the screen.
@@ -4865,7 +6095,7 @@
             <summary>
             Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
-        <member name="M:Nutiteq.Styles.TextStyle.#ctor(Nutiteq.Graphics.Color,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Int32,System.Boolean,System.Single,System.Single,System.Boolean,Nutiteq.Styles.BillboardOrientation,Nutiteq.Styles.BillboardScaling,System.String,System.Int32,Nutiteq.Graphics.Color,System.Single)">
+        <member name="M:Nutiteq.Styles.TextStyle.#ctor(Nutiteq.Graphics.Color,System.Single,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Int32,System.Boolean,System.Single,System.Single,System.Boolean,Nutiteq.Styles.BillboardOrientation,Nutiteq.Styles.BillboardScaling,System.String,System.String,System.Int32,Nutiteq.Graphics.Color,System.Single)">
             <summary>
             Constructs a TextStyle object from various parameters. Instantiating the object directly is
             not recommended, TextStyleBuilder should be used instead.
@@ -4885,6 +6115,7 @@
             <param name="orientationMode"> The orientation mode.</param>
             <param name="scalingMode"> The scaling mode.</param>
             <param name="fontName"> The font's name.</param>
+            <param name="textField"> The text field variable to use.</param>
             <param name="fontSize"> The font's size.</param>
             <param name="strokeColor"> The width of the color.</param>
             <param name="strokeWidth"> The width of the stroke.</param></member>
@@ -4898,6 +6129,30 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.TextStyle.FontColor">
+            <summary>
+            Returns the font's color.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyle.FontName">
+            <summary>
+            Returns the font's name.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyle.TextField">
+            <summary>
+            Returns the text field variable to use.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyle.FontSize">
+            <summary>
+            Returns the font's size.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyle.StrokeColor">
+            <summary>
+            Returns the color of the stroke.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyle.StrokeWidth">
+            <summary>
+            Returns the width of the stroke.
+            </summary></member>
         <member name="T:Nutiteq.Styles.TextStyleBuilder">
             <summary>
             A builder class for TextStyle.
@@ -4925,6 +6180,26 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Styles.TextStyleBuilder.FontName">
+            <summary>
+            Returns the font name for the text label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyleBuilder.TextField">
+            <summary>
+            Returns the text field variable. If not empty, this variable is used to read actual text string from object meta info.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyleBuilder.FontSize">
+            <summary>
+            Returns the font size for the text label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyleBuilder.StrokeColor">
+            <summary>
+            Returns the stroke color for the text label.
+            </summary></member>
+        <member name="P:Nutiteq.Styles.TextStyleBuilder.StrokeWidth">
+            <summary>
+            Returns the stroke width for the text label.
+            </summary></member>
         <member name="T:Nutiteq.Core.TileData">
             <summary>
             A wrapper class for tile data.
@@ -4944,6 +6219,18 @@
             Constructs a TileData object from a data blob.
             </summary>
             <param name="data"> The source tile data.</param></member>
+        <member name="P:Nutiteq.Core.TileData.MaxAge">
+            <summary>
+            Returns the maximum age of the tile data, tile data will expire after that point.
+            </summary></member>
+        <member name="P:Nutiteq.Core.TileData.ReplaceWithParent">
+            <summary>
+            Returns true if the tile should be replaced with parent tile.
+            </summary></member>
+        <member name="P:Nutiteq.Core.TileData.Data">
+            <summary>
+            Returns tile data as a byte vector.
+            </summary></member>
         <member name="T:Nutiteq.DataSources.TileDataSource">
             <summary>
             Abstract base class for tile data sources. It provides default implementation
@@ -4992,6 +6279,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.DataSources.TileDataSource.MinZoom">
+            <summary>
+            Returns the minimum zoom level supported by this data source.
+            </summary></member>
+        <member name="P:Nutiteq.DataSources.TileDataSource.MaxZoom">
+            <summary>
+            Returns the maximum zoom level supported by this data source.
+            </summary></member>
         <member name="T:Nutiteq.Layers.TileLayer">
             <summary>
             An abstract base class for all tile layers.
@@ -5038,6 +6333,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Layers.TileLayer.Preloading">
+            <summary>
+            Returns the state of the preloading flag of this layer.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.TileLayer.TileSubstitutionPolicy">
+            <summary>
+            Returns the current tile substitution policy.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.TileLayer.ZoomLevelBias">
+            <summary>
+            Gets the current zoom level bias for this layer.
+            </summary></member>
         <member name="T:Nutiteq.Layers.TileLoadListener">
             <summary>
             Interface for monitoring tile loading events.
@@ -5072,6 +6379,15 @@
         <member name="F:Nutiteq.Layers.TileSubstitutionPolicy.TileSubstitutionPolicyAll">
             <summary>
             Consider all cached/loaded tiles.
+            </summary></member>
+        <member name="F:Nutiteq.Layers.TileSubstitutionPolicy.TileSubstitutionPolicyVisible">
+            <summary>
+            Consider only tiles that are currently visible.
+            This is recommended for low-latency data sources, like offline sources.
+            </summary></member>
+        <member name="F:Nutiteq.Layers.TileSubstitutionPolicy.TileSubstitutionPolicyNone">
+            <summary>
+            Never substitute tiles.
             </summary></member>
         <member name="T:Nutiteq.WrappedCommons.UnsignedCharVector.UnsignedCharVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
@@ -5190,6 +6506,18 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorElements.VectorElement.Id">
+            <summary>
+            Returns the internal id of this vector element.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.VectorElement.Visible">
+            <summary>
+            Returns the state of the visibility flag of this vector element.
+            </summary></member>
+        <member name="P:Nutiteq.VectorElements.VectorElement.Bounds">
+            <summary>
+            Returns the bounds of this vector element.
+            </summary></member>
         <member name="T:Nutiteq.Ui.VectorElementClickInfo">
             <summary>
             A container class that provies information about a click performed on
@@ -5223,6 +6551,25 @@
             Returns the layer of the clicked vector element.
             </summary>
             <returns>The layer of the vector element on which the click was performed.</returns></member>
+        <member name="P:Nutiteq.Ui.VectorElementClickInfo.ClickPos">
+            <summary>
+            Returns the click position.
+            </summary></member>
+        <member name="P:Nutiteq.Ui.VectorElementClickInfo.ElementClickPos">
+            <summary>
+            Returns the position on the clicked element, that is close to the click position.
+            For points it will always be the center position, for lines it will be the closest point
+            on the line, for billboards it will be the anchor point and for polygons it's equal to
+            getClickPos().
+            </summary></member>
+        <member name="P:Nutiteq.Ui.VectorElementClickInfo.Distance">
+            <summary>
+            Returns the distance from the vector element to the camera.
+            </summary></member>
+        <member name="P:Nutiteq.Ui.VectorElementClickInfo.Order">
+            <summary>
+            Returns the relative draw order of the vector element.
+            </summary></member>
         <member name="T:Nutiteq.WrappedCommons.VectorElementClickInfoVector.VectorElementClickInfoVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
             whenever the collection is modified. This has been done for changes in the size of the
@@ -5253,6 +6600,14 @@
             Returns the hash value of this object.
             </summary>
             <returns>The hash value of this object.</returns></member>
+        <member name="P:Nutiteq.Ui.VectorElementsClickInfo.VectorElementClickInfos">
+            <summary>
+            Returns the sorted list of VectorElementClickInfo objects.
+            </summary></member>
+        <member name="P:Nutiteq.Ui.VectorElementsClickInfo.ClickType">
+            <summary>
+            Returns the click type.
+            </summary></member>
         <member name="T:Nutiteq.Layers.VectorLayer">
             <summary>
             A vector layer that loads data using an envelope. Should be used together with corresponding data source.
@@ -5318,6 +6673,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.VectorTiles.VectorTileDecoder.MinZoom">
+            <summary>
+            Returns minimum zoom level supported for by the decoder (or style).
+            </summary></member>
+        <member name="P:Nutiteq.VectorTiles.VectorTileDecoder.MaxZoom">
+            <summary>
+            Returns maximum zoom level supported for by the decoder (or style).
+            </summary></member>
         <member name="T:Nutiteq.Layers.VectorTileLayer">
             <summary>
             A tile layer where each tile is a bitmap. Should be used together with corresponding data source.
@@ -5342,6 +6705,14 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.Layers.VectorTileLayer.TileCacheCapacity">
+            <summary>
+            Returns the tile cache capacity.
+            </summary></member>
+        <member name="P:Nutiteq.Layers.VectorTileLayer.TileDecoder">
+            <summary>
+            Returns the tile decoder assigned to this layer.
+            </summary></member>
         <member name="T:Nutiteq.Graphics.ViewState">
             <summary>
             A class containing various view parameters for a view state.
@@ -5418,12 +6789,85 @@
             </summary>
             <returns>The cosine of the half horizontal FOV angle multiplied
             by the cosine of the half vertical FOV angle.</returns></member>
-        <member name="M:Nutiteq.Graphics.ViewState.WorldToScreen(Nutiteq.Core.MapPos,Nutiteq.Components.Options)">
+        <member name="P:Nutiteq.Graphics.ViewState.Frustum">
             <summary>
-            Projects a world position onto the screen using the current view state.
-            </summary>
-            <param name="worldPos"> The world position.</param>
-            <param name="options"> The options object.</param>
-            <returns>The world position projected onto the screen, in pixel coordinates.</returns></member>
+            Returns the view frustum.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Rotation">
+            <summary>
+            Returns the camera rotation angle.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Zoom">
+            <summary>
+            Returns the camera zoom level.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Tilt">
+            <summary>
+            Returns the camera tilt angle.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.ProjectionMode">
+            <summary>
+            Returns the projection mode.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Zoom0Distance">
+            <summary>
+            Returns the distance between the focus and the camera position, when the zoom level is set to 0.
+            This parameter depends on the screen size, DPI, tile draw size and field of view settings.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.FOVY">
+            <summary>
+            Returns the vertical field of view angle.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Near">
+            <summary>
+            Returns the near plane distance.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Far">
+            <summary>
+            Returns the far plane distance.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.CameraChanged">
+            <summary>
+            Returns the state of the camera changed flag.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Width">
+            <summary>
+            Returns the width of the map screen.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.Height">
+            <summary>
+            Returns the height of the map screen.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.ScreenWidth">
+            <summary>
+            Returns the screen width.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.ScreenHeight">
+            <summary>
+            Returns the screen height.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.DPI">
+            <summary>
+            Returns the dots per inch parameter of the screen.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.DPToPX">
+            <summary>
+            Returns a value that is used for converting display independent pixels (dp) to pixels (px).
+            This values depends on the screen density.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.UnitToDPCoef">
+            <summary>
+            Returns the conversion ratio between internal map units and screen density independent pixels (DP or DIP).
+            This parameter is dependent on the zoom level, DPI and other screen parameters.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.UnitToPXCoef">
+            <summary>
+            Returns the conversion ratio between internal map units and screen pixels. This parameter is dependent
+            on the zoom level and other screen parameters.
+            </summary></member>
+        <member name="P:Nutiteq.Graphics.ViewState.AspectRatio">
+            <summary>
+            Returns the aspect ratio of the map screen. Equal to width / height.
+            </summary></member>
     </members>
 </doc>
