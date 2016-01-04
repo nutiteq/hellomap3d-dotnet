@@ -29,7 +29,7 @@ Almost all of the map-related code: adding layers and objects to map, handling i
 
 1) **Add Nutiteq SDK component** to your project (from Xamarin Component store) or just copy the .dll files from Assemblies
 
-2) **Copy vector style file** (*osmbright.zip*) to your project *Assets* folder. You can take it from samples. This is needed for vector basemap.
+2) **Copy vector style file** (*nutibright-v2a.zip*) to your project *Assets* folder. You can take it from samples. This is needed for vector basemap.
 
 3) **Add MapView to your application main layout**
 
@@ -75,7 +75,7 @@ public class MainActivity : Activity
 		var mapView = FindViewById<MapView> ( Resource.Id.mapView );
 
 		/// Online vector base layer
-		var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+		var baseLayer = new NutiteqOnlineVectorTileLayer("nutibright-v2a.zip");
 
 		/// Set online base layer  
 		mapView.Layers.Add(baseLayer);
@@ -118,7 +118,7 @@ public class MainViewController : GLKit.GLKViewController
 		MapView.RegisterLicense("YOUR_LICENSE_KEY");
 
 		// Online vector base layer
-		var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+		var baseLayer = new NutiteqOnlineVectorTileLayer("nutibright-v2a.zip");
 
 		// Set online base layer.
 		// Note: assuming here that Map is an outlet added to the controller.
@@ -159,7 +159,7 @@ protected async override void OnLaunched(LaunchActivatedEventArgs e){
    // Register Nutiteq app license
    var licenseOk = Nutiteq.Ui.MapView.RegisterLicense("YOUR-LICENSE-CODE");
    // Online vector base layer
-   var baseLayer = new NutiteqOnlineVectorTileLayer("osmbright.zip");
+   var baseLayer = new NutiteqOnlineVectorTileLayer("nutibright-v2a.zip");
    
    // Set online base layer.
    // Note: assuming here that Map is an outlet added to the controller.
