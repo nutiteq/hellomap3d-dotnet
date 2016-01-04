@@ -4987,6 +4987,10 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
+        <member name="P:Nutiteq.DataSources.PersistentCacheTileDataSource.CacheOnlyMode">
+            <summary>
+            Returns the state of cache only mode.
+            </summary></member>
         <member name="T:Nutiteq.VectorElements.Point">
             <summary>
             A geometric point that can be displayed on the map.
