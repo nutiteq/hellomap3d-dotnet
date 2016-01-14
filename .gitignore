@@ -29,3 +29,12 @@ proguard/
 hellomap-ios/obj
 hellomap-android/obj
 
+#Xamarin specific
+
+*.DS_Store
+*.sln.cache
+*.suo
+*.userprefs
+*.usertasks
+*.user
+*.designer.cs
