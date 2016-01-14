@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="NutiteqMapsSDK.Android">
-      <HintPath>Assemblies\NutiteqMapsSDK.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NutiteqMapsSDK.Android">
+      <HintPath>Assemblies\NutiteqMapsSDK.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +61,7 @@
     <Compile Include="ClusteredGeoJSONCaptitals.cs" />
     <Compile Include="MapOverlays.cs" />
     <Compile Include="GpsLocationMap.cs" />
+    <Compile Include="OfflineRouting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -78,6 +79,11 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\list.axml" />
     <AndroidResource Include="Resources\layout\MainGPS.axml" />
+    <AndroidResource Include="Resources\drawable-nodpi\direction_down.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\direction_up.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\direction_upthenleft.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\direction_upthenright.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\olmarker.png" />
   </ItemGroup>
   <Import Project="..\hellomap-shared\hellomap-shared.projitems" Label="Shared" Condition="Exists('..\hellomap-shared\hellomap-shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
@@ -94,5 +100,8 @@
       <Version>6.0.8.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-nodpi\" />
   </ItemGroup>
 </Project>

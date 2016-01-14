@@ -12,6 +12,7 @@ using Nutiteq.Ui;
 using Nutiteq.Utils;
 using Nutiteq.Layers;
 using HelloMap;
+using Nutiteq.Projections;
 
 namespace NutiteqSample
 {
@@ -19,6 +20,7 @@ namespace NutiteqSample
 	public class BaseMapActivity : Activity
 	{
 		protected MapView mapView;
+		internal Projection baseProjection;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -32,6 +34,9 @@ namespace NutiteqSample
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 			mapView = (MapView)FindViewById (Resource.Id.mapView);
+
+			baseProjection = new EPSG3857 ();
+
 		}
 	}
 }
