@@ -3278,9 +3278,24 @@
             <summary>
             Creates a polymorphic instance of the given native object. This is used internally by the SDK.
             </summary></member>
+        <member name="M:Nutiteq.Ui.MapEventListener.OnMapIdle">
+            <summary>
+            Listener method that gets called at the end of the rendering process when the
+            map view needs no further refreshing.
+            Note that there can still be background processes (tile loading) that may change
+            the map view but these may take long time.
+            This method is called from GL renderer thread, not from main thread.
+            </summary></member>
         <member name="M:Nutiteq.Ui.MapEventListener.OnMapMoved">
             <summary>
             Listener method that gets called when the map is panned, rotated, tilted or zoomed.
+            The thread this method is called from may vary.
+            </summary></member>
+        <member name="M:Nutiteq.Ui.MapEventListener.OnMapStable">
+            <summary>
+            Listener method that gets called when map is in 'stable' state - map animations have finished,
+            user has lifted fingers from the screen. This method is similar to onMapIdle, but is called less
+            frequently and takes account touch state.
             The thread this method is called from may vary.
             </summary></member>
         <member name="M:Nutiteq.Ui.MapEventListener.OnMapClicked(Nutiteq.Ui.MapClickInfo)">
@@ -4146,52 +4161,6 @@
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
             <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
-        <member name="T:Nutiteq.Routing.NutiteqOfflineRoutingService">
-            <summary>
-            An offline routing service that uses Nutiteq-specific routing database file.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.NutiteqOfflineRoutingService.SwigCreatePolymorphicInstanceNutiteqOfflineRoutingService(System.IntPtr,System.Boolean)">
-            <summary>
-            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.NutiteqOfflineRoutingService.#ctor(System.String)">
-            <summary>
-            Constructs a new NutiteqOfflineRoutingService instance given database file.
-            </summary>
-            <param name="path"> The full path to the database file.</param></member>
-        <member name="M:Nutiteq.Routing.NutiteqOfflineRoutingService.SwigGetClassNameNutiteqOfflineRoutingService">
-            <summary>
-            Returns the actual class name of this object. This is used internally by the SDK.
-            </summary>
-            <returns>The class name of this object.</returns></member>
-        <member name="M:Nutiteq.Routing.NutiteqOfflineRoutingService.SwigGetDirectorObjectNutiteqOfflineRoutingService">
-            <summary>
-            Returns the pointer to the connected director object. This is used internally by the SDK.
-            </summary>
-            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
-        <member name="T:Nutiteq.Routing.NutiteqOnlineRoutingService">
-            <summary>
-            An online routing service that connects to Nutiteq-provided routing server.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.NutiteqOnlineRoutingService.SwigCreatePolymorphicInstanceNutiteqOnlineRoutingService(System.IntPtr,System.Boolean)">
-            <summary>
-            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.NutiteqOnlineRoutingService.#ctor(System.String)">
-            <summary>
-            Constructs a new NutiteqOnlineRoutingService instance given service source.
-            </summary>
-            <param name="source"> The source id of the service.</param></member>
-        <member name="M:Nutiteq.Routing.NutiteqOnlineRoutingService.SwigGetClassNameNutiteqOnlineRoutingService">
-            <summary>
-            Returns the actual class name of this object. This is used internally by the SDK.
-            </summary>
-            <returns>The class name of this object.</returns></member>
-        <member name="M:Nutiteq.Routing.NutiteqOnlineRoutingService.SwigGetDirectorObjectNutiteqOnlineRoutingService">
-            <summary>
-            Returns the pointer to the connected director object. This is used internally by the SDK.
-            </summary>
-            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
         <member name="T:Nutiteq.DataSources.NutiteqOnlineTileDataSource">
             <summary>
             An online tile data source that connects to Nutiteq tile server.
@@ -4423,6 +4392,10 @@
             <summary>
             Returns the panning mode.
             </summary></member>
+        <member name="P:Nutiteq.Components.Options.PivotMode">
+            <summary>
+            Returns the pivot mode.
+            </summary></member>
         <member name="P:Nutiteq.Components.Options.BackgroundBitmap">
             <summary>
             Returns the background bitmap. May be null.
@@ -4526,7 +4499,7 @@
             </summary></member>
         <member name="T:Nutiteq.PackageManager.PackageInfo">
             <summary>
-            Information about map package. This includes id, type, version, name, description and size.
+            Information about map package. This includes id, version, name, description and size.
             </summary></member>
         <member name="M:Nutiteq.PackageManager.PackageInfo.Equals(System.Object)">
             <summary>
@@ -4538,22 +4511,16 @@
             Returns the hash value of this object.
             </summary>
             <returns>The hash value of this object.</returns></member>
-        <member name="M:Nutiteq.PackageManager.PackageInfo.#ctor(System.String,Nutiteq.PackageManager.PackageType,System.Int32,System.UInt64,System.String,Nutiteq.PackageManager.PackageTileMask,Nutiteq.PackageManager.PackageMetaInfo)">
+        <member name="M:Nutiteq.PackageManager.PackageInfo.#ctor(System.String,System.Int32,System.UInt64,System.String,Nutiteq.PackageManager.PackageTileMask,Nutiteq.PackageManager.PackageMetaInfo)">
             <summary>
             Constructs a new package info instance.
             </summary>
             <param name="packageId"> The unique id of the package</param>
-            <param name="packageType"> The type of the package</param>
             <param name="version"> The increasing version number of the package</param>
             <param name="size"> Size of the package in bytes</param>
             <param name="serverUrl"> Location of the package</param>
             <param name="tileMask"> The tile mask of the package</param>
             <param name="metaInfo"> Package meta info</param></member>
-        <member name="M:Nutiteq.PackageManager.PackageInfo.GetPackageType">
-            <summary>
-            Returns the package type.
-            </summary>
-            <returns>The package type (map, routing, etc)</returns></member>
         <member name="M:Nutiteq.PackageManager.PackageInfo.GetNames(System.String)">
             <summary>
             Returns the names (short description) of the package. This can be displayed to the user. Each package may have multiple names, if the package has multiple classifications.
@@ -4584,8 +4551,7 @@
             </summary></member>
         <member name="P:Nutiteq.PackageManager.PackageInfo.TileMask">
             <summary>
-            Returns the encoded tile mask of the package. This is available for map packages but not for routing packages.
-            This should not be displayed to the user.
+            Returns the encoded tile mask of the package. This should not be displayed to the user.
             </summary></member>
         <member name="T:Nutiteq.WrappedCommons.PackageInfoVector.PackageInfoVectorEnumerator">
             Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
@@ -4770,29 +4736,6 @@
             </summary>
             <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.PackageManager.PackageManagerListener.SwigGetDirectorObjectPackageManagerListener">
-            <summary>
-            Returns the pointer to the connected director object. This is used internally by the SDK.
-            </summary>
-            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
-        <member name="T:Nutiteq.Routing.PackageManagerRoutingService">
-            <summary>
-            A routing service that uses routing packages from package manager.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.PackageManagerRoutingService.SwigCreatePolymorphicInstancePackageManagerRoutingService(System.IntPtr,System.Boolean)">
-            <summary>
-            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.PackageManagerRoutingService.#ctor(Nutiteq.PackageManager.PackageManager)">
-            <summary>
-            Constructs a new instance of the PackageManagerRoutingService given package manager instance.
-            </summary>
-            <param name="packageManager"> The package manager instance to use.</param></member>
-        <member name="M:Nutiteq.Routing.PackageManagerRoutingService.SwigGetClassNamePackageManagerRoutingService">
-            <summary>
-            Returns the actual class name of this object. This is used internally by the SDK.
-            </summary>
-            <returns>The class name of this object.</returns></member>
-        <member name="M:Nutiteq.Routing.PackageManagerRoutingService.SwigGetDirectorObjectPackageManagerRoutingService">
             <summary>
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
@@ -4992,18 +4935,6 @@
             <summary>
             Tile if part of the package and package fully covers it.
             </summary></member>
-        <member name="T:Nutiteq.PackageManager.PackageType">
-            <summary>
-            Package types.
-            </summary></member>
-        <member name="F:Nutiteq.PackageManager.PackageType.PackageTypeMap">
-            <summary>
-            Map package.
-            </summary></member>
-        <member name="F:Nutiteq.PackageManager.PackageType.PackageTypeRouting">
-            <summary>
-            Routing package.
-            </summary></member>
         <member name="T:Nutiteq.Components.PanningMode">
             <summary>
             Possible panning modes for dual touch user input.
@@ -5067,6 +4998,18 @@
         <member name="P:Nutiteq.DataSources.PersistentCacheTileDataSource.CacheOnlyMode">
             <summary>
             Returns the state of cache only mode.
+            </summary></member>
+        <member name="T:Nutiteq.Components.PivotMode">
+            <summary>
+            Possible pivot modes.
+            </summary></member>
+        <member name="F:Nutiteq.Components.PivotMode.PivotModeTouchpoint">
+            <summary>
+            The touch point (or middle point between 2 finger touches) is used as the pivot point.
+            </summary></member>
+        <member name="F:Nutiteq.Components.PivotMode.PivotModeCenterpoint">
+            <summary>
+            Screen center is always used for pivot point.
             </summary></member>
         <member name="T:Nutiteq.VectorElements.Point">
             <summary>
@@ -5837,230 +5780,6 @@
             </summary>
             <returns>The class name of this object.</returns></member>
         <member name="M:Nutiteq.Ui.RedrawRequestListener.SwigGetDirectorObjectRedrawRequestListener">
-            <summary>
-            Returns the pointer to the connected director object. This is used internally by the SDK.
-            </summary>
-            <returns>The pointer to the connected director object or null if director is not connected.</returns></member>
-        <member name="T:Nutiteq.Routing.RoutingAction">
-            <summary>
-            Routing action type.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionHeadOn">
-            <summary>
-            Head on, start the route.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionFinish">
-            <summary>
-            Finish the route.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionNoTurn">
-            <summary>
-            Continue along the given street, do not turn.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionGoStraight">
-            <summary>
-            Go straight.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionTurnRight">
-            <summary>
-            Turn right.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionUturn">
-            <summary>
-            Do an u-turn.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionTurnLeft">
-            <summary>
-            Turn left.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionReachViaLocation">
-            <summary>
-            Reached given via point. If this is the final point, FINISH action is used instead.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionEnterRoundabout">
-            <summary>
-            Enter roundabout.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionLeaveRoundabout">
-            <summary>
-            Leave roundabout.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionStayOnRoundabout">
-            <summary>
-            Continue along the roundabout.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionStartAtEndOfStreet">
-            <summary>
-            Start at the end of the street.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionEnterAgainstAllowedDirection">
-            <summary>
-            Enter street while moving against the allowed direction.
-            </summary></member>
-        <member name="F:Nutiteq.Routing.RoutingAction.RoutingActionLeaveAgainstAllowedDirection">
-            <summary>
-            Leave the street while moving aginst the allowed direction.
-            </summary></member>
-        <member name="T:Nutiteq.Routing.RoutingInstruction">
-            <summary>
-            A class that defines a routing instruction at specified position in the path.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.RoutingInstruction.Equals(System.Object)">
-            <summary>
-            Checks if this object is equal to the specified object.
-            </summary>
-            <returns>True when objects are equal, false otherwise.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingInstruction.GetHashCode">
-            <summary>
-            Returns the hash value of this object.
-            </summary>
-            <returns>The hash value of this object.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingInstruction.#ctor">
-            <summary>
-            Constructs a new RoutingInstruction instance with all values set to default.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.RoutingInstruction.#ctor(Nutiteq.Routing.RoutingAction,System.Int32,System.String,System.Single,System.Single,System.Double,System.Double)">
-            <summary>
-            Constructs a new RoutingInstruction instance given all instruction attributes.
-            </summary>
-            <param name="action"> Action to take.</param>
-            <param name="pointIndex"> Instruction starting point index in the point list.</param>
-            <param name="streetName"> Street name.</param>
-            <param name="turnAngle"> Turn angle in degrees.</param>
-            <param name="azimuth"> Azimuth in degrees.</param>
-            <param name="distance"> The distance to move along the given street in meters.</param>
-            <param name="time"> The approximate duration of the instruction in seconds.</param></member>
-        <member name="M:Nutiteq.Routing.RoutingInstruction.ToString">
-            <summary>
-            Creates a string representation of this instruction, useful for logging.
-            </summary>
-            <returns>The string representation of this instruction.</returns></member>
-        <member name="P:Nutiteq.Routing.RoutingInstruction.Action">
-            <summary>
-            Returns the action of the instruction.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingInstruction.PointIndex">
-            <summary>
-            Returns the index of the first geometry point in external point array.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingInstruction.StreetName">
-            <summary>
-            Returns the name of street.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingInstruction.TurnAngle">
-            <summary>
-            Returns the turn angle of the action.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingInstruction.Azimuth">
-            <summary>
-            Returns the azimuth of the initial position.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingInstruction.Distance">
-            <summary>
-            Returns the distance to move along the given street.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingInstruction.Time">
-            <summary>
-            Returns the time approximate duration of the instruction.
-            </summary></member>
-        <member name="T:Nutiteq.WrappedCommons.RoutingInstructionVector.RoutingInstructionVectorEnumerator">
-            Note that the IEnumerator documentation requires an InvalidOperationException to be thrown
-            whenever the collection is modified. This has been done for changes in the size of the
-            collection but not when one of the elements of the collection is modified as it is a bit
-            tricky to detect unmanaged code that modifies the collection under our feet.</member>
-        <member name="T:Nutiteq.Routing.RoutingRequest">
-            <summary>
-            A class that defines required attributes for routing (end points, etc).
-            </summary></member>
-        <member name="M:Nutiteq.Routing.RoutingRequest.Equals(System.Object)">
-            <summary>
-            Checks if this object is equal to the specified object.
-            </summary>
-            <returns>True when objects are equal, false otherwise.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingRequest.GetHashCode">
-            <summary>
-            Returns the hash value of this object.
-            </summary>
-            <returns>The hash value of this object.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingRequest.#ctor(Nutiteq.Projections.Projection,Nutiteq.WrappedCommons.MapPosVector)">
-            <summary>
-            Constructs a new RoutingRequest instance from projection and via points.
-            </summary>
-            <param name="projection"> The projection of the points.</param>
-            <param name="points"> The list of points that the route must pass. Must contains at least 2 elements.</param></member>
-        <member name="P:Nutiteq.Routing.RoutingRequest.Projection">
-            <summary>
-            Returns the projection of the points in the request.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingRequest.Points">
-            <summary>
-            Returns the point list of the request.
-            </summary></member>
-        <member name="T:Nutiteq.Routing.RoutingResult">
-            <summary>
-            A class that defines list of routing actions and path geometry.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.RoutingResult.Equals(System.Object)">
-            <summary>
-            Checks if this object is equal to the specified object.
-            </summary>
-            <returns>True when objects are equal, false otherwise.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingResult.GetHashCode">
-            <summary>
-            Returns the hash value of this object.
-            </summary>
-            <returns>The hash value of this object.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingResult.#ctor(Nutiteq.Projections.Projection,Nutiteq.WrappedCommons.MapPosVector,Nutiteq.WrappedCommons.RoutingInstructionVector)">
-            <summary>
-            Constructs a new RoutingResult instance from projection, points and instructions.
-            </summary>
-            <param name="projection"> The projection of the routing result (same as the request).</param>
-            <param name="points"> The point list defining the routing path. Instructions refer to this list.</param>
-            <param name="instructions"> The turn-by-turn instruction list.</param></member>
-        <member name="P:Nutiteq.Routing.RoutingResult.Projection">
-            <summary>
-            Returns the projection of the points in the result.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingResult.Points">
-            <summary>
-            Returns the point list of the result. The list contains all the points the route must pass in correct order.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingResult.Instructions">
-            <summary>
-            Returns the turn-by-turn instruction list.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingResult.TotalDistance">
-            <summary>
-            Returns the total distance of the path.
-            </summary></member>
-        <member name="P:Nutiteq.Routing.RoutingResult.TotalTime">
-            <summary>
-            Returns the approximate total duration of the path.
-            </summary></member>
-        <member name="T:Nutiteq.Routing.RoutingService">
-            <summary>
-            An abstract base class for routing services (either online or offline).
-            </summary></member>
-        <member name="M:Nutiteq.Routing.RoutingService.SwigCreatePolymorphicInstanceRoutingService(System.IntPtr,System.Boolean)">
-            <summary>
-            Creates a polymorphic instance of the given native object. This is used internally by the SDK.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.RoutingService.CalculateRoute(Nutiteq.Routing.RoutingRequest)">
-            <summary>
-            Calculates routing result (path) based on routing result.
-            </summary>
-            <param name="request"> The routing request defining via points.</param>
-            <returns>The result or null if routing failed.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingService.#ctor">
-            <summary>
-            The default constructor.
-            </summary></member>
-        <member name="M:Nutiteq.Routing.RoutingService.SwigGetClassNameRoutingService">
-            <summary>
-            Returns the actual class name of this object. This is used internally by the SDK.
-            </summary>
-            <returns>The class name of this object.</returns></member>
-        <member name="M:Nutiteq.Routing.RoutingService.SwigGetDirectorObjectRoutingService">
             <summary>
             Returns the pointer to the connected director object. This is used internally by the SDK.
             </summary>
