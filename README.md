@@ -1,11 +1,15 @@
-# Nutiteq Maps SDK for .NET
+# Update - new major map SDK version available!
+
+Nutiteq joined CARTO in early 2016. We suggest to develop your app using newer **CARTO Mobile Map SDK** version 4.x. It has all same features, plus more. The new and much advanced sample code here: https://github.com/CartoDB/mobile-dotnet-samples/ and developer Getting Started guidelines can be found from https://carto.com/docs/carto-engine/mobile-sdk/getting-started 
+
+# Nutiteq Maps SDK for .NET (old version)
 
 Includes samples and Nutiteq Maps SDK 3.1 for .NET platform:
 * Android (Xamarin)
 * iOS (Xamarin)
 * Windows Phone (Visual Studio)
 
-**Update:** Xamarin samples are also available in [Xamarin Store Nutiteq SDK component](https://components.xamarin.com/view/NutiteqMapsSDK) release. This github project has updated development version.
+Xamarin samples are also available in [Xamarin Store Nutiteq SDK component](https://components.xamarin.com/view/NutiteqMapsSDK) release. This github project has updated development version.
 
 #Getting started
 ## Register license key
